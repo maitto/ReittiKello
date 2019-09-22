@@ -14,9 +14,9 @@ struct DepartureRow: View {
     var body: some View {
         
         HStack {
-            Text(departure.departureTimestamp) .foregroundColor(getBackgroundColorForDeparture(departure))
+            Text(departure.formattedDepartureTime) .foregroundColor(getBackgroundColorForDeparture(departure))
             Spacer()
-            Text(departure.lineNumber)
+            Text(departure.routeName)
             Spacer()
             Text(departure.destination)
         }
@@ -26,7 +26,7 @@ struct DepartureRow: View {
 struct DepartureRow_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            DepartureRow(departure: Departure(id: "1", departureTimestamp: "123", lineNumber: "U", destination: "Helsinki", realTime: true, departureDelay: 10))
+            DepartureRow(departure: Departure(departureTimestamp: 123, routeName: "U", destination: "Helsinki", isRealTime: true, departureDelay: 10))
         }
     }
 }
@@ -35,7 +35,7 @@ struct DepartureRow_Previews: PreviewProvider {
 func getBackgroundColorForDeparture(_ departure: Departure) -> Color? {
     if departure.departureDelay > 0 {
         return .orange
-    } else if departure.realTime {
+    } else if departure.isRealTime {
         return .green
     } else {
         return nil
