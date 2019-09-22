@@ -1,0 +1,17 @@
+
+query Stop{
+  stop(id: "HSL:2161551") {
+    name
+      stoptimesWithoutPatterns {
+      realtimeDeparture
+      departureDelay
+      realtime
+      headsign
+      trip {
+        route {
+          shortName
+        }
+      }
+    }
+  }
+}
