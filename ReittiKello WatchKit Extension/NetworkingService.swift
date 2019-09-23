@@ -18,7 +18,7 @@ class StopData: ObservableObject {
     
     @Published var stops: [Stop] = []
     
-    func fetchStops(_ lat: Double = 60.206191, _ lon: Double = 24.706941, _ radius: Int = 500) {
+    func fetchStops(_ lat: Double, _ lon: Double, _ radius: Int = 500) {
         apollo.fetch(query: StopsByRadiusQuery(lat: lat, lon: lon, radius: radius)) { result in
             guard let data = try? result.get().data else { return }
             self.stops = [Stop(departures: [], stopName: "asd")]
