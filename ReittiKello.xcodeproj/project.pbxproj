@@ -11,6 +11,9 @@
 		B52097DBA03E50D674278474 /* Pods_ReittiKello_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63FD7901634AA731ACA9769B /* Pods_ReittiKello_WatchKit_Extension.framework */; };
 		D9E749D62E1704B1BC39325D /* Pods_ReittiKello_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC4AE3EC5EACC3A6B10EC04 /* Pods_ReittiKello_WatchKit_App.framework */; };
 		E60A8D5F23376DAC00F0567E /* ViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60A8D5E23376DAC00F0567E /* ViewModels.swift */; };
+		E60A8D61233787FD00F0567E /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60A8D60233787FD00F0567E /* LocationService.swift */; };
+		E60A8D632337AACF00F0567E /* StopRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60A8D622337AACF00F0567E /* StopRow.swift */; };
+		E60A8D652338EE2800F0567E /* DeparturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60A8D642338EE2800F0567E /* DeparturesView.swift */; };
 		E64AFA1F232D11B6003970B5 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64AFA1E232D11B6003970B5 /* NetworkingService.swift */; };
 		E65C2240232838BB006493F5 /* ReittiKello WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E65C223F232838BB006493F5 /* ReittiKello WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E65C2246232838BC006493F5 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E65C2244232838BC006493F5 /* Interface.storyboard */; };
@@ -82,6 +85,9 @@
 		BF3E63CF41E861B555513B9E /* Pods_ReittiKello.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReittiKello.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC4AE3EC5EACC3A6B10EC04 /* Pods_ReittiKello_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReittiKello_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E60A8D5E23376DAC00F0567E /* ViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels.swift; sourceTree = "<group>"; };
+		E60A8D60233787FD00F0567E /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		E60A8D622337AACF00F0567E /* StopRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopRow.swift; sourceTree = "<group>"; };
+		E60A8D642338EE2800F0567E /* DeparturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeparturesView.swift; sourceTree = "<group>"; };
 		E64AFA1E232D11B6003970B5 /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
 		E65C223B232838BB006493F5 /* ReittiKello.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReittiKello.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E65C223F232838BB006493F5 /* ReittiKello WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReittiKello WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -192,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				E65C2253232838BF006493F5 /* ContentView.swift */,
+				E60A8D642338EE2800F0567E /* DeparturesView.swift */,
 				E65C2255232838BF006493F5 /* HostingController.swift */,
 				E65C2257232838BF006493F5 /* ExtensionDelegate.swift */,
 				E65C2259232838BF006493F5 /* NotificationController.swift */,
@@ -203,10 +210,12 @@
 				E65C2261232838BF006493F5 /* Preview Content */,
 				E64AFA1E232D11B6003970B5 /* NetworkingService.swift */,
 				E6BC7A11232D18B70098C55A /* DeprtureRow.swift */,
+				E60A8D622337AACF00F0567E /* StopRow.swift */,
 				E69B5A2C232D54D200A44B36 /* schema.json */,
 				E69B5A2F232D568A00A44B36 /* hsl.graphql */,
 				E69B5A31232D57C600A44B36 /* API.swift */,
 				E60A8D5E23376DAC00F0567E /* ViewModels.swift */,
+				E60A8D60233787FD00F0567E /* LocationService.swift */,
 			);
 			path = "ReittiKello WatchKit Extension";
 			sourceTree = "<group>";
@@ -465,9 +474,12 @@
 				E65C2256232838BF006493F5 /* HostingController.swift in Sources */,
 				E65C2254232838BF006493F5 /* ContentView.swift in Sources */,
 				E65C225A232838BF006493F5 /* NotificationController.swift in Sources */,
+				E60A8D652338EE2800F0567E /* DeparturesView.swift in Sources */,
 				E65C2258232838BF006493F5 /* ExtensionDelegate.swift in Sources */,
 				E65C225C232838BF006493F5 /* NotificationView.swift in Sources */,
 				E60A8D5F23376DAC00F0567E /* ViewModels.swift in Sources */,
+				E60A8D632337AACF00F0567E /* StopRow.swift in Sources */,
+				E60A8D61233787FD00F0567E /* LocationService.swift in Sources */,
 				E64AFA1F232D11B6003970B5 /* NetworkingService.swift in Sources */,
 				E65C225E232838BF006493F5 /* ComplicationController.swift in Sources */,
 				E69B5A32232D57C600A44B36 /* API.swift in Sources */,

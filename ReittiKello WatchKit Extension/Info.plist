@@ -48,6 +48,8 @@
 	</dict>
 	<key>WKExtensionDelegateClassName</key>
 	<string>$(PRODUCT_MODULE_NAME).ExtensionDelegate</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Enable location to get nearest stops</string>
 	<key>WKWatchOnly</key>
 	<true/>
 </dict>

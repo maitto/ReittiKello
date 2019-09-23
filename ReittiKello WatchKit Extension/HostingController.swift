@@ -12,6 +12,6 @@ import SwiftUI
 
 class HostingController: WKHostingController<ContentView> {
     override var body: ContentView {
-        return ContentView(departureData: DepartureData())
+        return ContentView(stopData: StopData.shared)
     }
 }

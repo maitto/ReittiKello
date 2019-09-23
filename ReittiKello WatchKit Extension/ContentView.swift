@@ -9,16 +9,18 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var departureData: DepartureData
+    @ObservedObject var stopData: StopData
     
     var body: some View {
-        List(departureData.departures, rowContent: DepartureRow.init)
-            .onAppear(perform: departureData.fetch)
+        
+        List(stopData.stops, rowContent: StopRow.init)
+            .onAppear(perform: LocationService.shared.requestLocation)
+        
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(departureData: DepartureData())
+        ContentView(stopData: StopData())
     }
 }

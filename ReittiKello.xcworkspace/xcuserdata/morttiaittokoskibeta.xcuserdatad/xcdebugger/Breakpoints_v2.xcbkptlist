@@ -3,4 +3,85 @@
    uuid = "3925FC96-3C18-42BE-9614-58F453542F83"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F1A1C9F9-C7E8-4719-891E-E301560409A2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ReittiKello WatchKit Extension/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C3461DB0-FA9C-4B20-9555-DA79FB0502A9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ReittiKello WatchKit Extension/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "ContentView"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "C3461DB0-FA9C-4B20-9555-DA79FB0502A9 - eea482e27ab6ae6a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ReittiKello_WatchKit_Extension.ContentView.stopData.getter : ReittiKello_WatchKit_Extension.StopData"
+                  moduleName = "ReittiKello WatchKit Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/morttiaittokoskibeta/Desktop/ReittiKello/ReittiKello%20WatchKit%20Extension/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "102">
+               </Location>
+               <Location
+                  uuid = "C3461DB0-FA9C-4B20-9555-DA79FB0502A9 - 28670ec3561eaf9e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ReittiKello_WatchKit_Extension.ContentView.$stopData.getter : SwiftUI.EnvironmentObject&lt;ReittiKello_WatchKit_Extension.StopData&gt;.Wrapper"
+                  moduleName = "ReittiKello WatchKit Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/morttiaittokoskibeta/Desktop/ReittiKello/ReittiKello%20WatchKit%20Extension/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "102">
+               </Location>
+               <Location
+                  uuid = "C3461DB0-FA9C-4B20-9555-DA79FB0502A9 - c94a74242f2f97e9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ReittiKello_WatchKit_Extension.ContentView.init() -&gt; ReittiKello_WatchKit_Extension.ContentView"
+                  moduleName = "ReittiKello WatchKit Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/morttiaittokoskibeta/Desktop/ReittiKello/ReittiKello%20WatchKit%20Extension/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "59">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

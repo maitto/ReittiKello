@@ -13,33 +13,53 @@ import Apollo
 fileprivate let graphQLEndpoint = "https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql"
 fileprivate let apollo = ApolloClient(url: URL(string: graphQLEndpoint)!)
 
-final class DepartureData: ObservableObject {
-    @Published var departures: [Departure] = []
+class StopData: ObservableObject {
+    static let shared = StopData()
     
-    func fetch() {
-        var departures: [Departure] = []
-        apollo.fetch(query: StopQuery()) { result in
+    @Published var stops: [Stop] = []
+    
+    func fetchStops(_ lat: Double = 60.206191, _ lon: Double = 24.706941, _ radius: Int = 500) {
+        apollo.fetch(query: StopsByRadiusQuery(lat: lat, lon: lon, radius: radius)) { result in
             guard let data = try? result.get().data else { return }
-            if let stopTimes = data.stop?.stoptimesWithoutPatterns {
-                for stopTime in stopTimes {
-                    if let departureTimestamp = stopTime?.realtimeDeparture,
-                        let destination = stopTime?.headsign,
-                        let routeName = stopTime?.trip?.route.shortName,
-                        let isRealTime = stopTime?.realtime,
-                        let departureDelay = stopTime?.departureDelay {
-                        
-                        let departure = Departure(departureTimestamp: departureTimestamp,
-                                                  routeName: routeName,
-                                                  destination: destination,
-                                                  isRealTime: isRealTime,
-                                                  departureDelay: departureDelay)
-                        
-                        departures.append(departure)
-                        
-                        print("Departure entry: \(departureTimestamp) \(routeName) \(destination)")
+            self.stops = [Stop(departures: [], stopName: "asd")]
+            if let edges = data.stopsByRadius?.edges {
+                var stops: [Stop] = []
+
+                for edge in edges {
+                    
+                    // a stop
+                    if let stop = edge?.node?.stop {
+                        if let stopTimes = stop.stoptimesWithoutPatterns {
+                            
+                            var departures: [Departure] = []
+
+                            // a departure
+                            for departure in stopTimes {
+                                if let departureTimestamp = departure?.realtimeDeparture,
+                                    let destination = departure?.headsign,
+                                    let routeName = departure?.trip?.route.shortName,
+                                    let isRealTime = departure?.realtime,
+                                    let departureDelay = departure?.departureDelay {
+                                    
+                                    let departure = Departure(departureTimestamp: departureTimestamp,
+                                                              routeName: routeName,
+                                                              destination: destination,
+                                                              isRealTime: isRealTime,
+                                                              departureDelay: departureDelay)
+                                    
+                                    departures.append(departure)
+                                    
+                                    print("Departure entry: \(departureTimestamp) \(routeName) \(destination)")
+                                }
+                            }
+                            
+                            let stop = Stop(departures: departures, stopName: stop.name)
+                            stops.append(stop)
+                        }
                     }
                 }
-                self.departures = departures
+                self.stops = stops
+                
             }
         }
     }
