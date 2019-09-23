@@ -24,7 +24,7 @@ class StopData: ObservableObject {
             self.stops = [Stop(departures: [], stopName: "asd")]
             if let edges = data.stopsByRadius?.edges {
                 var stops: [Stop] = []
-
+                
                 for edge in edges {
                     
                     // a stop
@@ -32,7 +32,7 @@ class StopData: ObservableObject {
                         if let stopTimes = stop.stoptimesWithoutPatterns {
                             
                             var departures: [Departure] = []
-
+                            
                             // a departure
                             for departure in stopTimes {
                                 if let departureTimestamp = departure?.realtimeDeparture,
@@ -52,9 +52,11 @@ class StopData: ObservableObject {
                                     print("Departure entry: \(departureTimestamp) \(routeName) \(destination)")
                                 }
                             }
+                            if departures.count > 0 {
+                                let stop = Stop(departures: departures, stopName: stop.name)
+                                stops.append(stop)
+                            }
                             
-                            let stop = Stop(departures: departures, stopName: stop.name)
-                            stops.append(stop)
                         }
                     }
                 }

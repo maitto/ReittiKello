@@ -15,9 +15,9 @@ struct DepartureRow: View {
         
         HStack {
             Text(departure.formattedDepartureTime) .foregroundColor(getBackgroundColorForDeparture(departure))
-            Spacer()
-            Text(departure.routeName)
-            Spacer()
+            
+            Text(departure.routeName).frame(minWidth: 9, idealWidth: 9, maxWidth: 20, minHeight: nil, idealHeight: nil, maxHeight: nil, alignment: .center)
+            
             Text(departure.destination)
         }
     }
@@ -33,7 +33,7 @@ struct DepartureRow_Previews: PreviewProvider {
 
 
 func getBackgroundColorForDeparture(_ departure: Departure) -> Color? {
-    if departure.departureDelay > 0 {
+    if departure.departureDelay > 60 {
         return .orange
     } else if departure.isRealTime {
         return .green
