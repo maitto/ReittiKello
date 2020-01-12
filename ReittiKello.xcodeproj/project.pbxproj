@@ -632,6 +632,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 20;
 				DEVELOPMENT_ASSET_PATHS = "\"ReittiKello WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 6T8F5MPVZ3;
 				ENABLE_PREVIEWS = YES;
@@ -641,7 +642,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = mortinappi.ReittiKello.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = morttiaittokoski.PysakkiKello.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -657,6 +658,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 20;
 				DEVELOPMENT_ASSET_PATHS = "\"ReittiKello WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 6T8F5MPVZ3;
 				ENABLE_PREVIEWS = YES;
@@ -666,7 +668,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = mortinappi.ReittiKello.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = morttiaittokoski.PysakkiKello.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -683,6 +685,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 20;
 				DEVELOPMENT_TEAM = 6T8F5MPVZ3;
 				IBSC_MODULE = ReittiKello_WatchKit_Extension;
 				INFOPLIST_FILE = "ReittiKello WatchKit App/Info.plist";
@@ -691,7 +694,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = mortinappi.ReittiKello.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = morttiaittokoski.PysakkiKello.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -709,6 +712,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 20;
 				DEVELOPMENT_TEAM = 6T8F5MPVZ3;
 				IBSC_MODULE = ReittiKello_WatchKit_Extension;
 				INFOPLIST_FILE = "ReittiKello WatchKit App/Info.plist";
@@ -717,7 +721,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = mortinappi.ReittiKello.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = morttiaittokoski.PysakkiKello.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -733,7 +737,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 20;
 				DEVELOPMENT_TEAM = 6T8F5MPVZ3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -741,7 +745,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mortinappi.ReittiKello;
+				PRODUCT_BUNDLE_IDENTIFIER = morttiaittokoski.PysakkiKello;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -754,7 +758,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 20;
 				DEVELOPMENT_TEAM = 6T8F5MPVZ3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -762,7 +766,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mortinappi.ReittiKello;
+				PRODUCT_BUNDLE_IDENTIFIER = morttiaittokoski.PysakkiKello;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
