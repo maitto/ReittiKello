@@ -12,10 +12,7 @@ struct ContentView: View {
     @ObservedObject var stopData: StopData
     
     var body: some View {
-        
         List(stopData.stops, rowContent: StopRow.init)
-            .onAppear(perform: LocationService.shared.requestLocation)
-        
     }
 }
 
