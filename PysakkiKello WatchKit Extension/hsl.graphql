@@ -1,0 +1,42 @@
+
+query Stop{
+  stop(id: "HSL:2161551") {
+    name
+      stoptimesWithoutPatterns {
+      realtimeDeparture
+      departureDelay
+      realtime
+      headsign
+      trip {
+        route {
+          shortName
+        }
+      }
+    }
+  }
+}
+
+query StopsByRadius($lat: Float!, $lon: Float!, $radius: Int!){
+  stopsByRadius(lat:$lat, lon:$lon, radius:$radius) {
+    edges {
+      node {
+        stop {
+          name
+            stoptimesWithoutPatterns {
+            realtimeDeparture
+            departureDelay
+            realtime
+            headsign
+            trip {
+              route {
+                shortName
+              }
+            }
+          }
+        }
+        distance
+      }
+    }
+  }
+}
+

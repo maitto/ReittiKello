@@ -1,0 +1,774 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0767F646F715E0D8860C2644 /* Pods_PysakkiKello_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FA623E81CC5D08138C46D4E /* Pods_PysakkiKello_WatchKit_App.framework */; };
+		0FB5CE3399E4E6DADA4611B5 /* Pods_PysakkiKello.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F75AA0B3E695FA268FC491D5 /* Pods_PysakkiKello.framework */; };
+		2B269F54240FFBD500CFFAA5 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B269F53240FFBD500CFFAA5 /* API.swift */; };
+		2BCF23AB2402A43F00F60337 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BCF23AA2402A43F00F60337 /* schema.json */; };
+		2BE02708240299D400B3F367 /* PysakkiKello WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2BE02707240299D400B3F367 /* PysakkiKello WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2BE0270E240299D400B3F367 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BE0270C240299D400B3F367 /* Interface.storyboard */; };
+		2BE02710240299D800B3F367 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BE0270F240299D800B3F367 /* Assets.xcassets */; };
+		2BE02717240299D800B3F367 /* PysakkiKello WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2BE02716240299D800B3F367 /* PysakkiKello WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2BE0271C240299D800B3F367 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0271B240299D800B3F367 /* ContentView.swift */; };
+		2BE0271E240299D800B3F367 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0271D240299D800B3F367 /* HostingController.swift */; };
+		2BE02720240299D800B3F367 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0271F240299D800B3F367 /* ExtensionDelegate.swift */; };
+		2BE02722240299D800B3F367 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE02721240299D800B3F367 /* NotificationController.swift */; };
+		2BE02724240299D800B3F367 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE02723240299D800B3F367 /* NotificationView.swift */; };
+		2BE02726240299D800B3F367 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE02725240299D800B3F367 /* ComplicationController.swift */; };
+		2BE02728240299D900B3F367 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BE02727240299D900B3F367 /* Assets.xcassets */; };
+		2BE0272B240299D900B3F367 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BE0272A240299D900B3F367 /* Preview Assets.xcassets */; };
+		2BE0273C24029A1800B3F367 /* DeparturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0273B24029A1800B3F367 /* DeparturesView.swift */; };
+		2BE0273E24029A5F00B3F367 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0273D24029A5F00B3F367 /* NetworkingService.swift */; };
+		2BE0274024029A8500B3F367 /* DepartureRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0273F24029A8500B3F367 /* DepartureRow.swift */; };
+		2BE0274224029A9E00B3F367 /* StopRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0274124029A9E00B3F367 /* StopRow.swift */; };
+		2BE0274624029AE200B3F367 /* hsl.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 2BE0274524029AE200B3F367 /* hsl.graphql */; };
+		2BE0274824029B0500B3F367 /* ViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0274724029B0500B3F367 /* ViewModels.swift */; };
+		2BE0274E24029DB300B3F367 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0274D24029DB300B3F367 /* LocationService.swift */; };
+		63B469B137FF9A5229225C96 /* Pods_PysakkiKello_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271D1A5A236E0DEF8665BE8B /* Pods_PysakkiKello_WatchKit_Extension.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2BE02709240299D400B3F367 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BE026FD240299D400B3F367 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BE02706240299D400B3F367;
+			remoteInfo = "PysakkiKello WatchKit App";
+		};
+		2BE02718240299D800B3F367 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BE026FD240299D400B3F367 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BE02715240299D800B3F367;
+			remoteInfo = "PysakkiKello WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2BE02733240299D900B3F367 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2BE02717240299D800B3F367 /* PysakkiKello WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BE02737240299D900B3F367 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				2BE02708240299D400B3F367 /* PysakkiKello WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		028B6813ADF1470B3A2DFC27 /* Pods-PysakkiKello WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PysakkiKello WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-PysakkiKello WatchKit App/Pods-PysakkiKello WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		271D1A5A236E0DEF8665BE8B /* Pods_PysakkiKello_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PysakkiKello_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B269F53240FFBD500CFFAA5 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		2BCF23AA2402A43F00F60337 /* schema.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		2BE02703240299D400B3F367 /* PysakkiKello.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PysakkiKello.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BE02707240299D400B3F367 /* PysakkiKello WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PysakkiKello WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BE0270D240299D400B3F367 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		2BE0270F240299D800B3F367 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2BE02711240299D800B3F367 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BE02716240299D800B3F367 /* PysakkiKello WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "PysakkiKello WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BE0271B240299D800B3F367 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2BE0271D240299D800B3F367 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		2BE0271F240299D800B3F367 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		2BE02721240299D800B3F367 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		2BE02723240299D800B3F367 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		2BE02725240299D800B3F367 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		2BE02727240299D900B3F367 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2BE0272A240299D900B3F367 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2BE0272C240299D900B3F367 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BE0272D240299D900B3F367 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		2BE0273B24029A1800B3F367 /* DeparturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeparturesView.swift; sourceTree = "<group>"; };
+		2BE0273D24029A5F00B3F367 /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
+		2BE0273F24029A8500B3F367 /* DepartureRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartureRow.swift; sourceTree = "<group>"; };
+		2BE0274124029A9E00B3F367 /* StopRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopRow.swift; sourceTree = "<group>"; };
+		2BE0274524029AE200B3F367 /* hsl.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = hsl.graphql; sourceTree = "<group>"; };
+		2BE0274724029B0500B3F367 /* ViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels.swift; sourceTree = "<group>"; };
+		2BE0274D24029DB300B3F367 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		5ADB1C0206FE742F9C07F883 /* Pods-PysakkiKello.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PysakkiKello.release.xcconfig"; path = "Target Support Files/Pods-PysakkiKello/Pods-PysakkiKello.release.xcconfig"; sourceTree = "<group>"; };
+		5D219B1E6793B43E8824819F /* Pods-PysakkiKello WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PysakkiKello WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-PysakkiKello WatchKit Extension/Pods-PysakkiKello WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		6FA623E81CC5D08138C46D4E /* Pods_PysakkiKello_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PysakkiKello_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70E1CC63A19DC08118F3A865 /* Pods-PysakkiKello WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PysakkiKello WatchKit Extension.release.xcconfig"; path = "Target Support Files/Pods-PysakkiKello WatchKit Extension/Pods-PysakkiKello WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		BB161D2DAD3AA522B6784807 /* Pods-PysakkiKello.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PysakkiKello.debug.xcconfig"; path = "Target Support Files/Pods-PysakkiKello/Pods-PysakkiKello.debug.xcconfig"; sourceTree = "<group>"; };
+		F75AA0B3E695FA268FC491D5 /* Pods_PysakkiKello.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PysakkiKello.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9394841157548FFEEEADF47 /* Pods-PysakkiKello WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PysakkiKello WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-PysakkiKello WatchKit App/Pods-PysakkiKello WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2BE02713240299D800B3F367 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63B469B137FF9A5229225C96 /* Pods_PysakkiKello_WatchKit_Extension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		593DACE16F9FC3BA07A8D014 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FB5CE3399E4E6DADA4611B5 /* Pods_PysakkiKello.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB83DC982245059DECC633BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0767F646F715E0D8860C2644 /* Pods_PysakkiKello_WatchKit_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2BE026FC240299D400B3F367 = {
+			isa = PBXGroup;
+			children = (
+				2BE0270B240299D400B3F367 /* PysakkiKello WatchKit App */,
+				2BE0271A240299D800B3F367 /* PysakkiKello WatchKit Extension */,
+				2BE02704240299D400B3F367 /* Products */,
+				35643C33FA68B93FEA59706D /* Pods */,
+				33F8A7ECFF1C9D056F654208 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2BE02704240299D400B3F367 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2BE02703240299D400B3F367 /* PysakkiKello.app */,
+				2BE02707240299D400B3F367 /* PysakkiKello WatchKit App.app */,
+				2BE02716240299D800B3F367 /* PysakkiKello WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2BE0270B240299D400B3F367 /* PysakkiKello WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				2BE0270C240299D400B3F367 /* Interface.storyboard */,
+				2BE0270F240299D800B3F367 /* Assets.xcassets */,
+				2BE02711240299D800B3F367 /* Info.plist */,
+			);
+			path = "PysakkiKello WatchKit App";
+			sourceTree = "<group>";
+		};
+		2BE0271A240299D800B3F367 /* PysakkiKello WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2BE0271B240299D800B3F367 /* ContentView.swift */,
+				2BE0273B24029A1800B3F367 /* DeparturesView.swift */,
+				2BE0271D240299D800B3F367 /* HostingController.swift */,
+				2BE0271F240299D800B3F367 /* ExtensionDelegate.swift */,
+				2BE02721240299D800B3F367 /* NotificationController.swift */,
+				2BE02723240299D800B3F367 /* NotificationView.swift */,
+				2BE02725240299D800B3F367 /* ComplicationController.swift */,
+				2BE02727240299D900B3F367 /* Assets.xcassets */,
+				2BE0272C240299D900B3F367 /* Info.plist */,
+				2BE0272D240299D900B3F367 /* PushNotificationPayload.apns */,
+				2BE02729240299D900B3F367 /* Preview Content */,
+				2BE0273D24029A5F00B3F367 /* NetworkingService.swift */,
+				2BE0273F24029A8500B3F367 /* DepartureRow.swift */,
+				2BE0274124029A9E00B3F367 /* StopRow.swift */,
+				2BE0274524029AE200B3F367 /* hsl.graphql */,
+				2B269F53240FFBD500CFFAA5 /* API.swift */,
+				2BE0274724029B0500B3F367 /* ViewModels.swift */,
+				2BE0274D24029DB300B3F367 /* LocationService.swift */,
+				2BCF23AA2402A43F00F60337 /* schema.json */,
+			);
+			path = "PysakkiKello WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		2BE02729240299D900B3F367 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2BE0272A240299D900B3F367 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		33F8A7ECFF1C9D056F654208 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F75AA0B3E695FA268FC491D5 /* Pods_PysakkiKello.framework */,
+				6FA623E81CC5D08138C46D4E /* Pods_PysakkiKello_WatchKit_App.framework */,
+				271D1A5A236E0DEF8665BE8B /* Pods_PysakkiKello_WatchKit_Extension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		35643C33FA68B93FEA59706D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BB161D2DAD3AA522B6784807 /* Pods-PysakkiKello.debug.xcconfig */,
+				5ADB1C0206FE742F9C07F883 /* Pods-PysakkiKello.release.xcconfig */,
+				028B6813ADF1470B3A2DFC27 /* Pods-PysakkiKello WatchKit App.debug.xcconfig */,
+				F9394841157548FFEEEADF47 /* Pods-PysakkiKello WatchKit App.release.xcconfig */,
+				5D219B1E6793B43E8824819F /* Pods-PysakkiKello WatchKit Extension.debug.xcconfig */,
+				70E1CC63A19DC08118F3A865 /* Pods-PysakkiKello WatchKit Extension.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2BE02702240299D400B3F367 /* PysakkiKello */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BE02738240299D900B3F367 /* Build configuration list for PBXNativeTarget "PysakkiKello" */;
+			buildPhases = (
+				40453D7841E0E2C2DE95DBCC /* [CP] Check Pods Manifest.lock */,
+				2BE02701240299D400B3F367 /* Resources */,
+				2BE02737240299D900B3F367 /* Embed Watch Content */,
+				593DACE16F9FC3BA07A8D014 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BE0270A240299D400B3F367 /* PBXTargetDependency */,
+			);
+			name = PysakkiKello;
+			productName = PysakkiKello;
+			productReference = 2BE02703240299D400B3F367 /* PysakkiKello.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		2BE02706240299D400B3F367 /* PysakkiKello WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BE02734240299D900B3F367 /* Build configuration list for PBXNativeTarget "PysakkiKello WatchKit App" */;
+			buildPhases = (
+				A77DBB1BA9F9B526BB6779C3 /* [CP] Check Pods Manifest.lock */,
+				2BE02705240299D400B3F367 /* Resources */,
+				2BE02733240299D900B3F367 /* Embed App Extensions */,
+				DB83DC982245059DECC633BF /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BE02719240299D800B3F367 /* PBXTargetDependency */,
+			);
+			name = "PysakkiKello WatchKit App";
+			productName = "PysakkiKello WatchKit App";
+			productReference = 2BE02707240299D400B3F367 /* PysakkiKello WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		2BE02715240299D800B3F367 /* PysakkiKello WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BE02730240299D900B3F367 /* Build configuration list for PBXNativeTarget "PysakkiKello WatchKit Extension" */;
+			buildPhases = (
+				8CFAF55DF9E6CE0960CA8D49 /* [CP] Check Pods Manifest.lock */,
+				2BE02712240299D800B3F367 /* Sources */,
+				2BE02713240299D800B3F367 /* Frameworks */,
+				2BE02714240299D800B3F367 /* Resources */,
+				1B5F18169199230F1A020BD4 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PysakkiKello WatchKit Extension";
+			productName = "PysakkiKello WatchKit Extension";
+			productReference = 2BE02716240299D800B3F367 /* PysakkiKello WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2BE026FD240299D400B3F367 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Mortti Aittokoski";
+				TargetAttributes = {
+					2BE02702240299D400B3F367 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					2BE02706240299D400B3F367 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					2BE02715240299D800B3F367 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 2BE02700240299D400B3F367 /* Build configuration list for PBXProject "PysakkiKello" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2BE026FC240299D400B3F367;
+			productRefGroup = 2BE02704240299D400B3F367 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2BE02702240299D400B3F367 /* PysakkiKello */,
+				2BE02706240299D400B3F367 /* PysakkiKello WatchKit App */,
+				2BE02715240299D800B3F367 /* PysakkiKello WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2BE02701240299D400B3F367 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BE02705240299D400B3F367 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BE02710240299D800B3F367 /* Assets.xcassets in Resources */,
+				2BE0270E240299D400B3F367 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BE02714240299D800B3F367 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BCF23AB2402A43F00F60337 /* schema.json in Resources */,
+				2BE0274624029AE200B3F367 /* hsl.graphql in Resources */,
+				2BE0272B240299D900B3F367 /* Preview Assets.xcassets in Resources */,
+				2BE02728240299D900B3F367 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B5F18169199230F1A020BD4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PysakkiKello WatchKit Extension/Pods-PysakkiKello WatchKit Extension-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PysakkiKello WatchKit Extension/Pods-PysakkiKello WatchKit Extension-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PysakkiKello WatchKit Extension/Pods-PysakkiKello WatchKit Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		40453D7841E0E2C2DE95DBCC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PysakkiKello-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CFAF55DF9E6CE0960CA8D49 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PysakkiKello WatchKit Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A77DBB1BA9F9B526BB6779C3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PysakkiKello WatchKit App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2BE02712240299D800B3F367 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BE0271E240299D800B3F367 /* HostingController.swift in Sources */,
+				2BE0271C240299D800B3F367 /* ContentView.swift in Sources */,
+				2BE0274224029A9E00B3F367 /* StopRow.swift in Sources */,
+				2BE0274024029A8500B3F367 /* DepartureRow.swift in Sources */,
+				2BE02722240299D800B3F367 /* NotificationController.swift in Sources */,
+				2BE0273E24029A5F00B3F367 /* NetworkingService.swift in Sources */,
+				2BE0273C24029A1800B3F367 /* DeparturesView.swift in Sources */,
+				2BE0274824029B0500B3F367 /* ViewModels.swift in Sources */,
+				2B269F54240FFBD500CFFAA5 /* API.swift in Sources */,
+				2BE02720240299D800B3F367 /* ExtensionDelegate.swift in Sources */,
+				2BE02724240299D800B3F367 /* NotificationView.swift in Sources */,
+				2BE0274E24029DB300B3F367 /* LocationService.swift in Sources */,
+				2BE02726240299D800B3F367 /* ComplicationController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2BE0270A240299D400B3F367 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BE02706240299D400B3F367 /* PysakkiKello WatchKit App */;
+			targetProxy = 2BE02709240299D400B3F367 /* PBXContainerItemProxy */;
+		};
+		2BE02719240299D800B3F367 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BE02715240299D800B3F367 /* PysakkiKello WatchKit Extension */;
+			targetProxy = 2BE02718240299D800B3F367 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2BE0270C240299D400B3F367 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BE0270D240299D400B3F367 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2BE0272E240299D900B3F367 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2BE0272F240299D900B3F367 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2BE02731240299D900B3F367 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D219B1E6793B43E8824819F /* Pods-PysakkiKello WatchKit Extension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 23;
+				DEVELOPMENT_ASSET_PATHS = "\"PysakkiKello WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 6T8F5MPVZ3;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "PysakkiKello WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = morttiaittokoski.PysakkiKello.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		2BE02732240299D900B3F367 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70E1CC63A19DC08118F3A865 /* Pods-PysakkiKello WatchKit Extension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 23;
+				DEVELOPMENT_ASSET_PATHS = "\"PysakkiKello WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 6T8F5MPVZ3;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "PysakkiKello WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = morttiaittokoski.PysakkiKello.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
+		2BE02735240299D900B3F367 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 028B6813ADF1470B3A2DFC27 /* Pods-PysakkiKello WatchKit App.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 23;
+				DEVELOPMENT_TEAM = 6T8F5MPVZ3;
+				IBSC_MODULE = PysakkiKello_WatchKit_Extension;
+				INFOPLIST_FILE = "PysakkiKello WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = morttiaittokoski.PysakkiKello.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		2BE02736240299D900B3F367 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9394841157548FFEEEADF47 /* Pods-PysakkiKello WatchKit App.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 23;
+				DEVELOPMENT_TEAM = 6T8F5MPVZ3;
+				IBSC_MODULE = PysakkiKello_WatchKit_Extension;
+				INFOPLIST_FILE = "PysakkiKello WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = morttiaittokoski.PysakkiKello.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
+		2BE02739240299D900B3F367 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB161D2DAD3AA522B6784807 /* Pods-PysakkiKello.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 23;
+				DEVELOPMENT_TEAM = 6T8F5MPVZ3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = morttiaittokoski.PysakkiKello;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2BE0273A240299D900B3F367 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5ADB1C0206FE742F9C07F883 /* Pods-PysakkiKello.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 23;
+				DEVELOPMENT_TEAM = 6T8F5MPVZ3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = morttiaittokoski.PysakkiKello;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2BE02700240299D400B3F367 /* Build configuration list for PBXProject "PysakkiKello" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BE0272E240299D900B3F367 /* Debug */,
+				2BE0272F240299D900B3F367 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BE02730240299D900B3F367 /* Build configuration list for PBXNativeTarget "PysakkiKello WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BE02731240299D900B3F367 /* Debug */,
+				2BE02732240299D900B3F367 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BE02734240299D900B3F367 /* Build configuration list for PBXNativeTarget "PysakkiKello WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BE02735240299D900B3F367 /* Debug */,
+				2BE02736240299D900B3F367 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BE02738240299D900B3F367 /* Build configuration list for PBXNativeTarget "PysakkiKello" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BE02739240299D900B3F367 /* Debug */,
+				2BE0273A240299D900B3F367 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2BE026FD240299D400B3F367 /* Project object */;
+}
