@@ -12,13 +12,7 @@ struct DeparturesView: View {
     var departures: [Departure]
     
     var body: some View {
-        
         List(departures, rowContent: DepartureRow.init)
-            .contextMenu {
-                Button(action: {}) {
-                    Text("Share")
-                }
-        }
     }
 }
 
