@@ -14,6 +14,11 @@ struct DeparturesView: View {
     var body: some View {
         
         List(departures, rowContent: DepartureRow.init)
+            .contextMenu {
+                Button(action: {}) {
+                    Text("Share")
+                }
+        }
     }
 }
 
