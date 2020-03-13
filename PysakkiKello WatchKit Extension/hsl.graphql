@@ -1,6 +1,6 @@
 
-query Stop{
-  stop(id: "HSL:2161551") {
+query Stop($id: String!){
+  stop(id:$id) {
     name
       stoptimesWithoutPatterns {
       realtimeDeparture
@@ -21,6 +21,7 @@ query StopsByRadius($lat: Float!, $lon: Float!, $radius: Int!){
     edges {
       node {
         stop {
+          gtfsId
           name
             stoptimesWithoutPatterns {
             realtimeDeparture

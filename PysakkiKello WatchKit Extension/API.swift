@@ -1,41 +1,52 @@
+// @generated
 //  This file was automatically generated and should not be edited.
 
 import Apollo
+import Foundation
 
 public final class StopQuery: GraphQLQuery {
-  /// query Stop {
-  ///   stop(id: "HSL:2161551") {
-  ///     __typename
-  ///     name
-  ///     stoptimesWithoutPatterns {
-  ///       __typename
-  ///       realtimeDeparture
-  ///       departureDelay
-  ///       realtime
-  ///       headsign
-  ///       trip {
-  ///         __typename
-  ///         route {
-  ///           __typename
-  ///           shortName
-  ///         }
-  ///       }
-  ///     }
-  ///   }
-  /// }
-  public let operationDefinition =
-    "query Stop { stop(id: \"HSL:2161551\") { __typename name stoptimesWithoutPatterns { __typename realtimeDeparture departureDelay realtime headsign trip { __typename route { __typename shortName } } } } }"
+  /// The raw GraphQL definition of this operation.
+  public let operationDefinition: String =
+    """
+    query Stop($id: String!) {
+      stop(id: $id) {
+        __typename
+        name
+        stoptimesWithoutPatterns {
+          __typename
+          realtimeDeparture
+          departureDelay
+          realtime
+          headsign
+          trip {
+            __typename
+            route {
+              __typename
+              shortName
+            }
+          }
+        }
+      }
+    }
+    """
 
-  public let operationName = "Stop"
+  public let operationName: String = "Stop"
 
-  public init() {
+  public var id: String
+
+  public init(id: String) {
+    self.id = id
+  }
+
+  public var variables: GraphQLMap? {
+    return ["id": id]
   }
 
   public struct Data: GraphQLSelectionSet {
-    public static let possibleTypes = ["QueryType"]
+    public static let possibleTypes: [String] = ["QueryType"]
 
     public static let selections: [GraphQLSelection] = [
-      GraphQLField("stop", arguments: ["id": "HSL:2161551"], type: .object(Stop.selections)),
+      GraphQLField("stop", arguments: ["id": GraphQLVariable("id")], type: .object(Stop.selections)),
     ]
 
     public private(set) var resultMap: ResultMap
@@ -59,7 +70,7 @@ public final class StopQuery: GraphQLQuery {
     }
 
     public struct Stop: GraphQLSelectionSet {
-      public static let possibleTypes = ["Stop"]
+      public static let possibleTypes: [String] = ["Stop"]
 
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
@@ -107,7 +118,7 @@ public final class StopQuery: GraphQLQuery {
       }
 
       public struct StoptimesWithoutPattern: GraphQLSelectionSet {
-        public static let possibleTypes = ["Stoptime"]
+        public static let possibleTypes: [String] = ["Stoptime"]
 
         public static let selections: [GraphQLSelection] = [
           GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
@@ -191,7 +202,7 @@ public final class StopQuery: GraphQLQuery {
         }
 
         public struct Trip: GraphQLSelectionSet {
-          public static let possibleTypes = ["Trip"]
+          public static let possibleTypes: [String] = ["Trip"]
 
           public static let selections: [GraphQLSelection] = [
             GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
@@ -228,7 +239,7 @@ public final class StopQuery: GraphQLQuery {
           }
 
           public struct Route: GraphQLSelectionSet {
-            public static let possibleTypes = ["Route"]
+            public static let possibleTypes: [String] = ["Route"]
 
             public static let selections: [GraphQLSelection] = [
               GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
@@ -271,40 +282,43 @@ public final class StopQuery: GraphQLQuery {
 }
 
 public final class StopsByRadiusQuery: GraphQLQuery {
-  /// query StopsByRadius($lat: Float!, $lon: Float!, $radius: Int!) {
-  ///   stopsByRadius(lat: $lat, lon: $lon, radius: $radius) {
-  ///     __typename
-  ///     edges {
-  ///       __typename
-  ///       node {
-  ///         __typename
-  ///         stop {
-  ///           __typename
-  ///           name
-  ///           stoptimesWithoutPatterns {
-  ///             __typename
-  ///             realtimeDeparture
-  ///             departureDelay
-  ///             realtime
-  ///             headsign
-  ///             trip {
-  ///               __typename
-  ///               route {
-  ///                 __typename
-  ///                 shortName
-  ///               }
-  ///             }
-  ///           }
-  ///         }
-  ///         distance
-  ///       }
-  ///     }
-  ///   }
-  /// }
-  public let operationDefinition =
-    "query StopsByRadius($lat: Float!, $lon: Float!, $radius: Int!) { stopsByRadius(lat: $lat, lon: $lon, radius: $radius) { __typename edges { __typename node { __typename stop { __typename name stoptimesWithoutPatterns { __typename realtimeDeparture departureDelay realtime headsign trip { __typename route { __typename shortName } } } } distance } } } }"
+  /// The raw GraphQL definition of this operation.
+  public let operationDefinition: String =
+    """
+    query StopsByRadius($lat: Float!, $lon: Float!, $radius: Int!) {
+      stopsByRadius(lat: $lat, lon: $lon, radius: $radius) {
+        __typename
+        edges {
+          __typename
+          node {
+            __typename
+            stop {
+              __typename
+              gtfsId
+              name
+              stoptimesWithoutPatterns {
+                __typename
+                realtimeDeparture
+                departureDelay
+                realtime
+                headsign
+                trip {
+                  __typename
+                  route {
+                    __typename
+                    shortName
+                  }
+                }
+              }
+            }
+            distance
+          }
+        }
+      }
+    }
+    """
 
-  public let operationName = "StopsByRadius"
+  public let operationName: String = "StopsByRadius"
 
   public var lat: Double
   public var lon: Double
@@ -321,7 +335,7 @@ public final class StopsByRadiusQuery: GraphQLQuery {
   }
 
   public struct Data: GraphQLSelectionSet {
-    public static let possibleTypes = ["QueryType"]
+    public static let possibleTypes: [String] = ["QueryType"]
 
     public static let selections: [GraphQLSelection] = [
       GraphQLField("stopsByRadius", arguments: ["lat": GraphQLVariable("lat"), "lon": GraphQLVariable("lon"), "radius": GraphQLVariable("radius")], type: .object(StopsByRadiu.selections)),
@@ -351,7 +365,7 @@ public final class StopsByRadiusQuery: GraphQLQuery {
     }
 
     public struct StopsByRadiu: GraphQLSelectionSet {
-      public static let possibleTypes = ["stopAtDistanceConnection"]
+      public static let possibleTypes: [String] = ["stopAtDistanceConnection"]
 
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
@@ -387,7 +401,7 @@ public final class StopsByRadiusQuery: GraphQLQuery {
       }
 
       public struct Edge: GraphQLSelectionSet {
-        public static let possibleTypes = ["stopAtDistanceEdge"]
+        public static let possibleTypes: [String] = ["stopAtDistanceEdge"]
 
         public static let selections: [GraphQLSelection] = [
           GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
@@ -424,7 +438,7 @@ public final class StopsByRadiusQuery: GraphQLQuery {
         }
 
         public struct Node: GraphQLSelectionSet {
-          public static let possibleTypes = ["stopAtDistance"]
+          public static let possibleTypes: [String] = ["stopAtDistance"]
 
           public static let selections: [GraphQLSelection] = [
             GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
@@ -471,10 +485,11 @@ public final class StopsByRadiusQuery: GraphQLQuery {
           }
 
           public struct Stop: GraphQLSelectionSet {
-            public static let possibleTypes = ["Stop"]
+            public static let possibleTypes: [String] = ["Stop"]
 
             public static let selections: [GraphQLSelection] = [
               GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+              GraphQLField("gtfsId", type: .nonNull(.scalar(String.self))),
               GraphQLField("name", type: .nonNull(.scalar(String.self))),
               GraphQLField("stoptimesWithoutPatterns", type: .list(.object(StoptimesWithoutPattern.selections))),
             ]
@@ -485,8 +500,8 @@ public final class StopsByRadiusQuery: GraphQLQuery {
               self.resultMap = unsafeResultMap
             }
 
-            public init(name: String, stoptimesWithoutPatterns: [StoptimesWithoutPattern?]? = nil) {
-              self.init(unsafeResultMap: ["__typename": "Stop", "name": name, "stoptimesWithoutPatterns": stoptimesWithoutPatterns.flatMap { (value: [StoptimesWithoutPattern?]) -> [ResultMap?] in value.map { (value: StoptimesWithoutPattern?) -> ResultMap? in value.flatMap { (value: StoptimesWithoutPattern) -> ResultMap in value.resultMap } } }])
+            public init(gtfsId: String, name: String, stoptimesWithoutPatterns: [StoptimesWithoutPattern?]? = nil) {
+              self.init(unsafeResultMap: ["__typename": "Stop", "gtfsId": gtfsId, "name": name, "stoptimesWithoutPatterns": stoptimesWithoutPatterns.flatMap { (value: [StoptimesWithoutPattern?]) -> [ResultMap?] in value.map { (value: StoptimesWithoutPattern?) -> ResultMap? in value.flatMap { (value: StoptimesWithoutPattern) -> ResultMap in value.resultMap } } }])
             }
 
             public var __typename: String {
@@ -495,6 +510,16 @@ public final class StopsByRadiusQuery: GraphQLQuery {
               }
               set {
                 resultMap.updateValue(newValue, forKey: "__typename")
+              }
+            }
+
+            /// ÌD of the stop in format `FeedId:StopId`
+            public var gtfsId: String {
+              get {
+                return resultMap["gtfsId"]! as! String
+              }
+              set {
+                resultMap.updateValue(newValue, forKey: "gtfsId")
               }
             }
 
@@ -519,7 +544,7 @@ public final class StopsByRadiusQuery: GraphQLQuery {
             }
 
             public struct StoptimesWithoutPattern: GraphQLSelectionSet {
-              public static let possibleTypes = ["Stoptime"]
+              public static let possibleTypes: [String] = ["Stoptime"]
 
               public static let selections: [GraphQLSelection] = [
                 GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
@@ -603,7 +628,7 @@ public final class StopsByRadiusQuery: GraphQLQuery {
               }
 
               public struct Trip: GraphQLSelectionSet {
-                public static let possibleTypes = ["Trip"]
+                public static let possibleTypes: [String] = ["Trip"]
 
                 public static let selections: [GraphQLSelection] = [
                   GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
@@ -640,7 +665,7 @@ public final class StopsByRadiusQuery: GraphQLQuery {
                 }
 
                 public struct Route: GraphQLSelectionSet {
-                  public static let possibleTypes = ["Route"]
+                  public static let possibleTypes: [String] = ["Route"]
 
                   public static let selections: [GraphQLSelection] = [
                     GraphQLField("__typename", type: .nonNull(.scalar(String.self))),

@@ -10,6 +10,7 @@
 		0767F646F715E0D8860C2644 /* Pods_PysakkiKello_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FA623E81CC5D08138C46D4E /* Pods_PysakkiKello_WatchKit_App.framework */; };
 		0FB5CE3399E4E6DADA4611B5 /* Pods_PysakkiKello.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F75AA0B3E695FA268FC491D5 /* Pods_PysakkiKello.framework */; };
 		2B269F54240FFBD500CFFAA5 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B269F53240FFBD500CFFAA5 /* API.swift */; };
+		2BAD23C4241BCD27008AEB9B /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAD23C3241BCD27008AEB9B /* StorageService.swift */; };
 		2BCF23AB2402A43F00F60337 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BCF23AA2402A43F00F60337 /* schema.json */; };
 		2BE02708240299D400B3F367 /* PysakkiKello WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2BE02707240299D400B3F367 /* PysakkiKello WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2BE0270E240299D400B3F367 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BE0270C240299D400B3F367 /* Interface.storyboard */; };
@@ -79,6 +80,7 @@
 		028B6813ADF1470B3A2DFC27 /* Pods-PysakkiKello WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PysakkiKello WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-PysakkiKello WatchKit App/Pods-PysakkiKello WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 		271D1A5A236E0DEF8665BE8B /* Pods_PysakkiKello_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PysakkiKello_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B269F53240FFBD500CFFAA5 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		2BAD23C3241BCD27008AEB9B /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		2BCF23AA2402A43F00F60337 /* schema.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		2BE02703240299D400B3F367 /* PysakkiKello.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PysakkiKello.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BE02707240299D400B3F367 /* PysakkiKello WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PysakkiKello WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,6 +195,7 @@
 				2BE0274724029B0500B3F367 /* ViewModels.swift */,
 				2BE0274D24029DB300B3F367 /* LocationService.swift */,
 				2BCF23AA2402A43F00F60337 /* schema.json */,
+				2BAD23C3241BCD27008AEB9B /* StorageService.swift */,
 			);
 			path = "PysakkiKello WatchKit Extension";
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 			buildConfigurationList = 2BE02730240299D900B3F367 /* Build configuration list for PBXNativeTarget "PysakkiKello WatchKit Extension" */;
 			buildPhases = (
 				8CFAF55DF9E6CE0960CA8D49 /* [CP] Check Pods Manifest.lock */,
+				2BAD23C2241B9C22008AEB9B /* Generate Apollo GraphQL API */,
 				2BE02712240299D800B3F367 /* Sources */,
 				2BE02713240299D800B3F367 /* Frameworks */,
 				2BE02714240299D800B3F367 /* Resources */,
@@ -377,6 +381,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PysakkiKello WatchKit Extension/Pods-PysakkiKello WatchKit Extension-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		2BAD23C2241B9C22008AEB9B /* Generate Apollo GraphQL API */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Apollo GraphQL API";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nSCRIPT_PATH=\"${PODS_ROOT}/Apollo/scripts\"\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" API.swift\n";
+		};
 		40453D7841E0E2C2DE95DBCC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -463,6 +485,7 @@
 				2BE02724240299D800B3F367 /* NotificationView.swift in Sources */,
 				2BE0274E24029DB300B3F367 /* LocationService.swift in Sources */,
 				2BE02726240299D800B3F367 /* ComplicationController.swift in Sources */,
+				2BAD23C4241BCD27008AEB9B /* StorageService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
