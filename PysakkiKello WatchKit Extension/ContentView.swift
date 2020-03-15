@@ -13,6 +13,13 @@ struct ContentView: View {
     
     var body: some View {
         List(stopData.stops, rowContent: StopRow.init)
+        .contextMenu {
+            Button(action: {
+                UseCases.shared.toggleListMode()
+            }) {
+                Text(UseCases.shared.getViewModeChangeTitle())
+            }
+        }
     }
 }
 

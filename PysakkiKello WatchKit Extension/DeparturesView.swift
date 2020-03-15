@@ -10,14 +10,22 @@ import SwiftUI
 
 struct DeparturesView: View {
     var departures: [Departure]
+    var hslStopId: String
     
     var body: some View {
         List(departures, rowContent: DepartureRow.init)
+        .contextMenu {
+            Button(action: {
+                UseCases.shared.toggleIsStopFavorited(self.hslStopId)
+            }) {
+                Text(UseCases.shared.getToggleIsStopFavoritedButtonTitle(hslStopId))
+            }
+        }
     }
 }
 
 struct DeparturessView_Previews: PreviewProvider {
     static var previews: some View {
-        DeparturesView(departures: [])
+        DeparturesView(departures: [], hslStopId: "")
     }
 }

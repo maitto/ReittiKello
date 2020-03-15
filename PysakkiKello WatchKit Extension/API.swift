@@ -11,6 +11,7 @@ public final class StopQuery: GraphQLQuery {
     query Stop($id: String!) {
       stop(id: $id) {
         __typename
+        gtfsId
         name
         stoptimesWithoutPatterns {
           __typename
@@ -74,6 +75,7 @@ public final class StopQuery: GraphQLQuery {
 
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+        GraphQLField("gtfsId", type: .nonNull(.scalar(String.self))),
         GraphQLField("name", type: .nonNull(.scalar(String.self))),
         GraphQLField("stoptimesWithoutPatterns", type: .list(.object(StoptimesWithoutPattern.selections))),
       ]
@@ -84,8 +86,8 @@ public final class StopQuery: GraphQLQuery {
         self.resultMap = unsafeResultMap
       }
 
-      public init(name: String, stoptimesWithoutPatterns: [StoptimesWithoutPattern?]? = nil) {
-        self.init(unsafeResultMap: ["__typename": "Stop", "name": name, "stoptimesWithoutPatterns": stoptimesWithoutPatterns.flatMap { (value: [StoptimesWithoutPattern?]) -> [ResultMap?] in value.map { (value: StoptimesWithoutPattern?) -> ResultMap? in value.flatMap { (value: StoptimesWithoutPattern) -> ResultMap in value.resultMap } } }])
+      public init(gtfsId: String, name: String, stoptimesWithoutPatterns: [StoptimesWithoutPattern?]? = nil) {
+        self.init(unsafeResultMap: ["__typename": "Stop", "gtfsId": gtfsId, "name": name, "stoptimesWithoutPatterns": stoptimesWithoutPatterns.flatMap { (value: [StoptimesWithoutPattern?]) -> [ResultMap?] in value.map { (value: StoptimesWithoutPattern?) -> ResultMap? in value.flatMap { (value: StoptimesWithoutPattern) -> ResultMap in value.resultMap } } }])
       }
 
       public var __typename: String {
@@ -94,6 +96,16 @@ public final class StopQuery: GraphQLQuery {
         }
         set {
           resultMap.updateValue(newValue, forKey: "__typename")
+        }
+      }
+
+      /// ÌD of the stop in format `FeedId:StopId`
+      public var gtfsId: String {
+        get {
+          return resultMap["gtfsId"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "gtfsId")
         }
       }
 

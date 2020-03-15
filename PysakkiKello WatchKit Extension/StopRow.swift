@@ -12,7 +12,7 @@ struct StopRow: View {
     var stop: Stop
     
     var body: some View {
-        NavigationLink(destination: DeparturesView(departures: stop.departures)) {
+        NavigationLink(destination: DeparturesView(departures: stop.departures, hslStopId: stop.hslStopId)) {
             Text(stop.stopName)
         }
     }
@@ -21,7 +21,7 @@ struct StopRow: View {
 struct StopRow_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            StopRow(stop: Stop(departures: [], stopName: "stop name"))
+            StopRow(stop: Stop(hslStopId: "", departures: [], stopName: "stop name"))
         }
     }
 }

@@ -13,13 +13,6 @@ class StorageService {
     let key = "favorites"
     let defaults = UserDefaults.standard
     
-    func test() {
-        var favorites = defaults.stringArray(forKey: key) ?? []
-        favorites.append("HSL:1050113")
-        favorites.append("HSL:1050415")
-        defaults.set(favorites, forKey: key)
-    }
-    
     func getFavoriteStops() -> [String] {
         let favorites = defaults.stringArray(forKey: key) ?? []
         return favorites

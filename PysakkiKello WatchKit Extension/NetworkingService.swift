@@ -32,7 +32,7 @@ class StopData: ObservableObject {
                         if let stoptimes = stop.stoptimesWithoutPatterns {
                             let departures = self.getDeparturesFromStoptimes(stoptimes)
                             if departures.count > 0 {
-                                let stop = Stop(departures: departures, stopName: stop.name)
+                                let stop = Stop(hslStopId: stop.gtfsId, departures: departures, stopName: stop.name)
                                 stops.append(stop)
                             }
                         }
@@ -46,11 +46,12 @@ class StopData: ObservableObject {
     func fetchStopById(_ id: String) {
         apollo.fetch(query: StopQuery(id: id)) { result in
             guard let data = try? result.get().data else { return }
-            if let stoptimes = data.stop?.stoptimesWithoutPatterns,
+            if let hslStopId = data.stop?.gtfsId,
+                let stoptimes = data.stop?.stoptimesWithoutPatterns,
                 let stopname = data.stop?.name {
                 let departures = self.getDeparturesFromStoptimes(stoptimes)
                 if departures.count > 0 {
-                    let stop = Stop(departures: departures, stopName: stopname)
+                    let stop = Stop(hslStopId: hslStopId, departures: departures, stopName: stopname)
                     self.stops.append(stop)
                 }
             }
@@ -105,6 +106,18 @@ class StopData: ObservableObject {
         }
         
         return departures
+    }
+    
+    func clearStopCache() {
+        stops = []
+    }
+    
+    func removeStopFromCache(_ id: String) {
+        if let index = stops.firstIndex(where: { stop -> Bool in
+            stop.hslStopId == id
+        }) {
+            stops.remove(at: index)
+        }
     }
     
 }

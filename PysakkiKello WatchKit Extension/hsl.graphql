@@ -1,6 +1,7 @@
 
 query Stop($id: String!){
   stop(id:$id) {
+    gtfsId
     name
       stoptimesWithoutPatterns {
       realtimeDeparture

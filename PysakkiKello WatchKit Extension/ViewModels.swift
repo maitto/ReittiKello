@@ -10,6 +10,7 @@ import Foundation
 
 struct Stop: Identifiable {
     public let id = UUID()
+    let hslStopId: String
     let departures: [Departure]
     let stopName: String
 }
