@@ -640,7 +640,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_ASSET_PATHS = "\"PysakkiKello WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 6T8F5MPVZ3;
 				ENABLE_PREVIEWS = YES;
@@ -667,7 +667,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_ASSET_PATHS = "\"PysakkiKello WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 6T8F5MPVZ3;
 				ENABLE_PREVIEWS = YES;
@@ -695,7 +695,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = 6T8F5MPVZ3;
 				IBSC_MODULE = PysakkiKello_WatchKit_Extension;
 				INFOPLIST_FILE = "PysakkiKello WatchKit App/Info.plist";
@@ -717,7 +717,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = 6T8F5MPVZ3;
 				IBSC_MODULE = PysakkiKello_WatchKit_Extension;
 				INFOPLIST_FILE = "PysakkiKello WatchKit App/Info.plist";
@@ -737,7 +737,7 @@
 			baseConfigurationReference = BB161D2DAD3AA522B6784807 /* Pods-PysakkiKello.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = 6T8F5MPVZ3;
 				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = morttiaittokoski.PysakkiKello;
@@ -751,7 +751,7 @@
 			baseConfigurationReference = 5ADB1C0206FE742F9C07F883 /* Pods-PysakkiKello.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = 6T8F5MPVZ3;
 				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = morttiaittokoski.PysakkiKello;
