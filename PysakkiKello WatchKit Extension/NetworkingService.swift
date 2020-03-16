@@ -19,8 +19,10 @@ class StopData: ObservableObject {
     static let shared = StopData()
     
     @Published var stops: [Stop] = []
+    @Published var isLoading: Bool = false
     
     func fetchNearbyStops(_ lat: Double, _ lon: Double, _ radius: Int = 900) {
+        isLoading = true
         apollo.fetch(query: StopsByRadiusQuery(lat: lat, lon: lon, radius: radius)) { result in
             guard let data = try? result.get().data else { return }
             if let edges = data.stopsByRadius?.edges {
@@ -39,22 +41,32 @@ class StopData: ObservableObject {
                     }
                 }
                 self.stops = stops
+                self.isLoading = false
             }
         }
     }
     
-    func fetchStopById(_ id: String) {
-        apollo.fetch(query: StopQuery(id: id)) { result in
-            guard let data = try? result.get().data else { return }
-            if let hslStopId = data.stop?.gtfsId,
-                let stoptimes = data.stop?.stoptimesWithoutPatterns,
-                let stopname = data.stop?.name {
-                let departures = self.getDeparturesFromStoptimes(stoptimes)
-                if departures.count > 0 {
-                    let stop = Stop(hslStopId: hslStopId, departures: departures, stopName: stopname)
-                    self.stops.append(stop)
+    func fetchStopsById(_ ids: [String]) {
+        isLoading = true
+        let group = DispatchGroup()
+        for id in ids {
+            group.enter()
+            apollo.fetch(query: StopQuery(id: id)) { result in
+                guard let data = try? result.get().data else { return }
+                if let hslStopId = data.stop?.gtfsId,
+                    let stoptimes = data.stop?.stoptimesWithoutPatterns,
+                    let stopname = data.stop?.name {
+                    let departures = self.getDeparturesFromStoptimes(stoptimes)
+                    if departures.count > 0 {
+                        let stop = Stop(hslStopId: hslStopId, departures: departures, stopName: stopname)
+                        self.stops.append(stop)
+                    }
+                    group.leave()
                 }
             }
+        }
+        group.notify(queue: DispatchQueue.main) {
+            self.isLoading = false
         }
     }
     
@@ -110,6 +122,7 @@ class StopData: ObservableObject {
     
     func clearStopCache() {
         stops = []
+        apollo.clearCache()
     }
     
     func removeStopFromCache(_ id: String) {

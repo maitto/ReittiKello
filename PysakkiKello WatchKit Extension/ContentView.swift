@@ -12,13 +12,20 @@ struct ContentView: View {
     @ObservedObject var stopData: StopData
     
     var body: some View {
-        List(stopData.stops, rowContent: StopRow.init)
-        .contextMenu {
-            Button(action: {
-                UseCases.shared.toggleListMode()
-            }) {
-                Text(UseCases.shared.getViewModeChangeTitle())
+        VStack(alignment: .leading, spacing: nil, content: {
+            if UseCases.shared.getShouldHideStopsList() {
+                Text(UseCases.shared.getTextForNoDataState())
+            } else {
+                Text(UseCases.shared.getViewModeListTitle())
+                List(stopData.stops, rowContent: StopRow.init)
             }
+        })
+            .contextMenu {
+                Button(action: {
+                    UseCases.shared.toggleListMode()
+                }) {
+                    Text(UseCases.shared.getViewModeChangeTitle())
+                }
         }
     }
 }

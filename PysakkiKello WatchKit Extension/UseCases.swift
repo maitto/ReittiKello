@@ -20,11 +20,9 @@ class UseCases {
     var viewMode: ViewMode = StorageService.shared.getFavoriteStops().isEmpty ? .nearby : .favorites
     
     func showFavoriteStops() {
-        StopData.shared.clearStopCache()
         let favoriteStopIds = StorageService.shared.getFavoriteStops()
-        for id in favoriteStopIds {
-            StopData.shared.fetchStopById(id)
-        }
+        StopData.shared.clearStopCache()
+        StopData.shared.fetchStopsById(favoriteStopIds)
     }
     
     func showNearbyStops() {
@@ -52,6 +50,15 @@ class UseCases {
         }
     }
     
+    func getViewModeListTitle() -> String {
+        switch viewMode {
+        case .favorites:
+            return "Favorite stops"
+        case .nearby:
+            return "Nearby stops"
+        }
+    }
+    
     func getViewModeChangeTitle() -> String {
         switch viewMode {
         case .favorites:
@@ -69,9 +76,6 @@ class UseCases {
             }
         } else {
             StorageService.shared.addFavoriteStop(id)
-            if viewMode == .favorites {
-                    
-            }
         }
         
     }
@@ -82,5 +86,22 @@ class UseCases {
         } else {
             return "Add stop to favorites"
         }
+    }
+    
+    func getTextForNoDataState() -> String {
+        if StopData.shared.isLoading {
+            return "Loading..."
+        } else {
+            switch viewMode {
+            case .favorites:
+                return "No stops added to favorites"
+            case .nearby:
+                return "No stops nearby"
+            }
+        }
+    }
+    
+    func getShouldHideStopsList() -> Bool {
+        return StopData.shared.isLoading || StopData.shared.stops.isEmpty
     }
 }
