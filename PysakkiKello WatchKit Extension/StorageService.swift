@@ -13,9 +13,16 @@ class StorageService {
     let key = "favorites"
     let defaults = UserDefaults.standard
     
+    var favoritesUpdated = false
+    
     func getFavoriteStops() -> [String] {
         let favorites = defaults.stringArray(forKey: key) ?? []
         return favorites
+    }
+    
+    func isStopFavorited(_ id: String) -> Bool {
+        let favorites = defaults.stringArray(forKey: key) ?? []
+        return favorites.contains(id)
     }
     
     func addFavoriteStop(_ id: String) {
@@ -30,5 +37,11 @@ class StorageService {
             favorites.remove(at: index)
         }
         defaults.set(favorites, forKey: key)
+    }
+    
+    func areFavoritesUpdated() -> Bool {
+        let favoritesUpdated = self.favoritesUpdated
+        self.favoritesUpdated = false
+        return favoritesUpdated
     }
 }

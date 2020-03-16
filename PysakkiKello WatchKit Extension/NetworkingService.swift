@@ -19,10 +19,9 @@ class StopData: ObservableObject {
     static let shared = StopData()
     
     @Published var stops: [Stop] = []
-    @Published var isLoading: Bool = false
+    @Published var isLoading: Bool = true
     
     func fetchNearbyStops(_ lat: Double, _ lon: Double, _ radius: Int = 900) {
-        isLoading = true
         apollo.fetch(query: StopsByRadiusQuery(lat: lat, lon: lon, radius: radius)) { result in
             guard let data = try? result.get().data else { return }
             if let edges = data.stopsByRadius?.edges {
@@ -30,7 +29,7 @@ class StopData: ObservableObject {
                 
                 for edge in edges {
                     if let stop = edge?.node?.stop {
-                        print("asd \(stop.gtfsId)")
+                        print("stop \(stop.gtfsId) distance: \(edge?.node?.distance ?? 0)")
                         if let stoptimes = stop.stoptimesWithoutPatterns {
                             let departures = self.getDeparturesFromStoptimes(stoptimes)
                             if departures.count > 0 {
@@ -47,7 +46,6 @@ class StopData: ObservableObject {
     }
     
     func fetchStopsById(_ ids: [String]) {
-        isLoading = true
         let group = DispatchGroup()
         for id in ids {
             group.enter()

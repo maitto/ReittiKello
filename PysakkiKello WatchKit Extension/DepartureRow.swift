@@ -12,7 +12,6 @@ struct DepartureRow: View {
     var departure: Departure
     
     var body: some View {
-        
         HStack {
             Text(departure.formattedDepartureTime) .foregroundColor(getBackgroundColorForDeparture(departure))
             

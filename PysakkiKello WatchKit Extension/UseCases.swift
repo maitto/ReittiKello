@@ -20,12 +20,14 @@ class UseCases {
     var viewMode: ViewMode = StorageService.shared.getFavoriteStops().isEmpty ? .nearby : .favorites
     
     func showFavoriteStops() {
+        StopData.shared.isLoading = true
         let favoriteStopIds = StorageService.shared.getFavoriteStops()
         StopData.shared.clearStopCache()
         StopData.shared.fetchStopsById(favoriteStopIds)
     }
     
     func showNearbyStops() {
+        StopData.shared.isLoading = true
         StopData.shared.clearStopCache()
         LocationService.shared.requestLocation()
     }
@@ -41,7 +43,7 @@ class UseCases {
         }
     }
     
-    func showStopsAtAppLaunch() {
+    func updateStops() {
         switch viewMode {
         case .favorites:
             showFavoriteStops()
@@ -69,19 +71,16 @@ class UseCases {
     }
     
     func toggleIsStopFavorited(_ id: String) {
-        if StorageService.shared.getFavoriteStops().contains(id) {
+        if StorageService.shared.isStopFavorited(id) {
             StorageService.shared.removeFavoriteStop(id)
-            if viewMode == .favorites {
-                StopData.shared.removeStopFromCache(id)
-            }
         } else {
             StorageService.shared.addFavoriteStop(id)
         }
-        
+        updateStops()
     }
     
     func getToggleIsStopFavoritedButtonTitle(_ id: String) -> String {
-        if StorageService.shared.getFavoriteStops().contains(id) {
+        if StorageService.shared.isStopFavorited(id) {
             return "Remove stop from favorites"
         } else {
             return "Add stop to favorites"

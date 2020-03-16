@@ -12,7 +12,7 @@ struct StopRow: View {
     var stop: Stop
     
     var body: some View {
-        NavigationLink(destination: DeparturesView(departures: stop.departures, hslStopId: stop.hslStopId)) {
+        NavigationLink(destination: DeparturesView(departures: stop.departures, hslStopId: stop.hslStopId, stopName: stop.stopName)) {
             Text(stop.stopName)
         }
     }
