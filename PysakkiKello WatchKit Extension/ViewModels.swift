@@ -9,14 +9,14 @@
 import Foundation
 
 struct Stop: Identifiable {
-    public let id = UUID()
-    let hslStopId: String
-    let departures: [Departure]
+    public let id: String
     let stopName: String
+    let platformCode: String?
 }
 
 struct Departure: Identifiable {
     public let id = UUID()
+    let hslStopId: String
     let departureTimestamp: Int
     let routeName: String
     let destination: String

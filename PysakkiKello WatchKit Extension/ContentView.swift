@@ -27,6 +27,9 @@ struct ContentView: View {
                     Text(UseCases.shared.getViewModeChangeTitle())
                 }
         }
+        .onAppear {
+            UseCases.shared.updateStops()
+        }
     }
 }
 

@@ -1,8 +1,6 @@
 
 query Stop($id: String!){
   stop(id:$id) {
-    gtfsId
-    name
       stoptimesWithoutPatterns {
       realtimeDeparture
       departureDelay
@@ -22,19 +20,12 @@ query StopsByRadius($lat: Float!, $lon: Float!, $radius: Int!){
     edges {
       node {
         stop {
+          stoptimesWithoutPatterns {
+            headsign
+          }
           gtfsId
           name
-            stoptimesWithoutPatterns {
-            realtimeDeparture
-            departureDelay
-            realtime
-            headsign
-            trip {
-              route {
-                shortName
-              }
-            }
-          }
+          platformCode
         }
         distance
       }

@@ -25,7 +25,7 @@ struct DepartureRow: View {
 struct DepartureRow_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            DepartureRow(departure: Departure(departureTimestamp: 123, routeName: "U", destination: "Helsinki", isRealTime: true, departureDelay: 10))
+            DepartureRow(departure: Departure(hslStopId: "", departureTimestamp: 123, routeName: "U", destination: "Helsinki", isRealTime: true, departureDelay: 10))
         }
     }
 }

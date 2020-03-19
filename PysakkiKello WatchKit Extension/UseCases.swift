@@ -19,36 +19,44 @@ class UseCases {
     
     var viewMode: ViewMode = StorageService.shared.getFavoriteStops().isEmpty ? .nearby : .favorites
     
-    func showFavoriteStops() {
-        StopData.shared.isLoading = true
-        let favoriteStopIds = StorageService.shared.getFavoriteStops()
-        StopData.shared.clearStopCache()
-        StopData.shared.fetchStopsById(favoriteStopIds)
+    func updateFavoriteStops() {
+        StopData.shared.stops = StorageService.shared.getFavoriteStops()
     }
     
-    func showNearbyStops() {
+    func updateNearbyStops() {
         StopData.shared.isLoading = true
         StopData.shared.clearStopCache()
         LocationService.shared.requestLocation()
+    }
+    
+    func showDeparturesForStop(_ id: String) {
+        StopData.shared.clearDepartureCache()
+        StopData.shared.fetchStop(id)
     }
     
     func toggleListMode() {
         switch viewMode {
         case .favorites:
             viewMode = .nearby
-            showNearbyStops()
+            updateNearbyStops()
         case .nearby:
             viewMode = .favorites
-            showFavoriteStops()
+            updateFavoriteStops()
         }
     }
     
     func updateStops() {
         switch viewMode {
         case .favorites:
-            showFavoriteStops()
+            updateFavoriteStops()
         case .nearby:
-            showNearbyStops()
+            updateNearbyStops()
+        }
+    }
+    
+    func updateDepartures() {
+        if let hslStopId = StopData.shared.departures.first?.hslStopId {
+            StopData.shared.fetchStop(hslStopId)
         }
     }
     
@@ -70,13 +78,12 @@ class UseCases {
         }
     }
     
-    func toggleIsStopFavorited(_ id: String) {
+    func toggleIsStopFavorited(_ id: String, name: String, platform: String?) {
         if StorageService.shared.isStopFavorited(id) {
             StorageService.shared.removeFavoriteStop(id)
         } else {
-            StorageService.shared.addFavoriteStop(id)
+            StorageService.shared.addFavoriteStop(id, stopName: name, platformName: platform)
         }
-        updateStops()
     }
     
     func getToggleIsStopFavoritedButtonTitle(_ id: String) -> String {

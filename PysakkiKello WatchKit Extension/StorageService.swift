@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SQLite
 
 class StorageService {
     static let shared = StorageService()
@@ -15,33 +16,91 @@ class StorageService {
     
     var favoritesUpdated = false
     
-    func getFavoriteStops() -> [String] {
-        let favorites = defaults.stringArray(forKey: key) ?? []
-        return favorites
-    }
+    var dbConnection: Connection?
+    var dbPath = ""
+    let stopTable = Table("stops")
+    let id = Expression<String>("id")
+    let name = Expression<String>("name")
+    let platform = Expression<String?>("platform")
     
-    func isStopFavorited(_ id: String) -> Bool {
-        let favorites = defaults.stringArray(forKey: key) ?? []
-        return favorites.contains(id)
-    }
-    
-    func addFavoriteStop(_ id: String) {
-        var favorites = defaults.stringArray(forKey: key) ?? []
-        favorites.append(id)
-        defaults.set(favorites, forKey: key)
-    }
-    
-    func removeFavoriteStop(_ id: String) {
-        var favorites = defaults.stringArray(forKey: key) ?? []
-        if let index = favorites.firstIndex(of: id) {
-            favorites.remove(at: index)
+    func createDatabase() {
+        guard let path = NSSearchPathForDirectoriesInDomains(
+            .documentDirectory, .userDomainMask, true
+        ).first else {
+            return
         }
-        defaults.set(favorites, forKey: key)
+
+        dbPath = "\(path)/db.sqlite3"
+        do {
+            dbConnection = try Connection(dbPath)
+        } catch {
+            print(error)
+        }
+        guard let dbConnection = dbConnection else {
+            return
+        }
+        do {
+            try dbConnection.run(stopTable.create { t in
+                t.column(id, primaryKey: true)
+                t.column(name)
+                t.column(platform)
+            })
+        } catch {
+            print(error)
+        }
     }
     
-    func areFavoritesUpdated() -> Bool {
-        let favoritesUpdated = self.favoritesUpdated
-        self.favoritesUpdated = false
-        return favoritesUpdated
+    func getFavoriteStops() -> [Stop] {
+        var stops: [Stop] = []
+        guard let dbConnection = dbConnection else {
+            return stops
+        }
+        
+        do {
+            for stop in try dbConnection.prepare(stopTable) {
+                stops.append(Stop(id: stop[id], stopName: stop[name], platformCode: stop[platform]))
+            }
+        } catch {
+            print(error)
+        }
+        
+        return stops
+    }
+    
+    func isStopFavorited(_ stopId: String) -> Bool {
+        guard let dbConnection = dbConnection else {
+            return false
+        }
+        let stop = stopTable.filter(id == stopId).exists
+        do {
+            return try dbConnection.scalar(stop)
+        } catch {
+            print(error)
+            return false
+        }
+    }
+    
+    func addFavoriteStop(_ stopId: String, stopName: String, platformName: String?) {
+        guard let dbConnection = dbConnection else {
+            return
+        }
+        let insert = stopTable.insert(id <- stopId, name <- stopName, platform <- platformName)
+        do {
+            try dbConnection.run(insert)
+        } catch {
+            print(error)
+        }
+    }
+    
+    func removeFavoriteStop(_ stopId: String) {
+        guard let dbConnection = dbConnection else {
+            return
+        }
+        let stop = stopTable.filter(id == stopId)
+        do {
+            try dbConnection.run(stop.delete())
+        } catch {
+            print(error)
+        }
     }
 }

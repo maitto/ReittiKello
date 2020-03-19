@@ -9,19 +9,24 @@
 import SwiftUI
 
 struct DeparturesView: View {
-    var departures: [Departure]
     var hslStopId: String
     var stopName: String
+    var platform: String?
     
     @State private var isStopFavoriteStateChanged = false
+    @ObservedObject var stopData: StopData
     
     var body: some View {
         VStack(alignment: .leading, spacing: nil, content: {
             Text(stopName)
-            List(departures, rowContent: DepartureRow.init)
+            if platform != nil {
+                Text("Platform \(platform ?? "")")
+                    .font(.footnote)
+            }
+            List(stopData.departures, rowContent: DepartureRow.init)
                 .contextMenu {
                     Button(action: {
-                        UseCases.shared.toggleIsStopFavorited(self.hslStopId)
+                        UseCases.shared.toggleIsStopFavorited(self.hslStopId, name: self.stopName, platform: self.platform)
                         self.isStopFavoriteStateChanged.toggle()
                     }) {
                         if isStopFavoriteStateChanged {
@@ -31,12 +36,15 @@ struct DeparturesView: View {
                         }
                     }
             }
-        })
+        }).onAppear {
+            print("DeparturesView onAppear")
+            UseCases.shared.showDeparturesForStop(self.hslStopId)
+        }
     }
 }
 
 struct DeparturessView_Previews: PreviewProvider {
     static var previews: some View {
-        DeparturesView(departures: [], hslStopId: "", stopName: "")
+        DeparturesView(hslStopId: "", stopName: "", platform: "", stopData: StopData())
     }
 }

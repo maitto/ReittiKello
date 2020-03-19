@@ -12,8 +12,14 @@ struct StopRow: View {
     var stop: Stop
     
     var body: some View {
-        NavigationLink(destination: DeparturesView(departures: stop.departures, hslStopId: stop.hslStopId, stopName: stop.stopName)) {
-            Text(stop.stopName)
+        NavigationLink(destination: DeparturesView(hslStopId: stop.id, stopName: stop.stopName, platform: stop.platformCode, stopData: StopData.shared)) {
+            VStack {
+                Text(stop.stopName)
+                if stop.platformCode != nil {
+                    Text("Platform \(stop.platformCode ?? "")")
+                        .font(.footnote)
+                }
+            }
         }
     }
 }
@@ -21,7 +27,7 @@ struct StopRow: View {
 struct StopRow_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            StopRow(stop: Stop(hslStopId: "", departures: [], stopName: "stop name"))
+            StopRow(stop: Stop(id: "", stopName: "", platformCode: ""))
         }
     }
 }
