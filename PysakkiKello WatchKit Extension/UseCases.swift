@@ -2,47 +2,23 @@
 //  UseCases.swift
 //  PysakkiKello WatchKit Extension
 //
-//  Created by Mortti Aittokoski on 14.3.2020.
+//  Created by Mortti Aittokoski on 21.3.2020.
 //  Copyright © 2020 Mortti Aittokoski. All rights reserved.
 //
 
 import Foundation
-import CoreLocation
-
-enum ViewMode {
-    case favorites
-    case nearby
-}
 
 class UseCases {
+    
     static let shared = UseCases()
     
-    var viewMode: ViewMode = StorageService.shared.getFavoriteStops().isEmpty ? .nearby : .favorites
+    var viewMode: ViewMode = .favorites
     
-    func updateFavoriteStops() {
-        StopData.shared.stops = StorageService.shared.getFavoriteStops()
-    }
-    
-    func updateNearbyStops() {
-        StopData.shared.isLoading = true
-        StopData.shared.clearStopCache()
-        LocationService.shared.requestLocation()
-    }
-    
-    func showDeparturesForStop(_ id: String) {
-        StopData.shared.clearDepartureCache()
-        StopData.shared.fetchStop(id)
-    }
-    
-    func toggleListMode() {
-        switch viewMode {
-        case .favorites:
-            viewMode = .nearby
-            updateNearbyStops()
-        case .nearby:
-            viewMode = .favorites
-            updateFavoriteStops()
-        }
+    func initView() {
+        viewMode = StorageService.shared.getFavoriteStops().isEmpty ? .nearby : .favorites
+        updateNoDataTitle(updating: true)
+        updateViewModeButtonTitle()
+        updateStopListTitle()
     }
     
     func updateStops() {
@@ -54,28 +30,33 @@ class UseCases {
         }
     }
     
-    func updateDepartures() {
-        if let hslStopId = StopData.shared.departures.first?.hslStopId {
-            StopData.shared.fetchStop(hslStopId)
+    func updateDepartures(_ id: String) {
+        ViewData.shared.departures = []
+        updateFavoritedButtonTitle(id)
+        NetworkService.shared.getDeparturesForStop(id) { departures in
+            ViewData.shared.departures = departures
+            self.updateNoDataTitle(updating: false)
         }
     }
     
-    func getViewModeListTitle() -> String {
-        switch viewMode {
-        case .favorites:
-            return "Favorite stops"
-        case .nearby:
-            return "Nearby stops"
+    func updateNearbyStops(_ lat: Double,_ lon: Double) {
+        NetworkService.shared.getNearbyStops(lat, lon) { stops in
+            ViewData.shared.stops = stops
+            self.updateNoDataTitle(updating: false)
         }
     }
     
-    func getViewModeChangeTitle() -> String {
+    func toggleListMode() {
         switch viewMode {
         case .favorites:
-            return "Show nearby stops"
+            viewMode = .nearby
         case .nearby:
-            return "Show favorite stops"
+            viewMode = .favorites
         }
+        updateNoDataTitle(updating: true)
+        updateViewModeButtonTitle()
+        updateStopListTitle()
+        updateStops()
     }
     
     func toggleIsStopFavorited(_ id: String, name: String, platform: String?) {
@@ -84,30 +65,75 @@ class UseCases {
         } else {
             StorageService.shared.addFavoriteStop(id, stopName: name, platformName: platform)
         }
+        updateFavoritedButtonTitle(id)
+        updateStops()
     }
     
-    func getToggleIsStopFavoritedButtonTitle(_ id: String) -> String {
-        if StorageService.shared.isStopFavorited(id) {
-            return "Remove stop from favorites"
-        } else {
-            return "Add stop to favorites"
+    func onApplicationDidFinishLaunching() {
+        StorageService.shared.createDatabase()
+        initView()
+    }
+    
+    func onApplicationDidBecomeActive() {
+        if let id = ViewData.shared.departures.first?.hslStopId {
+            updateDepartures(id)
+        }
+        updateStops()
+    }
+    
+    private func updateNearbyStops() {
+        LocationService.shared.requestLocation()
+    }
+    
+    private func updateFavoriteStops() {
+        ViewData.shared.stops = StorageService.shared.getFavoriteStops()
+        updateNoDataTitle(updating: false)
+    }
+    
+    private func updateViewModeButtonTitle() {
+        switch viewMode {
+        case .favorites:
+            ViewData.shared.viewModeButtonTitle = "Show nearby stops"
+        case .nearby:
+            ViewData.shared.viewModeButtonTitle = "Show favorite stops"
         }
     }
     
-    func getTextForNoDataState() -> String {
-        if StopData.shared.isLoading {
-            return "Loading..."
+    private func updateStopListTitle() {
+        switch viewMode {
+        case .favorites:
+            ViewData.shared.stopListTitle = "Favorite stops"
+        case .nearby:
+            ViewData.shared.stopListTitle = "Nearby stops"
+        }
+    }
+    
+    private func updateFavoritedButtonTitle(_ id: String) {
+        if StorageService.shared.isStopFavorited(id) {
+            ViewData.shared.toggleFavoritedButtonTitle = "Remove stop from favorites"
+        } else {
+            ViewData.shared.toggleFavoritedButtonTitle = "Add stop to favorites"
+        }
+    }
+    
+    private func updateNoDataTitle(updating: Bool) {
+        if updating {
+            ViewData.shared.noDataTitle = "Updating..."
         } else {
             switch viewMode {
             case .favorites:
-                return "No stops added to favorites"
+                if ViewData.shared.stops.isEmpty {
+                    ViewData.shared.noDataTitle = "No stops added to favorites"
+                } else {
+                    ViewData.shared.noDataTitle = ""
+                }
             case .nearby:
-                return "No stops nearby"
+                if ViewData.shared.stops.isEmpty {
+                    ViewData.shared.noDataTitle = "No stops nearby"
+                } else {
+                    ViewData.shared.noDataTitle = ""
+                }
             }
         }
-    }
-    
-    func getShouldHideStopsList() -> Bool {
-        return StopData.shared.isLoading || StopData.shared.stops.isEmpty
     }
 }

@@ -12,18 +12,17 @@ import Apollo
 fileprivate let graphQLEndpoint = "https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql"
 fileprivate let apollo = ApolloClient(url: URL(string: graphQLEndpoint)!)
 
-class StopData: ObservableObject {
-    static let shared = StopData()
+class NetworkService {
+    static let shared = NetworkService()
     private var operation: Cancellable?
     
-    @Published var stops: [Stop] = []
-    @Published var departures: [Departure] = []
-    @Published var isLoading: Bool = false
-    
-    func fetchNearbyStops(_ lat: Double, _ lon: Double, _ radius: Int = 900) {
-        operation?.cancel()
+    func getNearbyStops(_ lat: Double, _ lon: Double, _ radius: Int = 1000, completion: @escaping ([Stop]) -> ()) {
+        apollo.clearCache()
         operation = apollo.fetch(query: StopsByRadiusQuery(lat: lat, lon: lon, radius: radius)) { result in
-            guard let data = try? result.get().data else { return }
+            guard let data = try? result.get().data else {
+                completion([])
+                return
+            }
             if let edges = data.stopsByRadius?.edges {
                 var stops: [Stop] = []
                 
@@ -34,24 +33,29 @@ class StopData: ObservableObject {
                         stops.append(stop)
                     }
                 }
-                self.stops = stops
-                self.isLoading = false
+                completion(stops)
+            } else {
+                completion([])
             }
         }
     }
     
-    func fetchStop(_ hslStopId: String) {
-        operation?.cancel()
+    func getDeparturesForStop(_ hslStopId: String, completion: @escaping ([Departure]) -> ()) {
+        apollo.clearCache()
         operation = apollo.fetch(query: StopQuery(id: hslStopId)) { result in
-            guard let data = try? result.get().data else { return }
+            guard let data = try? result.get().data else {
+                completion([])
+                return
+            }
             if let stoptimes = data.stop?.stoptimesWithoutPatterns {
-                self.departures = self.getDeparturesFromStoptimes(hslStopId, stoptimes)
+                completion(self.getDeparturesFromStoptimes(hslStopId, stoptimes))
+            } else {
+                completion([])
             }
         }
     }
     
-    
-    func getDeparturesFromStoptimes(_ hslStopId: String, _ stoptimes: [StopQuery.Data.Stop.StoptimesWithoutPattern?]) -> [Departure] {
+    private func getDeparturesFromStoptimes(_ hslStopId: String, _ stoptimes: [StopQuery.Data.Stop.StoptimesWithoutPattern?]) -> [Departure] {
         var departures: [Departure] = []
         
         for stoptime in stoptimes {
@@ -77,14 +81,7 @@ class StopData: ObservableObject {
         return departures
     }
     
-    func clearStopCache() {
-        stops = []
-        apollo.clearCache()
+    func cancelOperation() {
+        operation?.cancel()
     }
-    
-    func clearDepartureCache() {
-        departures = []
-        apollo.clearCache()
-    }
-    
 }

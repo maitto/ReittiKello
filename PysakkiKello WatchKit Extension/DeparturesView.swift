@@ -13,8 +13,7 @@ struct DeparturesView: View {
     var stopName: String
     var platform: String?
     
-    @State private var isStopFavoriteStateChanged = false
-    @ObservedObject var stopData: StopData
+    @ObservedObject var viewData: ViewData
     
     var body: some View {
         VStack(alignment: .leading, spacing: nil, content: {
@@ -23,28 +22,23 @@ struct DeparturesView: View {
                 Text("Platform \(platform ?? "")")
                     .font(.footnote)
             }
-            List(stopData.departures, rowContent: DepartureRow.init)
+            List(viewData.departures, rowContent: DepartureRow.init)
                 .contextMenu {
                     Button(action: {
                         UseCases.shared.toggleIsStopFavorited(self.hslStopId, name: self.stopName, platform: self.platform)
-                        self.isStopFavoriteStateChanged.toggle()
                     }) {
-                        if isStopFavoriteStateChanged {
-                            Text(UseCases.shared.getToggleIsStopFavoritedButtonTitle(hslStopId))
-                        } else {
-                            Text(UseCases.shared.getToggleIsStopFavoritedButtonTitle(hslStopId))
-                        }
+                        Text(viewData.toggleFavoritedButtonTitle)
                     }
             }
         }).onAppear {
             print("DeparturesView onAppear")
-            UseCases.shared.showDeparturesForStop(self.hslStopId)
+            UseCases.shared.updateDepartures(self.hslStopId)
         }
     }
 }
 
 struct DeparturessView_Previews: PreviewProvider {
     static var previews: some View {
-        DeparturesView(hslStopId: "", stopName: "", platform: "", stopData: StopData())
+        DeparturesView(hslStopId: "", stopName: "", platform: "", viewData: ViewData())
     }
 }

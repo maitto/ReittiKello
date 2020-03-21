@@ -31,7 +31,7 @@ class LocationService: NSObject, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last {
             locationManager?.stopUpdatingLocation()
-            StopData.shared.fetchNearbyStops(location.coordinate.latitude, location.coordinate.longitude)
+            UseCases.shared.updateNearbyStops(location.coordinate.latitude, location.coordinate.longitude)
         }
     }
     

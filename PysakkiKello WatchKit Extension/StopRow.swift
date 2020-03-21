@@ -12,7 +12,7 @@ struct StopRow: View {
     var stop: Stop
     
     var body: some View {
-        NavigationLink(destination: DeparturesView(hslStopId: stop.id, stopName: stop.stopName, platform: stop.platformCode, stopData: StopData.shared)) {
+        NavigationLink(destination: DeparturesView(hslStopId: stop.id, stopName: stop.stopName, platform: stop.platformCode, viewData: ViewData.shared)) {
             VStack {
                 Text(stop.stopName)
                 if stop.platformCode != nil {
