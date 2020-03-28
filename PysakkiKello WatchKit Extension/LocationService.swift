@@ -31,12 +31,16 @@ class LocationService: NSObject, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last {
             locationManager?.stopUpdatingLocation()
-            UseCases.shared.updateNearbyStops(location.coordinate.latitude, location.coordinate.longitude)
+            ViewModel.shared.updateNearbyStops(location.coordinate.latitude, location.coordinate.longitude)
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("didFailWithError: \(error.localizedDescription)")
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        requestLocation()
     }
 
 }

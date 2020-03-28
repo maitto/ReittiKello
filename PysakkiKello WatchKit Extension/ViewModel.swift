@@ -1,5 +1,5 @@
 //
-//  UseCases.swift
+//  ViewModel.swift
 //  PysakkiKello WatchKit Extension
 //
 //  Created by Mortti Aittokoski on 21.3.2020.
@@ -8,9 +8,8 @@
 
 import Foundation
 
-class UseCases {
-    
-    static let shared = UseCases()
+class ViewModel {
+    static let shared = ViewModel()
     
     var viewMode: ViewMode = .favorites
     
@@ -93,46 +92,40 @@ class UseCases {
     private func updateViewModeButtonTitle() {
         switch viewMode {
         case .favorites:
-            ViewData.shared.viewModeButtonTitle = "Show nearby stops"
+            ViewData.shared.viewModeButtonTitle = "show_nearby_stops".localized()
         case .nearby:
-            ViewData.shared.viewModeButtonTitle = "Show favorite stops"
+            ViewData.shared.viewModeButtonTitle = "show_favorite_stops".localized()
         }
     }
     
     private func updateStopListTitle() {
         switch viewMode {
         case .favorites:
-            ViewData.shared.stopListTitle = "Favorite stops"
+            ViewData.shared.stopListTitle = "favorite_stops".localized()
         case .nearby:
-            ViewData.shared.stopListTitle = "Nearby stops"
+            ViewData.shared.stopListTitle = "nearby_stops".localized()
         }
     }
     
     private func updateFavoritedButtonTitle(_ id: String) {
         if StorageService.shared.isStopFavorited(id) {
-            ViewData.shared.toggleFavoritedButtonTitle = "Remove stop from favorites"
+            ViewData.shared.toggleFavoritedButtonTitle = "remove_stop_from_favorites".localized()
         } else {
-            ViewData.shared.toggleFavoritedButtonTitle = "Add stop to favorites"
+            ViewData.shared.toggleFavoritedButtonTitle = "add_stop_to_favorites".localized()
         }
     }
     
     private func updateNoDataTitle(updating: Bool) {
         if updating {
-            ViewData.shared.noDataTitle = "Updating..."
+            ViewData.shared.noDataTitle = "updating".localized()
+        } else if !ViewData.shared.stops.isEmpty {
+            ViewData.shared.noDataTitle = ""
         } else {
             switch viewMode {
             case .favorites:
-                if ViewData.shared.stops.isEmpty {
-                    ViewData.shared.noDataTitle = "No stops added to favorites"
-                } else {
-                    ViewData.shared.noDataTitle = ""
-                }
+                ViewData.shared.noDataTitle = "no_stops_added_to_favorites".localized()
             case .nearby:
-                if ViewData.shared.stops.isEmpty {
-                    ViewData.shared.noDataTitle = "No stops nearby"
-                } else {
-                    ViewData.shared.noDataTitle = ""
-                }
+                ViewData.shared.noDataTitle = "no_stops_nearby".localized()
             }
         }
     }

@@ -19,20 +19,20 @@ struct DeparturesView: View {
         VStack(alignment: .leading, spacing: nil, content: {
             Text(stopName)
             if platform != nil {
-                Text("Platform \(platform ?? "")")
+                Text("\("platform".localized()) \(platform ?? "")")
                     .font(.footnote)
             }
             List(viewData.departures, rowContent: DepartureRow.init)
                 .contextMenu {
                     Button(action: {
-                        UseCases.shared.toggleIsStopFavorited(self.hslStopId, name: self.stopName, platform: self.platform)
+                        ViewModel.shared.toggleIsStopFavorited(self.hslStopId, name: self.stopName, platform: self.platform)
                     }) {
                         Text(viewData.toggleFavoritedButtonTitle)
                     }
             }
         }).onAppear {
             print("DeparturesView onAppear")
-            UseCases.shared.updateDepartures(self.hslStopId)
+            ViewModel.shared.updateDepartures(self.hslStopId)
         }
     }
 }

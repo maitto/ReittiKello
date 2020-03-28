@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  PysakkiKello
+
+  Created by Mortti Aittokoski on 22.3.2020.
+  Copyright © 2020 Mortti Aittokoski. All rights reserved.
+*/
+
+"show_nearby_stops" = "Näytä lähimmät pysäkit"; //Show nearby stops";
+"show_favorite_stops" = "Show favorite stops";
+"favorite_stops" = "Favorite stops";
+"nearby_stops" = "Nearby stops";
+"remove_stop_from_favorites" = "Remove stop from favorites";
+"add_stop_to_favorites" = "Add stop to favorites";
+"updating" = "Updating...";
+"no_stops_added_to_favorites" = "No stops added to favorites";
+"no_stops_nearby" = "No stops nearby";
+"platform" = "Platform";

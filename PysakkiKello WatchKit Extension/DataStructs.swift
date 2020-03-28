@@ -1,5 +1,5 @@
 //
-//  ViewModels.swift
+//  DataStructs.swift
 //  PysakkiKello WatchKit Extension
 //
 //  Created by Mortti Aittokoski on 23.2.2020.
@@ -26,17 +26,4 @@ struct Departure: Identifiable {
     var formattedDepartureTime: String {
         return getFormattedTime(seconds: departureTimestamp) ?? "\(departureTimestamp)"
     }
-}
-
-fileprivate func getFormattedTime(seconds: Int) -> String? {
-    let duration: TimeInterval = TimeInterval(seconds)
-
-    let formatter = DateComponentsFormatter()
-    formatter.unitsStyle = .positional
-    formatter.allowedUnits = [ .hour ,.minute ]
-    formatter.zeroFormattingBehavior = [ .pad ]
-
-    let formattedDuration = formatter.string(from: duration)
-    
-    return formattedDuration
 }

@@ -12,13 +12,13 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
     func applicationDidFinishLaunching() {
         // Perform any final initialization of your application.
-        UseCases.shared.onApplicationDidFinishLaunching()
+        ViewModel.shared.onApplicationDidFinishLaunching()
     }
 
     func applicationDidBecomeActive() {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
         
-        UseCases.shared.onApplicationDidBecomeActive()
+        ViewModel.shared.onApplicationDidBecomeActive()
         print("applicationDidBecomeActive")
     }
 

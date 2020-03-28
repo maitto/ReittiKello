@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  PysakkiKello
+
+  Created by Mortti Aittokoski on 22.3.2020.
+  Copyright © 2020 Mortti Aittokoski. All rights reserved.
+*/
+    
+"show_nearby_stops" = "Näytä lähimmät pysäkit";
+"show_favorite_stops" = "Näytä suosikki pysäkit";
+"favorite_stops" = "Suosikki pysäkit";
+"nearby_stops" = "Lähimmät pysäkit";
+"remove_stop_from_favorites" = "Poista pysäkki suosikeista";
+"add_stop_to_favorites" = "Lisää pysäkki suosikkeihin";
+"updating" = "Päivitetään...";
+"no_stops_added_to_favorites" = "Suosikkeihin ei ole lisätty yhtään pysäkkiä";
+"no_stops_nearby" = "Ei pysäkkejä lähettyvillä";
+"platform" = "Laituri";

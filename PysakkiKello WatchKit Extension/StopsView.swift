@@ -22,9 +22,12 @@ struct StopsView: View {
         })
             .contextMenu {
                 Button(action: {
-                    UseCases.shared.toggleListMode()
+                    ViewModel.shared.toggleListMode()
                 }) {
-                    Text(viewData.viewModeButtonTitle)
+                    VStack {
+                        Text(viewData.viewModeButtonTitle)
+                        Image(systemName: "star")
+                    }
                 }
         }
     }
