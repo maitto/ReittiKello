@@ -12,9 +12,9 @@ struct DeparturesView: View {
     var hslStopId: String
     var stopName: String
     var platform: String?
-    
+
     @ObservedObject var viewData: ViewData
-    
+
     var body: some View {
         VStack(alignment: .leading, spacing: nil, content: {
             Text(stopName)

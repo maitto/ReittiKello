@@ -13,16 +13,16 @@ class StorageService {
     static let shared = StorageService()
     let key = "favorites"
     let defaults = UserDefaults.standard
-    
+
     var favoritesUpdated = false
-    
+
     var dbConnection: Connection?
     var dbPath = ""
     let stopTable = Table("stops")
     let id = Expression<String>("id")
     let name = Expression<String>("name")
     let platform = Expression<String?>("platform")
-    
+
     func createDatabase() {
         guard let path = NSSearchPathForDirectoriesInDomains(
             .documentDirectory, .userDomainMask, true
@@ -40,22 +40,22 @@ class StorageService {
             return
         }
         do {
-            try dbConnection.run(stopTable.create { t in
-                t.column(id, primaryKey: true)
-                t.column(name)
-                t.column(platform)
+            try dbConnection.run(stopTable.create { table in
+                table.column(id, primaryKey: true)
+                table.column(name)
+                table.column(platform)
             })
         } catch {
             print(error)
         }
     }
-    
+
     func getFavoriteStops() -> [Stop] {
         var stops: [Stop] = []
         guard let dbConnection = dbConnection else {
             return stops
         }
-        
+
         do {
             for stop in try dbConnection.prepare(stopTable) {
                 stops.append(Stop(id: stop[id], stopName: stop[name], platformCode: stop[platform]))
@@ -63,10 +63,10 @@ class StorageService {
         } catch {
             print(error)
         }
-        
+
         return stops
     }
-    
+
     func isStopFavorited(_ stopId: String) -> Bool {
         guard let dbConnection = dbConnection else {
             return false
@@ -79,7 +79,7 @@ class StorageService {
             return false
         }
     }
-    
+
     func addFavoriteStop(_ stopId: String, stopName: String, platformName: String?) {
         guard let dbConnection = dbConnection else {
             return
@@ -91,7 +91,7 @@ class StorageService {
             print(error)
         }
     }
-    
+
     func removeFavoriteStop(_ stopId: String) {
         guard let dbConnection = dbConnection else {
             return

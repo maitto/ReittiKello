@@ -8,6 +8,7 @@ target 'PysakkiKello' do
   # Pods for PysakkiKello
 pod 'Apollo'
 pod 'SQLite.swift'
+pod 'SwiftLint'
 
 end
 
@@ -18,6 +19,7 @@ target 'PysakkiKello WatchKit App' do
   # Pods for PysakkiKello WatchKit App
   pod 'Apollo'
   pod 'SQLite.swift'
+  pod 'SwiftLint'
 
 end
 
@@ -28,6 +30,7 @@ target 'PysakkiKello WatchKit Extension' do
   # Pods for PysakkiKello WatchKit Extension
   pod 'Apollo'
   pod 'SQLite.swift'
+  pod 'SwiftLint'
 
 end
 workspace 'PysakkiKello'

@@ -15,6 +15,7 @@
 		2B3BC0472427B5C900B5AE19 /* Utils+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3BC0462427B5C900B5AE19 /* Utils+Extensions.swift */; };
 		2BABD5C924322EE400514129 /* PysakkiKelloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BABD5C824322EE400514129 /* PysakkiKelloTests.swift */; };
 		2BABD5CE24322F9700514129 /* Utils+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3BC0462427B5C900B5AE19 /* Utils+Extensions.swift */; };
+		2BABD5D52432366800514129 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 2BABD5D42432366800514129 /* .swiftlint.yml */; };
 		2BAD23C4241BCD27008AEB9B /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAD23C3241BCD27008AEB9B /* StorageService.swift */; };
 		2BC7F4102423CB220093A7B5 /* StopData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC7F40F2423CB220093A7B5 /* StopData.swift */; };
 		2BC7F41224266BAE0093A7B5 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC7F41124266BAE0093A7B5 /* ViewModel.swift */; };
@@ -94,6 +95,7 @@
 		2BABD5C624322EE400514129 /* PysakkiKelloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PysakkiKelloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BABD5C824322EE400514129 /* PysakkiKelloTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PysakkiKelloTests.swift; sourceTree = "<group>"; };
 		2BABD5CA24322EE400514129 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BABD5D42432366800514129 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		2BAD23C3241BCD27008AEB9B /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		2BC7F40F2423CB220093A7B5 /* StopData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopData.swift; sourceTree = "<group>"; };
 		2BC7F41124266BAE0093A7B5 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 		2BE026FC240299D400B3F367 = {
 			isa = PBXGroup;
 			children = (
+				2BABD5D42432366800514129 /* .swiftlint.yml */,
 				2BE0270B240299D400B3F367 /* PysakkiKello WatchKit App */,
 				2BE0271A240299D800B3F367 /* PysakkiKello WatchKit Extension */,
 				2BABD5C724322EE400514129 /* PysakkiKelloTests */,
@@ -338,6 +341,7 @@
 				2BE02713240299D800B3F367 /* Frameworks */,
 				2BE02714240299D800B3F367 /* Resources */,
 				1B5F18169199230F1A020BD4 /* [CP] Embed Pods Frameworks */,
+				2BABD5CF243234CD00514129 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -422,6 +426,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BABD5D52432366800514129 /* .swiftlint.yml in Resources */,
 				2B3BC04224276CCA00B5AE19 /* Localizable.strings in Resources */,
 				2BCF23AB2402A43F00F60337 /* schema.json in Resources */,
 				2BE0274624029AE200B3F367 /* hsl.graphql in Resources */,
@@ -449,6 +454,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PysakkiKello WatchKit Extension/Pods-PysakkiKello WatchKit Extension-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		2BABD5CF243234CD00514129 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 		2BAD23C2241B9C22008AEB9B /* Generate Apollo GraphQL API */ = {
 			isa = PBXShellScriptBuildPhase;

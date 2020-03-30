@@ -10,7 +10,7 @@ import SwiftUI
 
 struct StopsView: View {
     @ObservedObject var viewData: ViewData
-    
+
     var body: some View {
         VStack(alignment: .leading, spacing: nil, content: {
             if viewData.noDataTitle != "" {

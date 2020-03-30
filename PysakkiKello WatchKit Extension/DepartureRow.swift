@@ -10,13 +10,13 @@ import SwiftUI
 
 struct DepartureRow: View {
     var departure: Departure
-    
+
     var body: some View {
         HStack {
             Text(departure.formattedDepartureTime) .foregroundColor(getBackgroundColorForDeparture(departure))
-            
+
             Text(departure.routeName).frame(minWidth: 9, idealWidth: 9, maxWidth: 20, minHeight: nil, idealHeight: nil, maxHeight: nil, alignment: .center)
-            
+
             Text(departure.destination)
         }
     }
@@ -29,7 +29,6 @@ struct DepartureRow_Previews: PreviewProvider {
         }
     }
 }
-
 
 func getBackgroundColorForDeparture(_ departure: Departure) -> Color? {
     if departure.departureDelay > 60 {

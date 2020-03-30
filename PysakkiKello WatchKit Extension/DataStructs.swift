@@ -22,7 +22,7 @@ struct Departure: Identifiable {
     let destination: String
     let isRealTime: Bool
     let departureDelay: Int
-    
+
     var formattedDepartureTime: String {
         return getFormattedTime(seconds: departureTimestamp) ?? "\(departureTimestamp)"
     }

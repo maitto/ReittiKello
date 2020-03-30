@@ -10,7 +10,7 @@ import SwiftUI
 
 struct StopRow: View {
     var stop: Stop
-    
+
     var body: some View {
         NavigationLink(destination: DeparturesView(hslStopId: stop.id, stopName: stop.stopName, platform: stop.platformCode, viewData: ViewData.shared)) {
             VStack {

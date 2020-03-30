@@ -6,219 +6,261 @@
 	objectVersion = 51;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		0626378CBCA3137F03E6DCC306504C4B /* SwiftLint-watchOS */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = EE281C55CA51425B131359529BA6F174 /* Build configuration list for PBXAggregateTarget "SwiftLint-watchOS" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = "SwiftLint-watchOS";
+		};
+		2B03D5FD26A26B7D62142EA4492AEB83 /* SwiftLint-iOS */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 15C2581D1D019FF8D7F783E76C884B84 /* Build configuration list for PBXAggregateTarget "SwiftLint-iOS" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = "SwiftLint-iOS";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		00CE4F7124C8CF327A32D15C6F729CFF /* GraphQLHTTPRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A8F243638273661D18B6F474117619 /* GraphQLHTTPRequestError.swift */; };
-		02FA19BAB16422B45769F757646939BA /* Pods-PysakkiKello WatchKit App-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A14FF31E47C1F8AF04C832D7D52988 /* Pods-PysakkiKello WatchKit App-dummy.m */; };
-		06140A31E12C15D5A42F1252307C6CA0 /* GraphQLExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B5E3CF9F001B2395F14E3B83454732 /* GraphQLExecutor.swift */; };
-		086CEC573E1EE8DE60278C1AA01D086E /* Result+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BA2B0833D724ADD3E9FCF347E0C950 /* Result+Helpers.swift */; };
-		094B1532D04C479A07689586A0F2B648 /* GraphQLResultNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268AC5D4AA094D12414E5325C6DC7729 /* GraphQLResultNormalizer.swift */; };
-		0A41EE7A6F61EAD7FF82C3318EDB1DE0 /* SQLiteObjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 965D79C0A7AF1EBDB4172A115D5B97B3 /* SQLiteObjc.m */; };
-		0B5E779137E724BADF2BE7C0D8B4721F /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD306789730B07517DCE9DA10A9E9675 /* Helpers.swift */; };
-		0CBA8B4AF883A88B82901FBFAC64A736 /* ApolloStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4628F615612A5C46BE3113FD683B51F8 /* ApolloStore.swift */; };
+		00CE4F7124C8CF327A32D15C6F729CFF /* GraphQLHTTPRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36ACAC258219A1707B82454B9F4E06C /* GraphQLHTTPRequestError.swift */; };
+		06140A31E12C15D5A42F1252307C6CA0 /* GraphQLExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C39374451CFFC343961A37D885132FD /* GraphQLExecutor.swift */; };
+		086CEC573E1EE8DE60278C1AA01D086E /* Result+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40800DD97FCE26ADE467CB0C3628D8A3 /* Result+Helpers.swift */; };
+		094B1532D04C479A07689586A0F2B648 /* GraphQLResultNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE32CC3801CC6E3D24DFE9E48EA02FC /* GraphQLResultNormalizer.swift */; };
+		0A41EE7A6F61EAD7FF82C3318EDB1DE0 /* SQLiteObjc.m in Sources */ = {isa = PBXBuildFile; fileRef = B67A3F09B7FFECC0A1C9437F69B2EA11 /* SQLiteObjc.m */; };
+		0B5E779137E724BADF2BE7C0D8B4721F /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A85FA377E0399F7B93F1FCC626D2F9 /* Helpers.swift */; };
+		0CBA8B4AF883A88B82901FBFAC64A736 /* ApolloStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B8939DC4ECF02EF10E092C02549D3A /* ApolloStore.swift */; };
+		0DC351F88F6D25E8443C6EFB7C04599C /* Pods-PysakkiKello-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EA1D763942C03E4D2904B21B55115F55 /* Pods-PysakkiKello-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0DE3C4D88BA63AB5EDC72A86A696A8C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ADBF5E8B7047831DCFB355C966E47AD /* Foundation.framework */; };
-		0E19C88DFA0E92B1A4318255167979DE /* GraphQLFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0AD372E4B7808C92E611C37ABF0EAD /* GraphQLFile.swift */; };
-		0EDA87F536974DB8FC63C218404A78EA /* RTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64025DA65B28A970074CF5D077D433B /* RTree.swift */; };
-		0FA5BE25E0CF2FE25C7BE26FC95B4CF5 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B871EFA1E7DE71321093837135338389 /* Operators.swift */; };
-		128E595374451249308FBBCCBFC39C1F /* ResponsePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D1334578E2DCA1AC0702858425A95E /* ResponsePath.swift */; };
-		179B902A4F65EC8C8D12DA54A4056A9E /* GraphQLHTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170AEF7AB5DD27BB0D265E5A738474CF /* GraphQLHTTPMethod.swift */; };
-		19B263F6981FF84A1178FD8D5642C81B /* RequestCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C96B0B539306BC8B0584A2B55086A5 /* RequestCreator.swift */; };
+		0E19C88DFA0E92B1A4318255167979DE /* GraphQLFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E038E78E0723FB4ABE5DFF17C8A58A /* GraphQLFile.swift */; };
+		0EDA87F536974DB8FC63C218404A78EA /* RTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EEA1EF40839C625BDF4E275B46FE5D /* RTree.swift */; };
+		0FA5BE25E0CF2FE25C7BE26FC95B4CF5 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49D51A681531281B45C8410FF41403E /* Operators.swift */; };
+		128E595374451249308FBBCCBFC39C1F /* ResponsePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE1795B61C2A9643A6EDBEDDD7D796F /* ResponsePath.swift */; };
+		179B902A4F65EC8C8D12DA54A4056A9E /* GraphQLHTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F23813532B0C0052735D94581D04F63 /* GraphQLHTTPMethod.swift */; };
+		19B263F6981FF84A1178FD8D5642C81B /* RequestCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B494E8DD253DF5CB8BA8B25D9AB2B3F1 /* RequestCreator.swift */; };
 		19CCF9143F87434FA7951A44691A7479 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86FE31D69E844FBC226419FFD908E6D2 /* Foundation.framework */; };
-		1B52A320D0B8BDB4022BC8C997FEC272 /* ApolloStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4628F615612A5C46BE3113FD683B51F8 /* ApolloStore.swift */; };
-		1BBB6BC80F1DCAF0E84F84BE787D6090 /* Collation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90BEC05717F3EDCD8B944B668EB301A /* Collation.swift */; };
-		1C49DF949079B54D6DC802CDD0ECCC13 /* CustomFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFC5FD36526B5E4567FBE8AA2376C2E /* CustomFunctions.swift */; };
-		1D7B22F36B93AA7F9EF1B735AC120332 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DB7BFE087E3DD1E9CAB37AADD524E3 /* MultipartFormData.swift */; };
-		1DA902CDFC618DA5F9CD42FE0C9B03A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86FE31D69E844FBC226419FFD908E6D2 /* Foundation.framework */; };
-		1F6C0D21E7DDC70C2460442DDC7EE307 /* DispatchQueue+Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA2EF0F15493F0198442112E07AA071 /* DispatchQueue+Optional.swift */; };
-		21A03094FF8AA2CD342A7A4807E77E6D /* DispatchQueue+Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA2EF0F15493F0198442112E07AA071 /* DispatchQueue+Optional.swift */; };
-		26002913BCDFE0E8C70B5D3CD76DEF25 /* DateAndTimeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D278B16171414DB5449EE31D1F6CFDD1 /* DateAndTimeFunctions.swift */; };
-		27F5FD59609782719F68DC7A4D9E54FD /* HTTPURLResponse+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4F0BC09F59BE752DBD3666B2CEB689 /* HTTPURLResponse+Helpers.swift */; };
-		2862E6037F29CC5C805BFEF7D33BCC8F /* GraphQLSelectionSetMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC91F0F529C6163D21BC0D58D4913049 /* GraphQLSelectionSetMapper.swift */; };
-		29ACABEA2FEAAA502BADBDA1C81CEABE /* GraphQLQueryWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265C01711B9E5F148E1F2A71B28D769D /* GraphQLQueryWatcher.swift */; };
-		29B1C8AC2BA0A50A92CED7EDA2594473 /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C249A9A014C68846703B0E11FD8393B /* Statement.swift */; };
-		29D7A1B5AB1074CE13E3F7AB29AA70C4 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECB512B709D91717DA5369D47161A34 /* Query.swift */; };
-		2A34A1147E38BE86E304F462956DBAA4 /* Pods-PysakkiKello WatchKit Extension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C906AE3A3BE3302612B948EE90B7684 /* Pods-PysakkiKello WatchKit Extension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2B4F23AA37FDCFE45FB9937B7480EF8D /* ApolloClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536AA974BF3723694E9B96200634D8A5 /* ApolloClient.swift */; };
-		2C7451D38536B4E1AF99EE5755C1DDB3 /* Apollo-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C8922A829D9CA870B5B191E15103AFF2 /* Apollo-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		355FF7EBBF0707823A65ABB74321D47A /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2428D71E7FF630C1C0FFB5B67D58BF07 /* Errors.swift */; };
-		376AE8D22DA567D43DB94C709A943BA7 /* Apollo-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 851E27FAD6876354ED75790EFA7C1A21 /* Apollo-iOS-dummy.m */; };
-		3927D3451C744E07731A43A939F337AF /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75C55FED0F6CF1E9E04BFDA1E520D13 /* DataLoader.swift */; };
-		393777665598FA40D0EB3F67D5F6F99A /* RTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64025DA65B28A970074CF5D077D433B /* RTree.swift */; };
-		39B42ACCD8F9797650D1CA66ECB9F4AB /* GraphQLHTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170AEF7AB5DD27BB0D265E5A738474CF /* GraphQLHTTPMethod.swift */; };
-		3A703A0FAA67DD611A05BA7D34CC9737 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477AABA708A2507869801E2024ACDFAE /* Connection.swift */; };
-		3AEA55ED6C08906E8B52CBA3B4E66B0B /* JSONSerialization+Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C475D82879C23A00A9066D4D5AED55 /* JSONSerialization+Sorting.swift */; };
-		3B16E1D38D8A98F7F3461C64616643EB /* SQLite.h in Headers */ = {isa = PBXBuildFile; fileRef = CE475C47F48CD811BF0575420F86FC07 /* SQLite.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3CC916D35D33F8750EBE534BDBC47EB3 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E838FB623F3C1F10C6B218E96E8B52 /* JSON.swift */; };
-		40DB1CF059C9ABA674AC6291FB23AA3B /* Locking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B607D45ABD7635DF3A7A4935E0BD40 /* Locking.swift */; };
-		4119988C8AFAEDB88E8DB46610AE6F5D /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477AABA708A2507869801E2024ACDFAE /* Connection.swift */; };
-		4166B6887460466B5D8B2A5F33BF4EE9 /* ApolloClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536AA974BF3723694E9B96200634D8A5 /* ApolloClient.swift */; };
-		44B3092D7873A8C7C47B689976CDEE1C /* SQLiteObjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 965D79C0A7AF1EBDB4172A115D5B97B3 /* SQLiteObjc.m */; };
-		45921180F38A838100485DF143CBFE27 /* SQLite.h in Headers */ = {isa = PBXBuildFile; fileRef = CE475C47F48CD811BF0575420F86FC07 /* SQLite.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		46C259F4385C50089745A291A3E96554 /* GraphQLSelectionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973C3B92C3E8C46C4DC1697CEB3B6331 /* GraphQLSelectionSet.swift */; };
-		4A281170B7544E8799DFAB22D4BFBA9A /* InMemoryNormalizedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B27C9D88E95D9054808A8CFA9E3EC5 /* InMemoryNormalizedCache.swift */; };
-		4CBF709347E13C7414842BCDA9018887 /* Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDA20AEC9749B1B014D5EB85291A1E9 /* Coding.swift */; };
-		4E7432BA64491C5A019425716F4B60DF /* Apollo-watchOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CE904D610DCEE6D55ED29B715E593EC5 /* Apollo-watchOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4F7BB385119FFF6343F52E855A99081F /* NormalizedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938C6FC628D112DA9F6E1FEF606A48EE /* NormalizedCache.swift */; };
-		5138D160A9A8BBC7EE8A81BC823AADF9 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75C55FED0F6CF1E9E04BFDA1E520D13 /* DataLoader.swift */; };
-		527C78992CE32212DED40A4FFC505775 /* JSONSerialization+Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C475D82879C23A00A9066D4D5AED55 /* JSONSerialization+Sorting.swift */; };
-		528F9781905678330D07E342B1B42E08 /* Pods-PysakkiKello WatchKit Extension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8A7A3B697569AA674A3BBFCC6C3C6 /* Pods-PysakkiKello WatchKit Extension-dummy.m */; };
-		53BA96FDAEE1A7C07703C2FDB4A0E635 /* GraphQLHTTPResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A133303D31A4AFE7FC9BD93BD036111 /* GraphQLHTTPResponseError.swift */; };
-		552DDF3CE96227C9F19B97F2C589E7A8 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5C29D836EA7B740D1A94B01578449F /* Expression.swift */; };
-		55968F1847979238AF94263CAB7BAC28 /* SQLite.swift-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BBA30AABD952A1883D7D955F19987C2 /* SQLite.swift-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		570F5E8A50EFD4D5AD6CA367EE88BDAE /* SQLite.swift-watchOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 61E53179E2C4246F36BF38054BFE15AC /* SQLite.swift-watchOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		57BFA06BF796E573C5C890372F23EA77 /* AggregateFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5FA8AA727058486E8D6A47856BEB5C /* AggregateFunctions.swift */; };
-		57FF19DEB6C742C732AF2D06AD014890 /* Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDA20AEC9749B1B014D5EB85291A1E9 /* Coding.swift */; };
-		591600971D33C67BAC9EB8F90BF6CAD5 /* Setter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9D30C6A251BB57B5A11318618E1E2E /* Setter.swift */; };
-		59AEB3C507E2A10EFEBCEB2C91627B7E /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F462EFA7D55BFB31590BB987DF18BC9 /* Promise.swift */; };
-		5A4895CD391A62FAE7FC52B34933FC15 /* String+SHA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6248235898DC33B9E9E63518388D1550 /* String+SHA.swift */; };
-		5D6561ED7A93A50ABCA0060DB0A32F2F /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F78A4579AA480919201B199D530FCC /* Atomic.swift */; };
-		5D96B254C4D83C59B0CA9208B384864C /* Locking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B607D45ABD7635DF3A7A4935E0BD40 /* Locking.swift */; };
-		601C82096BF585AB908F98AAF4A8FFA3 /* Collection+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166FF0141CB08815834BA6FA1FA4BD75 /* Collection+Helpers.swift */; };
-		6175DCACFA14C0D3144A597F03DA320D /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F78A4579AA480919201B199D530FCC /* Atomic.swift */; };
-		6252B3848D362AD58B01F042B0DDE349 /* HTTPNetworkTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3D8552AB092719423A2AED079370B /* HTTPNetworkTransport.swift */; };
-		626237CB2442BA4EED2C26EB316D2BBF /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E838FB623F3C1F10C6B218E96E8B52 /* JSON.swift */; };
-		62D3ED3A8020C739D7E9BD97AE03A068 /* HTTPURLResponse+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4F0BC09F59BE752DBD3666B2CEB689 /* HTTPURLResponse+Helpers.swift */; };
-		6462E88DC26DB072DBCE9918BDC5CCB0 /* JSONSerializationFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D0189FDE3C27889B71D44DC3329ED2 /* JSONSerializationFormat.swift */; };
-		67B50437BE657D4EB561970D1249E692 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B871EFA1E7DE71321093837135338389 /* Operators.swift */; };
-		68E29AFBDBD31AF2A0C850760E629E48 /* GraphQLInputValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5785AB892C882EA4CC3DC5A37B77820 /* GraphQLInputValue.swift */; };
-		699C4B3FE1B2162A1ED79E947E702AB6 /* JSONSerializationFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D0189FDE3C27889B71D44DC3329ED2 /* JSONSerializationFormat.swift */; };
-		6A802D9C12B942943AD2F55C30547FDC /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2428D71E7FF630C1C0FFB5B67D58BF07 /* Errors.swift */; };
-		6C98C0EBB2FADBFF7EE3D31DA94B29D8 /* HTTPNetworkTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3D8552AB092719423A2AED079370B /* HTTPNetworkTransport.swift */; };
-		6E27545A21ACAAF7A29E7CF608B0A99A /* GraphQLResultAccumulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4879FD33E337E997A8062D7FE3391B9 /* GraphQLResultAccumulator.swift */; };
-		6E515B6001DD21CBA59390827464A647 /* RecordSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F416640DF5708F7CF4744EE5A2F234 /* RecordSet.swift */; };
-		6E5B547E9D9171B206C631D008B62217 /* Blob.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DCD5B55299C654EB1715CC267EF08C /* Blob.swift */; };
-		6FAACBDB58679AC9222D93E9D2ED8E21 /* GraphQLResponseGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEF9F2C0D890A1F89D072E9FA2A93B8 /* GraphQLResponseGenerator.swift */; };
-		71EC7CC186366DC00DA604F0429142D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86FE31D69E844FBC226419FFD908E6D2 /* Foundation.framework */; };
-		7372D98FD65E6ECB0E6E6EE6DF2E8103 /* JSONStandardTypeConversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D284FE403384984BB65A4CC64084F2 /* JSONStandardTypeConversions.swift */; };
-		73D8EC9DC9EF112E3086CEAEECEAFBCA /* Dictionary+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923EC7B499D9A6440949F62153D448A5 /* Dictionary+Helpers.swift */; };
-		74158911CF240F40F9F7FEC40DB65C79 /* GraphQLFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0AD372E4B7808C92E611C37ABF0EAD /* GraphQLFile.swift */; };
-		78A831D35AF854F6B5D2C1EF813095FB /* ApolloClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65615E24ADCDC4D62D974EC566C163E9 /* ApolloClientProtocol.swift */; };
-		79E6A6FC655FA39A058AC742159F4DAC /* Bundle+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3180E2E2F3907284C6FBB5F0566614 /* Bundle+Helpers.swift */; };
-		7B3186528AAA5CF775ADFB3DD63B412B /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C52ABB1ED91731C4B73AA889839F3F /* Value.swift */; };
-		7BA40EA3E4FF29BD0F686F0D514129DC /* Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9F3460831D5CB904687526440C36DE /* Foundation.swift */; };
-		7CD142939C77A7805AE0ABC5DD69B624 /* Setter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9D30C6A251BB57B5A11318618E1E2E /* Setter.swift */; };
-		7E0F3D7B248F8127F6A3A6BAC1BC2118 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5C29D836EA7B740D1A94B01578449F /* Expression.swift */; };
-		809F8D6784AB766BCD065AB9F6D31947 /* Collation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90BEC05717F3EDCD8B944B668EB301A /* Collation.swift */; };
-		810C93DB92BB18421C33B9319BBE9ED4 /* GraphQLHTTPResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A133303D31A4AFE7FC9BD93BD036111 /* GraphQLHTTPResponseError.swift */; };
-		81CBF1D4E5BB7B8053CF64918E1073C3 /* NetworkTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6176783771AE206FB6FC9922D77AC4D /* NetworkTransport.swift */; };
-		8631FB3328185AE07446ABDF0CD491D5 /* FTS4.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24F71D6C4E5C0604BAEBF5677A0768A /* FTS4.swift */; };
-		8CF9DDBDF2D5A91713E4C359C083B571 /* GraphQLOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107E2F85AFB065E59E0F62412C61F441 /* GraphQLOperation.swift */; };
-		92EAC3B0FF37193272BD18688454D373 /* RecordSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F416640DF5708F7CF4744EE5A2F234 /* RecordSet.swift */; };
-		935668FC784109EB03E55B5227CEA657 /* RequestCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C96B0B539306BC8B0584A2B55086A5 /* RequestCreator.swift */; };
-		9458B1A49B4698B636F620F6A482C23B /* Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C7F60FDEC68038B134E48C5C412C8A /* Schema.swift */; };
-		970C827C35D108B3B8C03172D205DB72 /* GraphQLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BB7FE19F265D307ADE1240C5A48E12 /* GraphQLResponse.swift */; };
-		98F578352D695C8F706559120229E225 /* Pods-PysakkiKello-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EA1D763942C03E4D2904B21B55115F55 /* Pods-PysakkiKello-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9986C251EEAD0DA99B0E15F5EEC110A3 /* NetworkTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6176783771AE206FB6FC9922D77AC4D /* NetworkTransport.swift */; };
-		9B814D8D4D4C52DEDD1BF7546E3C215C /* GraphQLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BB7FE19F265D307ADE1240C5A48E12 /* GraphQLResponse.swift */; };
-		9E0A138C1B8490BB63803577318D0F84 /* Collection+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166FF0141CB08815834BA6FA1FA4BD75 /* Collection+Helpers.swift */; };
-		9F60338E0760416D49C53E5F62CC0030 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C52ABB1ED91731C4B73AA889839F3F /* Value.swift */; };
-		A040EF1777E8253D19753FC0EF793281 /* FTS5.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37D64C30FC4DB98A5071507886E34F3 /* FTS5.swift */; };
-		A1B7AEB6DF4A719F87DE4E476BCC919F /* GraphQLSelectionSetMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC91F0F529C6163D21BC0D58D4913049 /* GraphQLSelectionSetMapper.swift */; };
-		A213AB0C3618F862D3C3F0BCC4F5AFD0 /* fts3_tokenizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 25CB40532BC5EE63D21714EE3E0ECD00 /* fts3_tokenizer.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		A34900C9ECA8140F07B523BB228A23AD /* Decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFF545AF1A289A9327FD2893F75CDC3 /* Decoding.swift */; };
-		A4C4918052BD21F59758654551C6ACE8 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE998AD2C5059B24AE99D1E59E2B212 /* Record.swift */; };
-		A76E19BC7DBB8E2C4203060D36D1AA48 /* CoreFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE97B2A1B68106FD0FC6DD29D9B2BF1 /* CoreFunctions.swift */; };
-		AA1EED938BA0DDF6CB373E03B92FA0F9 /* GraphQLDependencyTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21166BD23B61EC111838D648D69C93DB /* GraphQLDependencyTracker.swift */; };
-		ABF522972C14C8827BB8D5012C7EF557 /* SQLiteObjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E61D02F602BA40FA2A4CA6B6CC39CD9 /* SQLiteObjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AE31A6D95099B1F1F02B90AA6BB08B43 /* AggregateFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5FA8AA727058486E8D6A47856BEB5C /* AggregateFunctions.swift */; };
-		AE8ECC8A9B905FABDC188CA9A5E8B4E5 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F462EFA7D55BFB31590BB987DF18BC9 /* Promise.swift */; };
-		AFBD254C827078BDAA078BBB8B910384 /* ResultOrPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E9FCF5715E895976068277A9278C9E /* ResultOrPromise.swift */; };
-		AFCE53C39FF34E9BB38CD256FEF73C40 /* Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C7F60FDEC68038B134E48C5C412C8A /* Schema.swift */; };
-		B04AAE7657F74550579AFAB52E37A784 /* GraphQLResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1944D5A7566E99337C58EB8BA0F83BC2 /* GraphQLResult.swift */; };
-		B0A37E74CD072CE2F534DE8548C9D558 /* GroupedSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BBB905EE4B8B30D652055E4C22346B /* GroupedSequence.swift */; };
-		B2C2B547E739E32B3AEBC74C3C255AE6 /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C249A9A014C68846703B0E11FD8393B /* Statement.swift */; };
-		B3B34E670C389FC7B58C6FDFD364D3DF /* CustomFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFC5FD36526B5E4567FBE8AA2376C2E /* CustomFunctions.swift */; };
-		B43B0A2B79FC5566232269B5B281D04F /* DateAndTimeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D278B16171414DB5449EE31D1F6CFDD1 /* DateAndTimeFunctions.swift */; };
-		B760D01586855892DB2D2DAC3B6CC912 /* Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9F3460831D5CB904687526440C36DE /* Foundation.swift */; };
-		BA27C002A2C4A42079A8D694507A2F1E /* GraphQLInputValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5785AB892C882EA4CC3DC5A37B77820 /* GraphQLInputValue.swift */; };
-		BA8894774DB09C215511957A222232A1 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DB7BFE087E3DD1E9CAB37AADD524E3 /* MultipartFormData.swift */; };
-		BB5219BE795D8147FA33DF1F2AA288B1 /* GroupedSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BBB905EE4B8B30D652055E4C22346B /* GroupedSequence.swift */; };
-		BD8F6291BCF4385B60C0326D8A86119D /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7228BC50173AA93C99D1B1656AE8701D /* Cancellable.swift */; };
-		C09B89C2AF5177B060A75F0A8D6A4ECA /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7228BC50173AA93C99D1B1656AE8701D /* Cancellable.swift */; };
-		C34DFE713637F90B6FE44547AAE2135E /* SQLite.swift-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B82D85B34A9CB9923955A3D7FAA5B9 /* SQLite.swift-iOS-dummy.m */; };
-		C41247D204FBB1AE520EB85DA57E6E4A /* FTS4.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24F71D6C4E5C0604BAEBF5677A0768A /* FTS4.swift */; };
-		C6F49FCA4C028E612881D22DAAF137B5 /* GraphQLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FAA906F6C8F821C53E8EAFEA5CBA62 /* GraphQLError.swift */; };
-		C7E520B2B9B57A45D58C4E546601B5A6 /* GraphQLResultAccumulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4879FD33E337E997A8062D7FE3391B9 /* GraphQLResultAccumulator.swift */; };
-		C82D79A8B2B280C6EBC236F3CC24F8CC /* Blob.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DCD5B55299C654EB1715CC267EF08C /* Blob.swift */; };
-		C9947E18CF745B26B0524EFAA1808B96 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ADBF5E8B7047831DCFB355C966E47AD /* Foundation.framework */; };
-		CA4A5AF483A050B6442151B29F60BC69 /* GraphQLResponseGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEF9F2C0D890A1F89D072E9FA2A93B8 /* GraphQLResponseGenerator.swift */; };
-		CAD7AB0E579985A6027DB3D9E8825C8F /* GraphQLGETTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D03AB0D7A75D8E33A5207A00F68F5D /* GraphQLGETTransformer.swift */; };
-		CBC48119B136408ED33E0E5A5D32B801 /* ApolloClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65615E24ADCDC4D62D974EC566C163E9 /* ApolloClientProtocol.swift */; };
-		CC4323D830FB704CBFDA346863A1B442 /* CoreFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE97B2A1B68106FD0FC6DD29D9B2BF1 /* CoreFunctions.swift */; };
-		CD6A2E7A3A3E044DB57E08275F0F8296 /* Pods-PysakkiKello-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BBB7D1F8A535051202CE465812FCF663 /* Pods-PysakkiKello-dummy.m */; };
-		CF5324025D2AA987BAE06CD3391A42DF /* AsynchronousOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09BCA5FCCD4AD86F58C712D0E63895B /* AsynchronousOperation.swift */; };
-		D0136C081922C2E8B1016E78441FD0B8 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE998AD2C5059B24AE99D1E59E2B212 /* Record.swift */; };
+		1B52A320D0B8BDB4022BC8C997FEC272 /* ApolloStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B8939DC4ECF02EF10E092C02549D3A /* ApolloStore.swift */; };
+		1BBB6BC80F1DCAF0E84F84BE787D6090 /* Collation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47249C0EDC66311DDA8E257B808C8EDE /* Collation.swift */; };
+		1C49DF949079B54D6DC802CDD0ECCC13 /* CustomFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EB70BD66827D96B798D119110E1300 /* CustomFunctions.swift */; };
+		1D7B22F36B93AA7F9EF1B735AC120332 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDA3B3D160B70CBA393C755699EF579 /* MultipartFormData.swift */; };
+		1F6C0D21E7DDC70C2460442DDC7EE307 /* DispatchQueue+Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EFFFC187B7F301BEB83B59623C524B /* DispatchQueue+Optional.swift */; };
+		21A03094FF8AA2CD342A7A4807E77E6D /* DispatchQueue+Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EFFFC187B7F301BEB83B59623C524B /* DispatchQueue+Optional.swift */; };
+		26002913BCDFE0E8C70B5D3CD76DEF25 /* DateAndTimeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D229074A1AF87582C5636F9D38228A /* DateAndTimeFunctions.swift */; };
+		266C23ED2C397EE25C606913FB57EA8A /* Pods-PysakkiKello-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BBB7D1F8A535051202CE465812FCF663 /* Pods-PysakkiKello-dummy.m */; };
+		27F5FD59609782719F68DC7A4D9E54FD /* HTTPURLResponse+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449CE002A5E124820631AD5E1B4AB8BC /* HTTPURLResponse+Helpers.swift */; };
+		2862E6037F29CC5C805BFEF7D33BCC8F /* GraphQLSelectionSetMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF7E22FE391C2255D5CB9694972AE8B /* GraphQLSelectionSetMapper.swift */; };
+		29ACABEA2FEAAA502BADBDA1C81CEABE /* GraphQLQueryWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13929C321A5178D2B87D57622FA9C93E /* GraphQLQueryWatcher.swift */; };
+		29B1C8AC2BA0A50A92CED7EDA2594473 /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E944CF0BE9478B894123D7F3168F43 /* Statement.swift */; };
+		29D7A1B5AB1074CE13E3F7AB29AA70C4 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0536BD2D8767BA64BCE36F1D067BCA13 /* Query.swift */; };
+		2B4F23AA37FDCFE45FB9937B7480EF8D /* ApolloClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5082DBC39A5D41DFB0CF0B2857E76FC7 /* ApolloClient.swift */; };
+		2C7451D38536B4E1AF99EE5755C1DDB3 /* Apollo-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BE1FEACBA234E071DA8ECC34E6C05736 /* Apollo-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34F166A6F577B62F4E8D0D0CFF08F1DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86FE31D69E844FBC226419FFD908E6D2 /* Foundation.framework */; };
+		355FF7EBBF0707823A65ABB74321D47A /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F4D618C701F25B968C4D18AF49AE28 /* Errors.swift */; };
+		376AE8D22DA567D43DB94C709A943BA7 /* Apollo-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 213008E31A01D742BC6FF7379D968222 /* Apollo-iOS-dummy.m */; };
+		3927D3451C744E07731A43A939F337AF /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4159C58454D6FC08433DDBA65ABAE88 /* DataLoader.swift */; };
+		393777665598FA40D0EB3F67D5F6F99A /* RTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EEA1EF40839C625BDF4E275B46FE5D /* RTree.swift */; };
+		39B42ACCD8F9797650D1CA66ECB9F4AB /* GraphQLHTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F23813532B0C0052735D94581D04F63 /* GraphQLHTTPMethod.swift */; };
+		3A703A0FAA67DD611A05BA7D34CC9737 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1591C3D50F5DBB2CD1A841CB39CB840 /* Connection.swift */; };
+		3AEA55ED6C08906E8B52CBA3B4E66B0B /* JSONSerialization+Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EA5680A50F7496151C60FF6622DE55 /* JSONSerialization+Sorting.swift */; };
+		3B16E1D38D8A98F7F3461C64616643EB /* SQLite.h in Headers */ = {isa = PBXBuildFile; fileRef = A9E59BBFA0815ADE5FAA9450F3734FCE /* SQLite.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CC916D35D33F8750EBE534BDBC47EB3 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C20487B041033FBAD6034056852B86 /* JSON.swift */; };
+		3EA7FA9A06F240EFEB81FD79C696FF3F /* Pods-PysakkiKello WatchKit App-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 874B08754D35B1DCF328E8C7EB3772C5 /* Pods-PysakkiKello WatchKit App-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		40DB1CF059C9ABA674AC6291FB23AA3B /* Locking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F8ECA5F22FF711515D1CCE5B3EE910 /* Locking.swift */; };
+		4119988C8AFAEDB88E8DB46610AE6F5D /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1591C3D50F5DBB2CD1A841CB39CB840 /* Connection.swift */; };
+		4166B6887460466B5D8B2A5F33BF4EE9 /* ApolloClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5082DBC39A5D41DFB0CF0B2857E76FC7 /* ApolloClient.swift */; };
+		44B3092D7873A8C7C47B689976CDEE1C /* SQLiteObjc.m in Sources */ = {isa = PBXBuildFile; fileRef = B67A3F09B7FFECC0A1C9437F69B2EA11 /* SQLiteObjc.m */; };
+		45921180F38A838100485DF143CBFE27 /* SQLite.h in Headers */ = {isa = PBXBuildFile; fileRef = A9E59BBFA0815ADE5FAA9450F3734FCE /* SQLite.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46C259F4385C50089745A291A3E96554 /* GraphQLSelectionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8992F490F47866BE2BF58D25378EBA /* GraphQLSelectionSet.swift */; };
+		4A281170B7544E8799DFAB22D4BFBA9A /* InMemoryNormalizedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8944DC1B36003CA7220640951FA54C9C /* InMemoryNormalizedCache.swift */; };
+		4CBF709347E13C7414842BCDA9018887 /* Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6E66A073BFCBC943EF122B59D73875 /* Coding.swift */; };
+		4E7432BA64491C5A019425716F4B60DF /* Apollo-watchOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 719968A98CDC32B625869671C0CA2706 /* Apollo-watchOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F7BB385119FFF6343F52E855A99081F /* NormalizedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B8804FEA6D11C76DE691DDB29F52E5 /* NormalizedCache.swift */; };
+		5138D160A9A8BBC7EE8A81BC823AADF9 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4159C58454D6FC08433DDBA65ABAE88 /* DataLoader.swift */; };
+		527C78992CE32212DED40A4FFC505775 /* JSONSerialization+Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EA5680A50F7496151C60FF6622DE55 /* JSONSerialization+Sorting.swift */; };
+		53BA96FDAEE1A7C07703C2FDB4A0E635 /* GraphQLHTTPResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D040472924E959C7FADF18D4402607B /* GraphQLHTTPResponseError.swift */; };
+		53E9D0B4E8AFC698FF6EF984A9C5D245 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ADBF5E8B7047831DCFB355C966E47AD /* Foundation.framework */; };
+		552DDF3CE96227C9F19B97F2C589E7A8 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F135DD2469C9F5FA5ED48503998F7D /* Expression.swift */; };
+		55968F1847979238AF94263CAB7BAC28 /* SQLite.swift-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 51FAD74F53FA19391B8C1F58CDE58C88 /* SQLite.swift-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		570F5E8A50EFD4D5AD6CA367EE88BDAE /* SQLite.swift-watchOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F3552F6A6A765FAA63ED3C5AF0E1F26 /* SQLite.swift-watchOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		57BFA06BF796E573C5C890372F23EA77 /* AggregateFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76831FDA31B9535A0943DD5B7883559 /* AggregateFunctions.swift */; };
+		57FF19DEB6C742C732AF2D06AD014890 /* Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6E66A073BFCBC943EF122B59D73875 /* Coding.swift */; };
+		591600971D33C67BAC9EB8F90BF6CAD5 /* Setter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE05E9331A9972C3E8CF9F94DAAD183 /* Setter.swift */; };
+		59AEB3C507E2A10EFEBCEB2C91627B7E /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFBD5549B37D0F6C3F47F8CA00B0A15 /* Promise.swift */; };
+		5A4895CD391A62FAE7FC52B34933FC15 /* String+SHA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045966B3DBB247F45368809AD14335C /* String+SHA.swift */; };
+		5D6561ED7A93A50ABCA0060DB0A32F2F /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D423F38BD8D32464228A720A28C98AEF /* Atomic.swift */; };
+		5D96B254C4D83C59B0CA9208B384864C /* Locking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F8ECA5F22FF711515D1CCE5B3EE910 /* Locking.swift */; };
+		601C82096BF585AB908F98AAF4A8FFA3 /* Collection+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5967010C3EF27CDDA505C0EDE7BBFB44 /* Collection+Helpers.swift */; };
+		6175DCACFA14C0D3144A597F03DA320D /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D423F38BD8D32464228A720A28C98AEF /* Atomic.swift */; };
+		6252B3848D362AD58B01F042B0DDE349 /* HTTPNetworkTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4885A1631D8B1D6B4FDD4F8575E665CB /* HTTPNetworkTransport.swift */; };
+		626237CB2442BA4EED2C26EB316D2BBF /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C20487B041033FBAD6034056852B86 /* JSON.swift */; };
+		62D3ED3A8020C739D7E9BD97AE03A068 /* HTTPURLResponse+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449CE002A5E124820631AD5E1B4AB8BC /* HTTPURLResponse+Helpers.swift */; };
+		6462E88DC26DB072DBCE9918BDC5CCB0 /* JSONSerializationFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233BB374E00BEB86CBBC0258A2CA8883 /* JSONSerializationFormat.swift */; };
+		67B50437BE657D4EB561970D1249E692 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49D51A681531281B45C8410FF41403E /* Operators.swift */; };
+		68E29AFBDBD31AF2A0C850760E629E48 /* GraphQLInputValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBF49EE48B3CA05581494ED94F92170 /* GraphQLInputValue.swift */; };
+		699C4B3FE1B2162A1ED79E947E702AB6 /* JSONSerializationFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233BB374E00BEB86CBBC0258A2CA8883 /* JSONSerializationFormat.swift */; };
+		6A802D9C12B942943AD2F55C30547FDC /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F4D618C701F25B968C4D18AF49AE28 /* Errors.swift */; };
+		6C98C0EBB2FADBFF7EE3D31DA94B29D8 /* HTTPNetworkTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4885A1631D8B1D6B4FDD4F8575E665CB /* HTTPNetworkTransport.swift */; };
+		6D9CD6AC71C267D2CB7E4A63D338E269 /* Pods-PysakkiKello WatchKit Extension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8A7A3B697569AA674A3BBFCC6C3C6 /* Pods-PysakkiKello WatchKit Extension-dummy.m */; };
+		6E27545A21ACAAF7A29E7CF608B0A99A /* GraphQLResultAccumulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A5DD008F46BB75EA00386FD59C47CA /* GraphQLResultAccumulator.swift */; };
+		6E515B6001DD21CBA59390827464A647 /* RecordSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4259AC61019232765691C5F8302FA32B /* RecordSet.swift */; };
+		6E5B547E9D9171B206C631D008B62217 /* Blob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AA3CE0749E53DA70F0FEA14FD46B0B /* Blob.swift */; };
+		6FAACBDB58679AC9222D93E9D2ED8E21 /* GraphQLResponseGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9F8DDC184FA2B3B29E50277C079CE1 /* GraphQLResponseGenerator.swift */; };
+		7372D98FD65E6ECB0E6E6EE6DF2E8103 /* JSONStandardTypeConversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5FEF1803C267405A0BA791979594C3 /* JSONStandardTypeConversions.swift */; };
+		73D8EC9DC9EF112E3086CEAEECEAFBCA /* Dictionary+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01806CBC9B4DAFA360E6EB95B93CB177 /* Dictionary+Helpers.swift */; };
+		74158911CF240F40F9F7FEC40DB65C79 /* GraphQLFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E038E78E0723FB4ABE5DFF17C8A58A /* GraphQLFile.swift */; };
+		78A831D35AF854F6B5D2C1EF813095FB /* ApolloClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0007BF0145AC5CD175F844DAA5B0D0A /* ApolloClientProtocol.swift */; };
+		7999124B333D29568E4CFF6F30A8D7C8 /* Pods-PysakkiKello WatchKit Extension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C906AE3A3BE3302612B948EE90B7684 /* Pods-PysakkiKello WatchKit Extension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		79E6A6FC655FA39A058AC742159F4DAC /* Bundle+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8ECDE9B37A488E42D5D0ACB48E18B5 /* Bundle+Helpers.swift */; };
+		7B3186528AAA5CF775ADFB3DD63B412B /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF668FE1A94FB22FA7D0217E3DF7BB01 /* Value.swift */; };
+		7BA40EA3E4FF29BD0F686F0D514129DC /* Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FABDEA5BB9F0636402FEF95494D811 /* Foundation.swift */; };
+		7CD142939C77A7805AE0ABC5DD69B624 /* Setter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE05E9331A9972C3E8CF9F94DAAD183 /* Setter.swift */; };
+		7E0F3D7B248F8127F6A3A6BAC1BC2118 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F135DD2469C9F5FA5ED48503998F7D /* Expression.swift */; };
+		809F8D6784AB766BCD065AB9F6D31947 /* Collation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47249C0EDC66311DDA8E257B808C8EDE /* Collation.swift */; };
+		810C93DB92BB18421C33B9319BBE9ED4 /* GraphQLHTTPResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D040472924E959C7FADF18D4402607B /* GraphQLHTTPResponseError.swift */; };
+		81CBF1D4E5BB7B8053CF64918E1073C3 /* NetworkTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135849DCAF8190752AD3BA8D5B7A55A8 /* NetworkTransport.swift */; };
+		8482E7A84AAEF29DB2F3F97EE23B0E0A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86FE31D69E844FBC226419FFD908E6D2 /* Foundation.framework */; };
+		8631FB3328185AE07446ABDF0CD491D5 /* FTS4.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC40F5032856BBC3985CECF345FBEEB4 /* FTS4.swift */; };
+		887374609D99FCB5595518401AF8408D /* Pods-PysakkiKello WatchKit App-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A14FF31E47C1F8AF04C832D7D52988 /* Pods-PysakkiKello WatchKit App-dummy.m */; };
+		8CF9DDBDF2D5A91713E4C359C083B571 /* GraphQLOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F2683159F50E264E1CD2B2E5D7D2E7 /* GraphQLOperation.swift */; };
+		92EAC3B0FF37193272BD18688454D373 /* RecordSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4259AC61019232765691C5F8302FA32B /* RecordSet.swift */; };
+		935668FC784109EB03E55B5227CEA657 /* RequestCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B494E8DD253DF5CB8BA8B25D9AB2B3F1 /* RequestCreator.swift */; };
+		9458B1A49B4698B636F620F6A482C23B /* Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35829EE5BAC9F3F002A7406E8A9B0E48 /* Schema.swift */; };
+		970C827C35D108B3B8C03172D205DB72 /* GraphQLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A023AB977DB6ABBA04EC9B97B39A1B /* GraphQLResponse.swift */; };
+		9986C251EEAD0DA99B0E15F5EEC110A3 /* NetworkTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135849DCAF8190752AD3BA8D5B7A55A8 /* NetworkTransport.swift */; };
+		9B814D8D4D4C52DEDD1BF7546E3C215C /* GraphQLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A023AB977DB6ABBA04EC9B97B39A1B /* GraphQLResponse.swift */; };
+		9E0A138C1B8490BB63803577318D0F84 /* Collection+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5967010C3EF27CDDA505C0EDE7BBFB44 /* Collection+Helpers.swift */; };
+		9F60338E0760416D49C53E5F62CC0030 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF668FE1A94FB22FA7D0217E3DF7BB01 /* Value.swift */; };
+		A040EF1777E8253D19753FC0EF793281 /* FTS5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1210724E29616EDA636DAE0E7B1D3D81 /* FTS5.swift */; };
+		A1B7AEB6DF4A719F87DE4E476BCC919F /* GraphQLSelectionSetMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF7E22FE391C2255D5CB9694972AE8B /* GraphQLSelectionSetMapper.swift */; };
+		A213AB0C3618F862D3C3F0BCC4F5AFD0 /* fts3_tokenizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A67B9EA8FFDD22E5AA8B8B305205F85 /* fts3_tokenizer.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		A34900C9ECA8140F07B523BB228A23AD /* Decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32F6887390F256CBF2E27E81DD596C6 /* Decoding.swift */; };
+		A4C4918052BD21F59758654551C6ACE8 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8697981CD22DDD55EC6364A941BC4D7A /* Record.swift */; };
+		A76E19BC7DBB8E2C4203060D36D1AA48 /* CoreFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DE14033ECC1D86FDAAC6A09956F01C /* CoreFunctions.swift */; };
+		AA1EED938BA0DDF6CB373E03B92FA0F9 /* GraphQLDependencyTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED1DCF4CDCA1A58EF2A5030ED9F44FD /* GraphQLDependencyTracker.swift */; };
+		ABF522972C14C8827BB8D5012C7EF557 /* SQLiteObjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 70D94646963EC25046BD31ECE6C407EF /* SQLiteObjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE31A6D95099B1F1F02B90AA6BB08B43 /* AggregateFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76831FDA31B9535A0943DD5B7883559 /* AggregateFunctions.swift */; };
+		AE8ECC8A9B905FABDC188CA9A5E8B4E5 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFBD5549B37D0F6C3F47F8CA00B0A15 /* Promise.swift */; };
+		AFBD254C827078BDAA078BBB8B910384 /* ResultOrPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB18A752B45E003B66F6D670AFA07DFC /* ResultOrPromise.swift */; };
+		AFCE53C39FF34E9BB38CD256FEF73C40 /* Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35829EE5BAC9F3F002A7406E8A9B0E48 /* Schema.swift */; };
+		B04AAE7657F74550579AFAB52E37A784 /* GraphQLResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AFD8F05C2AA8FBC2E05C69C6F5637C /* GraphQLResult.swift */; };
+		B0A37E74CD072CE2F534DE8548C9D558 /* GroupedSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FFA70752A7454452773C95DA80AD44 /* GroupedSequence.swift */; };
+		B2C2B547E739E32B3AEBC74C3C255AE6 /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E944CF0BE9478B894123D7F3168F43 /* Statement.swift */; };
+		B3B34E670C389FC7B58C6FDFD364D3DF /* CustomFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EB70BD66827D96B798D119110E1300 /* CustomFunctions.swift */; };
+		B43B0A2B79FC5566232269B5B281D04F /* DateAndTimeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D229074A1AF87582C5636F9D38228A /* DateAndTimeFunctions.swift */; };
+		B760D01586855892DB2D2DAC3B6CC912 /* Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FABDEA5BB9F0636402FEF95494D811 /* Foundation.swift */; };
+		BA27C002A2C4A42079A8D694507A2F1E /* GraphQLInputValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBF49EE48B3CA05581494ED94F92170 /* GraphQLInputValue.swift */; };
+		BA8894774DB09C215511957A222232A1 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDA3B3D160B70CBA393C755699EF579 /* MultipartFormData.swift */; };
+		BB5219BE795D8147FA33DF1F2AA288B1 /* GroupedSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FFA70752A7454452773C95DA80AD44 /* GroupedSequence.swift */; };
+		BD8F6291BCF4385B60C0326D8A86119D /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58817A39F2FBE637D618368E72A8A977 /* Cancellable.swift */; };
+		C09B89C2AF5177B060A75F0A8D6A4ECA /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58817A39F2FBE637D618368E72A8A977 /* Cancellable.swift */; };
+		C34DFE713637F90B6FE44547AAE2135E /* SQLite.swift-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D9191118C566EA3457AB0B0D4CC3D69F /* SQLite.swift-iOS-dummy.m */; };
+		C41247D204FBB1AE520EB85DA57E6E4A /* FTS4.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC40F5032856BBC3985CECF345FBEEB4 /* FTS4.swift */; };
+		C6F49FCA4C028E612881D22DAAF137B5 /* GraphQLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E5ECB2134411107625F1EC05D703B2 /* GraphQLError.swift */; };
+		C7E520B2B9B57A45D58C4E546601B5A6 /* GraphQLResultAccumulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A5DD008F46BB75EA00386FD59C47CA /* GraphQLResultAccumulator.swift */; };
+		C82D79A8B2B280C6EBC236F3CC24F8CC /* Blob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AA3CE0749E53DA70F0FEA14FD46B0B /* Blob.swift */; };
+		CA4A5AF483A050B6442151B29F60BC69 /* GraphQLResponseGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9F8DDC184FA2B3B29E50277C079CE1 /* GraphQLResponseGenerator.swift */; };
+		CAD7AB0E579985A6027DB3D9E8825C8F /* GraphQLGETTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0B7F5EFD6F95912896C233D6AEF602 /* GraphQLGETTransformer.swift */; };
+		CBC48119B136408ED33E0E5A5D32B801 /* ApolloClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0007BF0145AC5CD175F844DAA5B0D0A /* ApolloClientProtocol.swift */; };
+		CC4323D830FB704CBFDA346863A1B442 /* CoreFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DE14033ECC1D86FDAAC6A09956F01C /* CoreFunctions.swift */; };
+		CF5324025D2AA987BAE06CD3391A42DF /* AsynchronousOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36779618B50583285C90F7A7B6135CD /* AsynchronousOperation.swift */; };
+		D0136C081922C2E8B1016E78441FD0B8 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8697981CD22DDD55EC6364A941BC4D7A /* Record.swift */; };
 		D1B0B30D166D7C1A7CEAB996069783E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86FE31D69E844FBC226419FFD908E6D2 /* Foundation.framework */; };
-		D1EF2C3D9FD4FD1612AD28A780459756 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECB512B709D91717DA5369D47161A34 /* Query.swift */; };
-		D2AF20316D860D02101AED311896A881 /* GraphQLResultNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268AC5D4AA094D12414E5325C6DC7729 /* GraphQLResultNormalizer.swift */; };
-		D8676EB437CA29058D4906EE783D3A12 /* GraphQLSelectionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973C3B92C3E8C46C4DC1697CEB3B6331 /* GraphQLSelectionSet.swift */; };
-		D8ABD1A64883F8DA8E25C0C76A0BB79A /* String+SHA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6248235898DC33B9E9E63518388D1550 /* String+SHA.swift */; };
-		D8C4E6EB5C0D2D92119C1B5E953584E1 /* SQLite.swift-watchOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC131461AE611FAD02F227F7171BCEE /* SQLite.swift-watchOS-dummy.m */; };
-		DBADF0F7DC9FB785FC38F2E1ED840B6A /* GraphQLExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B5E3CF9F001B2395F14E3B83454732 /* GraphQLExecutor.swift */; };
-		DBDF002ED7D9B5D5D50A691D1F2EDF92 /* GraphQLGETTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D03AB0D7A75D8E33A5207A00F68F5D /* GraphQLGETTransformer.swift */; };
-		DDFBFA880806B2DEE282701DF21A21AB /* ResponsePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D1334578E2DCA1AC0702858425A95E /* ResponsePath.swift */; };
-		DE75C333BFB35588B4E45B7698E6B8F6 /* Apollo-watchOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 174C9BC20B105200C615648A59E97230 /* Apollo-watchOS-dummy.m */; };
-		DF4839539370D7B3CDACA73210033B73 /* GraphQLDependencyTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21166BD23B61EC111838D648D69C93DB /* GraphQLDependencyTracker.swift */; };
-		E0CC97FE8A57F9B998217FDF06FB31EE /* fts3_tokenizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 25CB40532BC5EE63D21714EE3E0ECD00 /* fts3_tokenizer.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		E126A6EE1E2A6EDAC307825264B8E853 /* Matchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2D9D0957F767F95135757AF7D9C079 /* Matchable.swift */; };
-		E1EACFADCAF3408821E5AACE0AF3BA8F /* AsynchronousOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09BCA5FCCD4AD86F58C712D0E63895B /* AsynchronousOperation.swift */; };
-		E259F2163BEC8805B10EED135580B929 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD306789730B07517DCE9DA10A9E9675 /* Helpers.swift */; };
-		E2DC3E89068EE5C39754057CBD465482 /* NormalizedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938C6FC628D112DA9F6E1FEF606A48EE /* NormalizedCache.swift */; };
-		E2FF03B3478DE0E3A170339632BA2E7C /* GraphQLHTTPRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A8F243638273661D18B6F474117619 /* GraphQLHTTPRequestError.swift */; };
-		E44302B02908359293D7287D1E4EF3D0 /* ResultOrPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E9FCF5715E895976068277A9278C9E /* ResultOrPromise.swift */; };
-		E4D44F8A015710FE1116E3D19C1D5649 /* InMemoryNormalizedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B27C9D88E95D9054808A8CFA9E3EC5 /* InMemoryNormalizedCache.swift */; };
+		D1EF2C3D9FD4FD1612AD28A780459756 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0536BD2D8767BA64BCE36F1D067BCA13 /* Query.swift */; };
+		D2AF20316D860D02101AED311896A881 /* GraphQLResultNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE32CC3801CC6E3D24DFE9E48EA02FC /* GraphQLResultNormalizer.swift */; };
+		D8676EB437CA29058D4906EE783D3A12 /* GraphQLSelectionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8992F490F47866BE2BF58D25378EBA /* GraphQLSelectionSet.swift */; };
+		D8ABD1A64883F8DA8E25C0C76A0BB79A /* String+SHA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045966B3DBB247F45368809AD14335C /* String+SHA.swift */; };
+		D8C4E6EB5C0D2D92119C1B5E953584E1 /* SQLite.swift-watchOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C75BD330BBF8CF3E2CC688C8E5804ACA /* SQLite.swift-watchOS-dummy.m */; };
+		DBADF0F7DC9FB785FC38F2E1ED840B6A /* GraphQLExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C39374451CFFC343961A37D885132FD /* GraphQLExecutor.swift */; };
+		DBDF002ED7D9B5D5D50A691D1F2EDF92 /* GraphQLGETTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0B7F5EFD6F95912896C233D6AEF602 /* GraphQLGETTransformer.swift */; };
+		DDFBFA880806B2DEE282701DF21A21AB /* ResponsePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE1795B61C2A9643A6EDBEDDD7D796F /* ResponsePath.swift */; };
+		DE75C333BFB35588B4E45B7698E6B8F6 /* Apollo-watchOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 184BF0306D720D9DF8CAF6A838695F8F /* Apollo-watchOS-dummy.m */; };
+		DF4839539370D7B3CDACA73210033B73 /* GraphQLDependencyTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED1DCF4CDCA1A58EF2A5030ED9F44FD /* GraphQLDependencyTracker.swift */; };
+		E0CC97FE8A57F9B998217FDF06FB31EE /* fts3_tokenizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A67B9EA8FFDD22E5AA8B8B305205F85 /* fts3_tokenizer.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		E126A6EE1E2A6EDAC307825264B8E853 /* Matchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21796F71DE2AD51A4910C3DB2272727 /* Matchable.swift */; };
+		E1EACFADCAF3408821E5AACE0AF3BA8F /* AsynchronousOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36779618B50583285C90F7A7B6135CD /* AsynchronousOperation.swift */; };
+		E259F2163BEC8805B10EED135580B929 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A85FA377E0399F7B93F1FCC626D2F9 /* Helpers.swift */; };
+		E2DC3E89068EE5C39754057CBD465482 /* NormalizedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B8804FEA6D11C76DE691DDB29F52E5 /* NormalizedCache.swift */; };
+		E2FF03B3478DE0E3A170339632BA2E7C /* GraphQLHTTPRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36ACAC258219A1707B82454B9F4E06C /* GraphQLHTTPRequestError.swift */; };
+		E44302B02908359293D7287D1E4EF3D0 /* ResultOrPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB18A752B45E003B66F6D670AFA07DFC /* ResultOrPromise.swift */; };
+		E4D44F8A015710FE1116E3D19C1D5649 /* InMemoryNormalizedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8944DC1B36003CA7220640951FA54C9C /* InMemoryNormalizedCache.swift */; };
 		E523F82C3F29F35A92051088C29160BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ADBF5E8B7047831DCFB355C966E47AD /* Foundation.framework */; };
-		E703FBD1A482D3C693C40FF9FFCF71B5 /* GraphQLOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107E2F85AFB065E59E0F62412C61F441 /* GraphQLOperation.swift */; };
-		E7944E1C56E85DE471A8E6FE3696226F /* Pods-PysakkiKello WatchKit App-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 874B08754D35B1DCF328E8C7EB3772C5 /* Pods-PysakkiKello WatchKit App-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E7D88F9329764188CD7173BAE3F69752 /* Result+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BA2B0833D724ADD3E9FCF347E0C950 /* Result+Helpers.swift */; };
-		E81AFBFABE023E20DC285316BD49BBF6 /* GraphQLQueryWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265C01711B9E5F148E1F2A71B28D769D /* GraphQLQueryWatcher.swift */; };
-		EB35D5D90C50F9462217571F2E03546B /* Matchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2D9D0957F767F95135757AF7D9C079 /* Matchable.swift */; };
-		EBE4846F543F01A7E0A3D8DEE8BEDC7A /* Decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFF545AF1A289A9327FD2893F75CDC3 /* Decoding.swift */; };
-		EE346F40B17312E9EAB69556ABFE9F97 /* JSONStandardTypeConversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D284FE403384984BB65A4CC64084F2 /* JSONStandardTypeConversions.swift */; };
-		EEA30A2A227D764D628C0B7222FF2068 /* SQLiteObjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E61D02F602BA40FA2A4CA6B6CC39CD9 /* SQLiteObjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F66114108F83CA90115C7EE02C54B944 /* FTS5.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37D64C30FC4DB98A5071507886E34F3 /* FTS5.swift */; };
-		FA7346A27653232944013B9FEF38B052 /* GraphQLResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1944D5A7566E99337C58EB8BA0F83BC2 /* GraphQLResult.swift */; };
-		FB4AB9B88E4F279312029A86E5BF0CE5 /* GraphQLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FAA906F6C8F821C53E8EAFEA5CBA62 /* GraphQLError.swift */; };
-		FDC93CF1EE09F7E8A544A6EC58A8B3E9 /* Dictionary+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923EC7B499D9A6440949F62153D448A5 /* Dictionary+Helpers.swift */; };
-		FFDA24C5B53DC4173E38E73EE5F5BBD0 /* Bundle+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3180E2E2F3907284C6FBB5F0566614 /* Bundle+Helpers.swift */; };
+		E703FBD1A482D3C693C40FF9FFCF71B5 /* GraphQLOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F2683159F50E264E1CD2B2E5D7D2E7 /* GraphQLOperation.swift */; };
+		E7D88F9329764188CD7173BAE3F69752 /* Result+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40800DD97FCE26ADE467CB0C3628D8A3 /* Result+Helpers.swift */; };
+		E81AFBFABE023E20DC285316BD49BBF6 /* GraphQLQueryWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13929C321A5178D2B87D57622FA9C93E /* GraphQLQueryWatcher.swift */; };
+		EB35D5D90C50F9462217571F2E03546B /* Matchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21796F71DE2AD51A4910C3DB2272727 /* Matchable.swift */; };
+		EBE4846F543F01A7E0A3D8DEE8BEDC7A /* Decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32F6887390F256CBF2E27E81DD596C6 /* Decoding.swift */; };
+		EE346F40B17312E9EAB69556ABFE9F97 /* JSONStandardTypeConversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5FEF1803C267405A0BA791979594C3 /* JSONStandardTypeConversions.swift */; };
+		EEA30A2A227D764D628C0B7222FF2068 /* SQLiteObjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 70D94646963EC25046BD31ECE6C407EF /* SQLiteObjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F66114108F83CA90115C7EE02C54B944 /* FTS5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1210724E29616EDA636DAE0E7B1D3D81 /* FTS5.swift */; };
+		FA7346A27653232944013B9FEF38B052 /* GraphQLResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AFD8F05C2AA8FBC2E05C69C6F5637C /* GraphQLResult.swift */; };
+		FB4AB9B88E4F279312029A86E5BF0CE5 /* GraphQLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E5ECB2134411107625F1EC05D703B2 /* GraphQLError.swift */; };
+		FDC93CF1EE09F7E8A544A6EC58A8B3E9 /* Dictionary+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01806CBC9B4DAFA360E6EB95B93CB177 /* Dictionary+Helpers.swift */; };
+		FFDA24C5B53DC4173E38E73EE5F5BBD0 /* Bundle+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8ECDE9B37A488E42D5D0ACB48E18B5 /* Bundle+Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1F5C1387AFD1C9D4D622D560053C6F0E /* PBXContainerItemProxy */ = {
+		3D2BBDEDC2C738B65A6F52FDC866BFB6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = B03C12E4A63B911096950D3BEDE8BCE4;
 			remoteInfo = "SQLite.swift-watchOS";
 		};
-		2D27D474D8DB1A782C0CEDC9069E9C1D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B03C12E4A63B911096950D3BEDE8BCE4;
-			remoteInfo = "SQLite.swift-watchOS";
-		};
-		4B95324717E91AC2B975E356F9E18E7B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4B473BC68A8E02E3A7A9ED2CE7790A74;
-			remoteInfo = "Apollo-iOS";
-		};
-		5EC39D8740DBAAE0F0B7D3C5BAAC46C3 /* PBXContainerItemProxy */ = {
+		50F3180D96186B05CAFF2D0D45182D08 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 9DF667367C1D5C66C810E63C5D2E9C2C;
 			remoteInfo = "Apollo-watchOS";
 		};
-		BB7ECD3B41B5155C37536089416F5332 /* PBXContainerItemProxy */ = {
+		5A45794F894043D578F1435A690E356B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B03C12E4A63B911096950D3BEDE8BCE4;
+			remoteInfo = "SQLite.swift-watchOS";
+		};
+		5EC8CA3B91C97BE4C1F896069D2626A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B473BC68A8E02E3A7A9ED2CE7790A74;
+			remoteInfo = "Apollo-iOS";
+		};
+		7C636FD902E9FDAE4C57987C7545E55A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0626378CBCA3137F03E6DCC306504C4B;
+			remoteInfo = "SwiftLint-watchOS";
+		};
+		9CACCFE372E0E46547EA60D64C4EB80A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0626378CBCA3137F03E6DCC306504C4B;
+			remoteInfo = "SwiftLint-watchOS";
+		};
+		A80B35B6D65661AF52849EF9B22BA837 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B03D5FD26A26B7D62142EA4492AEB83;
+			remoteInfo = "SwiftLint-iOS";
+		};
+		CC4615E64507E51EB1DB1AB92D310E98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 0A79CECACBDA1A8D6DAEF3993D705334;
 			remoteInfo = "SQLite.swift-iOS";
 		};
-		DD2DFB28D9388E0C128FFAE2EF73FB2E /* PBXContainerItemProxy */ = {
+		D9718BC3F304DF5BAA21B1E52CF32CEF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -228,146 +270,150 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02B607D45ABD7635DF3A7A4935E0BD40 /* Locking.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Locking.swift; path = Sources/Apollo/Locking.swift; sourceTree = "<group>"; };
-		03C96B0B539306BC8B0584A2B55086A5 /* RequestCreator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestCreator.swift; path = Sources/Apollo/RequestCreator.swift; sourceTree = "<group>"; };
-		08A8F243638273661D18B6F474117619 /* GraphQLHTTPRequestError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLHTTPRequestError.swift; path = Sources/Apollo/GraphQLHTTPRequestError.swift; sourceTree = "<group>"; };
+		01806CBC9B4DAFA360E6EB95B93CB177 /* Dictionary+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Dictionary+Helpers.swift"; path = "Sources/Apollo/Dictionary+Helpers.swift"; sourceTree = "<group>"; };
+		0536BD2D8767BA64BCE36F1D067BCA13 /* Query.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Query.swift; path = Sources/SQLite/Typed/Query.swift; sourceTree = "<group>"; };
 		0912C41901EF0991AB54870330E357B2 /* Pods-PysakkiKello WatchKit App-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PysakkiKello WatchKit App-acknowledgements.plist"; sourceTree = "<group>"; };
-		0A133303D31A4AFE7FC9BD93BD036111 /* GraphQLHTTPResponseError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLHTTPResponseError.swift; path = Sources/Apollo/GraphQLHTTPResponseError.swift; sourceTree = "<group>"; };
-		0BBA30AABD952A1883D7D955F19987C2 /* SQLite.swift-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SQLite.swift-iOS-umbrella.h"; sourceTree = "<group>"; };
-		0C249A9A014C68846703B0E11FD8393B /* Statement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Statement.swift; path = Sources/SQLite/Core/Statement.swift; sourceTree = "<group>"; };
+		09E038E78E0723FB4ABE5DFF17C8A58A /* GraphQLFile.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLFile.swift; path = Sources/Apollo/GraphQLFile.swift; sourceTree = "<group>"; };
 		0C906AE3A3BE3302612B948EE90B7684 /* Pods-PysakkiKello WatchKit Extension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PysakkiKello WatchKit Extension-umbrella.h"; sourceTree = "<group>"; };
-		107E2F85AFB065E59E0F62412C61F441 /* GraphQLOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLOperation.swift; path = Sources/Apollo/GraphQLOperation.swift; sourceTree = "<group>"; };
-		1105B001435F11E1380A9069B89FD777 /* Apollo-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Apollo-watchOS-prefix.pch"; path = "../Apollo-watchOS/Apollo-watchOS-prefix.pch"; sourceTree = "<group>"; };
+		0F3552F6A6A765FAA63ED3C5AF0E1F26 /* SQLite.swift-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SQLite.swift-watchOS-umbrella.h"; path = "../SQLite.swift-watchOS/SQLite.swift-watchOS-umbrella.h"; sourceTree = "<group>"; };
+		0F8B11128EDAF70DC55815550FDF0E34 /* Apollo-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Apollo-watchOS.release.xcconfig"; path = "../Apollo-watchOS/Apollo-watchOS.release.xcconfig"; sourceTree = "<group>"; };
+		10A6377028680D4964F1949C9C52142F /* SQLite.swift-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SQLite.swift-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		10FABDEA5BB9F0636402FEF95494D811 /* Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Foundation.swift; path = Sources/SQLite/Foundation.swift; sourceTree = "<group>"; };
+		1210724E29616EDA636DAE0E7B1D3D81 /* FTS5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTS5.swift; path = Sources/SQLite/Extensions/FTS5.swift; sourceTree = "<group>"; };
 		131F5B96A0065A9AB2057B59996A9296 /* Pods-PysakkiKello-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PysakkiKello-frameworks.sh"; sourceTree = "<group>"; };
-		166FF0141CB08815834BA6FA1FA4BD75 /* Collection+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Collection+Helpers.swift"; path = "Sources/Apollo/Collection+Helpers.swift"; sourceTree = "<group>"; };
-		16C52ABB1ED91731C4B73AA889839F3F /* Value.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Value.swift; path = Sources/SQLite/Core/Value.swift; sourceTree = "<group>"; };
-		170AEF7AB5DD27BB0D265E5A738474CF /* GraphQLHTTPMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLHTTPMethod.swift; path = Sources/Apollo/GraphQLHTTPMethod.swift; sourceTree = "<group>"; };
-		174C9BC20B105200C615648A59E97230 /* Apollo-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Apollo-watchOS-dummy.m"; path = "../Apollo-watchOS/Apollo-watchOS-dummy.m"; sourceTree = "<group>"; };
-		18C475D82879C23A00A9066D4D5AED55 /* JSONSerialization+Sorting.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "JSONSerialization+Sorting.swift"; path = "Sources/Apollo/JSONSerialization+Sorting.swift"; sourceTree = "<group>"; };
-		1944D5A7566E99337C58EB8BA0F83BC2 /* GraphQLResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLResult.swift; path = Sources/Apollo/GraphQLResult.swift; sourceTree = "<group>"; };
+		135849DCAF8190752AD3BA8D5B7A55A8 /* NetworkTransport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkTransport.swift; path = Sources/Apollo/NetworkTransport.swift; sourceTree = "<group>"; };
+		13929C321A5178D2B87D57622FA9C93E /* GraphQLQueryWatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLQueryWatcher.swift; path = Sources/Apollo/GraphQLQueryWatcher.swift; sourceTree = "<group>"; };
+		14EFFFC187B7F301BEB83B59623C524B /* DispatchQueue+Optional.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Optional.swift"; path = "Sources/Apollo/DispatchQueue+Optional.swift"; sourceTree = "<group>"; };
+		15E944CF0BE9478B894123D7F3168F43 /* Statement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Statement.swift; path = Sources/SQLite/Core/Statement.swift; sourceTree = "<group>"; };
+		184BF0306D720D9DF8CAF6A838695F8F /* Apollo-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Apollo-watchOS-dummy.m"; path = "../Apollo-watchOS/Apollo-watchOS-dummy.m"; sourceTree = "<group>"; };
 		1C336606A46D267D13C9F90470F5DBCD /* Pods-PysakkiKello WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PysakkiKello WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
-		1E5C29D836EA7B740D1A94B01578449F /* Expression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expression.swift; path = Sources/SQLite/Typed/Expression.swift; sourceTree = "<group>"; };
-		1FE998AD2C5059B24AE99D1E59E2B212 /* Record.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Record.swift; path = Sources/Apollo/Record.swift; sourceTree = "<group>"; };
+		1E0B7F5EFD6F95912896C233D6AEF602 /* GraphQLGETTransformer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLGETTransformer.swift; path = Sources/Apollo/GraphQLGETTransformer.swift; sourceTree = "<group>"; };
+		1E9F8DDC184FA2B3B29E50277C079CE1 /* GraphQLResponseGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLResponseGenerator.swift; path = Sources/Apollo/GraphQLResponseGenerator.swift; sourceTree = "<group>"; };
+		1F23813532B0C0052735D94581D04F63 /* GraphQLHTTPMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLHTTPMethod.swift; path = Sources/Apollo/GraphQLHTTPMethod.swift; sourceTree = "<group>"; };
 		20125288281FC558510056098CD02AC6 /* Pods-PysakkiKello WatchKit Extension-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PysakkiKello WatchKit Extension-frameworks.sh"; sourceTree = "<group>"; };
-		21166BD23B61EC111838D648D69C93DB /* GraphQLDependencyTracker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLDependencyTracker.swift; path = Sources/Apollo/GraphQLDependencyTracker.swift; sourceTree = "<group>"; };
-		21B82D85B34A9CB9923955A3D7FAA5B9 /* SQLite.swift-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SQLite.swift-iOS-dummy.m"; sourceTree = "<group>"; };
-		2428D71E7FF630C1C0FFB5B67D58BF07 /* Errors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = Sources/SQLite/Core/Errors.swift; sourceTree = "<group>"; };
-		25CB40532BC5EE63D21714EE3E0ECD00 /* fts3_tokenizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = fts3_tokenizer.h; path = Sources/SQLiteObjc/fts3_tokenizer.h; sourceTree = "<group>"; };
-		26064D5CDB9B993D191CDB0E4CD2ECBD /* Apollo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Apollo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		265C01711B9E5F148E1F2A71B28D769D /* GraphQLQueryWatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLQueryWatcher.swift; path = Sources/Apollo/GraphQLQueryWatcher.swift; sourceTree = "<group>"; };
-		268AC5D4AA094D12414E5325C6DC7729 /* GraphQLResultNormalizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLResultNormalizer.swift; path = Sources/Apollo/GraphQLResultNormalizer.swift; sourceTree = "<group>"; };
-		2A89EA7C92361F3347D373858DE37F30 /* SQLite.swift-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "SQLite.swift-watchOS.release.xcconfig"; path = "../SQLite.swift-watchOS/SQLite.swift-watchOS.release.xcconfig"; sourceTree = "<group>"; };
-		2C5FA8AA727058486E8D6A47856BEB5C /* AggregateFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AggregateFunctions.swift; path = Sources/SQLite/Typed/AggregateFunctions.swift; sourceTree = "<group>"; };
+		213008E31A01D742BC6FF7379D968222 /* Apollo-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Apollo-iOS-dummy.m"; sourceTree = "<group>"; };
+		233BB374E00BEB86CBBC0258A2CA8883 /* JSONSerializationFormat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONSerializationFormat.swift; path = Sources/Apollo/JSONSerializationFormat.swift; sourceTree = "<group>"; };
+		29C9791A4B828FEBE7609B6A8E91E18C /* SQLite.swift-watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "SQLite.swift-watchOS.debug.xcconfig"; path = "../SQLite.swift-watchOS/SQLite.swift-watchOS.debug.xcconfig"; sourceTree = "<group>"; };
+		29DE14033ECC1D86FDAAC6A09956F01C /* CoreFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoreFunctions.swift; path = Sources/SQLite/Typed/CoreFunctions.swift; sourceTree = "<group>"; };
 		2E186DFDD9650EA377C7788559A18C17 /* Pods-PysakkiKello.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PysakkiKello.modulemap"; sourceTree = "<group>"; };
+		2F8992F490F47866BE2BF58D25378EBA /* GraphQLSelectionSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLSelectionSet.swift; path = Sources/Apollo/GraphQLSelectionSet.swift; sourceTree = "<group>"; };
+		3045966B3DBB247F45368809AD14335C /* String+SHA.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+SHA.swift"; path = "Sources/Apollo/String+SHA.swift"; sourceTree = "<group>"; };
 		3356A2CEEA69128F8F91728BDCDF8CC4 /* Pods-PysakkiKello WatchKit Extension-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PysakkiKello WatchKit Extension-Info.plist"; sourceTree = "<group>"; };
 		3414BE644F3F5B83003BF9DFDACE38B3 /* Pods-PysakkiKello WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PysakkiKello WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
-		35B5E3CF9F001B2395F14E3B83454732 /* GraphQLExecutor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLExecutor.swift; path = Sources/Apollo/GraphQLExecutor.swift; sourceTree = "<group>"; };
-		3C0AD372E4B7808C92E611C37ABF0EAD /* GraphQLFile.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLFile.swift; path = Sources/Apollo/GraphQLFile.swift; sourceTree = "<group>"; };
-		3DEF9F2C0D890A1F89D072E9FA2A93B8 /* GraphQLResponseGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLResponseGenerator.swift; path = Sources/Apollo/GraphQLResponseGenerator.swift; sourceTree = "<group>"; };
-		3E7E2D447F053DE132693EFE28F1B444 /* SQLite.swift-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "SQLite.swift-iOS.modulemap"; sourceTree = "<group>"; };
-		3E843879E72E3F602DFFDEC38CAADC27 /* SQLite.swift-iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SQLite.swift-iOS-Info.plist"; sourceTree = "<group>"; };
+		35829EE5BAC9F3F002A7406E8A9B0E48 /* Schema.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Schema.swift; path = Sources/SQLite/Typed/Schema.swift; sourceTree = "<group>"; };
+		36EEA1EF40839C625BDF4E275B46FE5D /* RTree.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RTree.swift; path = Sources/SQLite/Extensions/RTree.swift; sourceTree = "<group>"; };
+		37AFD8F05C2AA8FBC2E05C69C6F5637C /* GraphQLResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLResult.swift; path = Sources/Apollo/GraphQLResult.swift; sourceTree = "<group>"; };
+		3BE1795B61C2A9643A6EDBEDDD7D796F /* ResponsePath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponsePath.swift; path = Sources/Apollo/ResponsePath.swift; sourceTree = "<group>"; };
+		40800DD97FCE26ADE467CB0C3628D8A3 /* Result+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Result+Helpers.swift"; path = "Sources/Apollo/Result+Helpers.swift"; sourceTree = "<group>"; };
 		40A14FF31E47C1F8AF04C832D7D52988 /* Pods-PysakkiKello WatchKit App-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PysakkiKello WatchKit App-dummy.m"; sourceTree = "<group>"; };
-		4628F615612A5C46BE3113FD683B51F8 /* ApolloStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ApolloStore.swift; path = Sources/Apollo/ApolloStore.swift; sourceTree = "<group>"; };
-		477AABA708A2507869801E2024ACDFAE /* Connection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Connection.swift; path = Sources/SQLite/Core/Connection.swift; sourceTree = "<group>"; };
+		4259AC61019232765691C5F8302FA32B /* RecordSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RecordSet.swift; path = Sources/Apollo/RecordSet.swift; sourceTree = "<group>"; };
+		42F8ECA5F22FF711515D1CCE5B3EE910 /* Locking.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Locking.swift; path = Sources/Apollo/Locking.swift; sourceTree = "<group>"; };
+		449CE002A5E124820631AD5E1B4AB8BC /* HTTPURLResponse+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HTTPURLResponse+Helpers.swift"; path = "Sources/Apollo/HTTPURLResponse+Helpers.swift"; sourceTree = "<group>"; };
+		46764E782E4A2650AD837B55C8E00F60 /* SQLite.swift-iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SQLite.swift-iOS-Info.plist"; sourceTree = "<group>"; };
+		47249C0EDC66311DDA8E257B808C8EDE /* Collation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Collation.swift; path = Sources/SQLite/Typed/Collation.swift; sourceTree = "<group>"; };
+		4885A1631D8B1D6B4FDD4F8575E665CB /* HTTPNetworkTransport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPNetworkTransport.swift; path = Sources/Apollo/HTTPNetworkTransport.swift; sourceTree = "<group>"; };
 		48FEF61723BA40CA2A5434749FAD0CF9 /* Pods-PysakkiKello-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PysakkiKello-acknowledgements.markdown"; sourceTree = "<group>"; };
-		4AC131461AE611FAD02F227F7171BCEE /* SQLite.swift-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SQLite.swift-watchOS-dummy.m"; path = "../SQLite.swift-watchOS/SQLite.swift-watchOS-dummy.m"; sourceTree = "<group>"; };
-		4DA2EF0F15493F0198442112E07AA071 /* DispatchQueue+Optional.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Optional.swift"; path = "Sources/Apollo/DispatchQueue+Optional.swift"; sourceTree = "<group>"; };
-		4DE97B2A1B68106FD0FC6DD29D9B2BF1 /* CoreFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoreFunctions.swift; path = Sources/SQLite/Typed/CoreFunctions.swift; sourceTree = "<group>"; };
-		4ECD5A18D6B6DC61490D7027BC4775C3 /* Apollo-iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Apollo-iOS-Info.plist"; sourceTree = "<group>"; };
+		4C7D61457662352AAB6B7DAC389059E9 /* Apollo-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Apollo-iOS.modulemap"; sourceTree = "<group>"; };
 		4F2CBBA860278552FE651E7BC4E54517 /* Apollo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Apollo.framework; path = "Apollo-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F7EE7ADA0F8B38DB7D3AFD7972A2CAC /* SQLite.swift-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SQLite.swift-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		536AA974BF3723694E9B96200634D8A5 /* ApolloClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ApolloClient.swift; path = Sources/Apollo/ApolloClient.swift; sourceTree = "<group>"; };
-		53BA2B0833D724ADD3E9FCF347E0C950 /* Result+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Result+Helpers.swift"; path = "Sources/Apollo/Result+Helpers.swift"; sourceTree = "<group>"; };
+		5082DBC39A5D41DFB0CF0B2857E76FC7 /* ApolloClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ApolloClient.swift; path = Sources/Apollo/ApolloClient.swift; sourceTree = "<group>"; };
+		51FAD74F53FA19391B8C1F58CDE58C88 /* SQLite.swift-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SQLite.swift-iOS-umbrella.h"; sourceTree = "<group>"; };
+		52A023AB977DB6ABBA04EC9B97B39A1B /* GraphQLResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLResponse.swift; path = Sources/Apollo/GraphQLResponse.swift; sourceTree = "<group>"; };
 		54E7010DA3D996F291454D343063AEF5 /* SQLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SQLite.framework; path = "SQLite.swift-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		56D284FE403384984BB65A4CC64084F2 /* JSONStandardTypeConversions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONStandardTypeConversions.swift; path = Sources/Apollo/JSONStandardTypeConversions.swift; sourceTree = "<group>"; };
+		5691DCC296141977CD9B3D8359DCC945 /* SwiftLint-watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "SwiftLint-watchOS.debug.xcconfig"; path = "../SwiftLint-watchOS/SwiftLint-watchOS.debug.xcconfig"; sourceTree = "<group>"; };
+		57A85FA377E0399F7B93F1FCC626D2F9 /* Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = Sources/SQLite/Helpers.swift; sourceTree = "<group>"; };
+		58817A39F2FBE637D618368E72A8A977 /* Cancellable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cancellable.swift; path = Sources/Apollo/Cancellable.swift; sourceTree = "<group>"; };
 		590FA946505B75FA37B24D576510BBDC /* Pods-PysakkiKello WatchKit App-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PysakkiKello WatchKit App-Info.plist"; sourceTree = "<group>"; };
-		5A4F0BC09F59BE752DBD3666B2CEB689 /* HTTPURLResponse+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HTTPURLResponse+Helpers.swift"; path = "Sources/Apollo/HTTPURLResponse+Helpers.swift"; sourceTree = "<group>"; };
+		5967010C3EF27CDDA505C0EDE7BBFB44 /* Collection+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Collection+Helpers.swift"; path = "Sources/Apollo/Collection+Helpers.swift"; sourceTree = "<group>"; };
 		5ADBF5E8B7047831DCFB355C966E47AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		5D3180E2E2F3907284C6FBB5F0566614 /* Bundle+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bundle+Helpers.swift"; path = "Sources/Apollo/Bundle+Helpers.swift"; sourceTree = "<group>"; };
-		5F93ECAD6F008D4583356EF423BA6A82 /* Apollo-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Apollo-iOS-prefix.pch"; sourceTree = "<group>"; };
-		5F9F3460831D5CB904687526440C36DE /* Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Foundation.swift; path = Sources/SQLite/Foundation.swift; sourceTree = "<group>"; };
-		60E9FCF5715E895976068277A9278C9E /* ResultOrPromise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResultOrPromise.swift; path = Sources/Apollo/ResultOrPromise.swift; sourceTree = "<group>"; };
-		61E53179E2C4246F36BF38054BFE15AC /* SQLite.swift-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SQLite.swift-watchOS-umbrella.h"; path = "../SQLite.swift-watchOS/SQLite.swift-watchOS-umbrella.h"; sourceTree = "<group>"; };
-		6248235898DC33B9E9E63518388D1550 /* String+SHA.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+SHA.swift"; path = "Sources/Apollo/String+SHA.swift"; sourceTree = "<group>"; };
-		65615E24ADCDC4D62D974EC566C163E9 /* ApolloClientProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ApolloClientProtocol.swift; path = Sources/Apollo/ApolloClientProtocol.swift; sourceTree = "<group>"; };
-		6A9D30C6A251BB57B5A11318618E1E2E /* Setter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Setter.swift; path = Sources/SQLite/Typed/Setter.swift; sourceTree = "<group>"; };
-		6ECB512B709D91717DA5369D47161A34 /* Query.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Query.swift; path = Sources/SQLite/Typed/Query.swift; sourceTree = "<group>"; };
+		5EBF49EE48B3CA05581494ED94F92170 /* GraphQLInputValue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLInputValue.swift; path = Sources/Apollo/GraphQLInputValue.swift; sourceTree = "<group>"; };
+		5ED1DCF4CDCA1A58EF2A5030ED9F44FD /* GraphQLDependencyTracker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLDependencyTracker.swift; path = Sources/Apollo/GraphQLDependencyTracker.swift; sourceTree = "<group>"; };
 		6FDC23EAE2965721C00545C790B7B80B /* Pods-PysakkiKello WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PysakkiKello WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
-		6FFC5FD36526B5E4567FBE8AA2376C2E /* CustomFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomFunctions.swift; path = Sources/SQLite/Typed/CustomFunctions.swift; sourceTree = "<group>"; };
-		70F416640DF5708F7CF4744EE5A2F234 /* RecordSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RecordSet.swift; path = Sources/Apollo/RecordSet.swift; sourceTree = "<group>"; };
-		719D60D474AFDEF759E66B426D6A8599 /* Apollo-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Apollo-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		7228BC50173AA93C99D1B1656AE8701D /* Cancellable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cancellable.swift; path = Sources/Apollo/Cancellable.swift; sourceTree = "<group>"; };
-		767ACB8858BE1DEC4CCABBD989CDB5C4 /* SQLite.swift-watchOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "SQLite.swift-watchOS-Info.plist"; path = "../SQLite.swift-watchOS/SQLite.swift-watchOS-Info.plist"; sourceTree = "<group>"; };
-		78493116D291836BE0C9F130BA24DAA1 /* Apollo-watchOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "Apollo-watchOS-Info.plist"; path = "../Apollo-watchOS/Apollo-watchOS-Info.plist"; sourceTree = "<group>"; };
+		70D94646963EC25046BD31ECE6C407EF /* SQLiteObjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SQLiteObjc.h; path = Sources/SQLiteObjc/include/SQLiteObjc.h; sourceTree = "<group>"; };
+		719968A98CDC32B625869671C0CA2706 /* Apollo-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Apollo-watchOS-umbrella.h"; path = "../Apollo-watchOS/Apollo-watchOS-umbrella.h"; sourceTree = "<group>"; };
+		72D7D60962A23864CAFDB1FBC057109B /* SQLite.swift-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SQLite.swift-watchOS-prefix.pch"; path = "../SQLite.swift-watchOS/SQLite.swift-watchOS-prefix.pch"; sourceTree = "<group>"; };
+		78AA3CE0749E53DA70F0FEA14FD46B0B /* Blob.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Blob.swift; path = Sources/SQLite/Core/Blob.swift; sourceTree = "<group>"; };
 		7AD8A7A3B697569AA674A3BBFCC6C3C6 /* Pods-PysakkiKello WatchKit Extension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PysakkiKello WatchKit Extension-dummy.m"; sourceTree = "<group>"; };
-		7BFF545AF1A289A9327FD2893F75CDC3 /* Decoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Decoding.swift; path = Sources/Apollo/Decoding.swift; sourceTree = "<group>"; };
-		7E61D02F602BA40FA2A4CA6B6CC39CD9 /* SQLiteObjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SQLiteObjc.h; path = Sources/SQLiteObjc/include/SQLiteObjc.h; sourceTree = "<group>"; };
-		7EDA20AEC9749B1B014D5EB85291A1E9 /* Coding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Coding.swift; path = Sources/SQLite/Typed/Coding.swift; sourceTree = "<group>"; };
-		84B3D8552AB092719423A2AED079370B /* HTTPNetworkTransport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPNetworkTransport.swift; path = Sources/Apollo/HTTPNetworkTransport.swift; sourceTree = "<group>"; };
-		84D179CD8DD9F212BA3ABC42CA89A715 /* Apollo-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Apollo-watchOS.release.xcconfig"; path = "../Apollo-watchOS/Apollo-watchOS.release.xcconfig"; sourceTree = "<group>"; };
-		851E27FAD6876354ED75790EFA7C1A21 /* Apollo-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Apollo-iOS-dummy.m"; sourceTree = "<group>"; };
+		7B6E66A073BFCBC943EF122B59D73875 /* Coding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Coding.swift; path = Sources/SQLite/Typed/Coding.swift; sourceTree = "<group>"; };
+		7D040472924E959C7FADF18D4402607B /* GraphQLHTTPResponseError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLHTTPResponseError.swift; path = Sources/Apollo/GraphQLHTTPResponseError.swift; sourceTree = "<group>"; };
+		7E731146A23976FA89B83D2B8376B61B /* SQLite.swift-watchOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "SQLite.swift-watchOS-Info.plist"; path = "../SQLite.swift-watchOS/SQLite.swift-watchOS-Info.plist"; sourceTree = "<group>"; };
+		84A5DD008F46BB75EA00386FD59C47CA /* GraphQLResultAccumulator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLResultAccumulator.swift; path = Sources/Apollo/GraphQLResultAccumulator.swift; sourceTree = "<group>"; };
+		86019F136D766F1C0A59B4B3A26C6ABF /* Apollo-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "Apollo-watchOS.modulemap"; path = "../Apollo-watchOS/Apollo-watchOS.modulemap"; sourceTree = "<group>"; };
+		8697981CD22DDD55EC6364A941BC4D7A /* Record.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Record.swift; path = Sources/Apollo/Record.swift; sourceTree = "<group>"; };
+		86F135DD2469C9F5FA5ED48503998F7D /* Expression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expression.swift; path = Sources/SQLite/Typed/Expression.swift; sourceTree = "<group>"; };
 		86FE31D69E844FBC226419FFD908E6D2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		87229BBA88DE8A210188F2069720DB25 /* Apollo-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Apollo-iOS-prefix.pch"; sourceTree = "<group>"; };
 		874B08754D35B1DCF328E8C7EB3772C5 /* Pods-PysakkiKello WatchKit App-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PysakkiKello WatchKit App-umbrella.h"; sourceTree = "<group>"; };
-		8950BA591C22E643B0819B55A23620EB /* SQLite.swift-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "SQLite.swift-watchOS.modulemap"; path = "../SQLite.swift-watchOS/SQLite.swift-watchOS.modulemap"; sourceTree = "<group>"; };
-		89C33A7594B0628F65D2016D2F89A09B /* SQLite.swift-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SQLite.swift-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		8944DC1B36003CA7220640951FA54C9C /* InMemoryNormalizedCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InMemoryNormalizedCache.swift; path = Sources/Apollo/InMemoryNormalizedCache.swift; sourceTree = "<group>"; };
 		8A0F21E4792F361C1DD4D3E4A71931EC /* Pods-PysakkiKello WatchKit Extension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PysakkiKello WatchKit Extension-acknowledgements.markdown"; sourceTree = "<group>"; };
 		8AB3C254FBEED37A7A04EF97AF7C2584 /* Pods-PysakkiKello-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PysakkiKello-acknowledgements.plist"; sourceTree = "<group>"; };
+		8AE32CC3801CC6E3D24DFE9E48EA02FC /* GraphQLResultNormalizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLResultNormalizer.swift; path = Sources/Apollo/GraphQLResultNormalizer.swift; sourceTree = "<group>"; };
+		8C39374451CFFC343961A37D885132FD /* GraphQLExecutor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLExecutor.swift; path = Sources/Apollo/GraphQLExecutor.swift; sourceTree = "<group>"; };
 		8D23FCA75953C2C08B3E676E3A349EE2 /* Pods_PysakkiKello_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PysakkiKello_WatchKit_Extension.framework; path = "Pods-PysakkiKello WatchKit Extension.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D2D9D0957F767F95135757AF7D9C079 /* Matchable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Matchable.swift; path = Sources/Apollo/Matchable.swift; sourceTree = "<group>"; };
 		8D3C24143368B8D4789DB4A2C632A910 /* Pods-PysakkiKello WatchKit App-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PysakkiKello WatchKit App-frameworks.sh"; sourceTree = "<group>"; };
-		8F462EFA7D55BFB31590BB987DF18BC9 /* Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Promise.swift; path = Sources/Apollo/Promise.swift; sourceTree = "<group>"; };
-		923EC7B499D9A6440949F62153D448A5 /* Dictionary+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Dictionary+Helpers.swift"; path = "Sources/Apollo/Dictionary+Helpers.swift"; sourceTree = "<group>"; };
+		8FF7E22FE391C2255D5CB9694972AE8B /* GraphQLSelectionSetMapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLSelectionSetMapper.swift; path = Sources/Apollo/GraphQLSelectionSetMapper.swift; sourceTree = "<group>"; };
+		918ECECE5FDF86EA05A638FB344A69D7 /* SQLite.swift-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "SQLite.swift-watchOS.modulemap"; path = "../SQLite.swift-watchOS/SQLite.swift-watchOS.modulemap"; sourceTree = "<group>"; };
 		92895B567B97326AE769EA42C82D965B /* SQLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SQLite.framework; path = "SQLite.swift-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92AF7ACE4B45E5E22D0388FAAFF2B917 /* Pods_PysakkiKello_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PysakkiKello_WatchKit_App.framework; path = "Pods-PysakkiKello WatchKit App.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		938C6FC628D112DA9F6E1FEF606A48EE /* NormalizedCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NormalizedCache.swift; path = Sources/Apollo/NormalizedCache.swift; sourceTree = "<group>"; };
-		965D79C0A7AF1EBDB4172A115D5B97B3 /* SQLiteObjc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SQLiteObjc.m; path = Sources/SQLiteObjc/SQLiteObjc.m; sourceTree = "<group>"; };
-		973C3B92C3E8C46C4DC1697CEB3B6331 /* GraphQLSelectionSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLSelectionSet.swift; path = Sources/Apollo/GraphQLSelectionSet.swift; sourceTree = "<group>"; };
+		959A47376B29A2492EACA76C7CE7A315 /* SwiftLint-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SwiftLint-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		98C20487B041033FBAD6034056852B86 /* JSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSON.swift; path = Sources/Apollo/JSON.swift; sourceTree = "<group>"; };
+		99EB70BD66827D96B798D119110E1300 /* CustomFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomFunctions.swift; path = Sources/SQLite/Typed/CustomFunctions.swift; sourceTree = "<group>"; };
+		9A67B9EA8FFDD22E5AA8B8B305205F85 /* fts3_tokenizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = fts3_tokenizer.h; path = Sources/SQLiteObjc/fts3_tokenizer.h; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A1591C3D50F5DBB2CD1A841CB39CB840 /* Connection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Connection.swift; path = Sources/SQLite/Core/Connection.swift; sourceTree = "<group>"; };
+		A21796F71DE2AD51A4910C3DB2272727 /* Matchable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Matchable.swift; path = Sources/Apollo/Matchable.swift; sourceTree = "<group>"; };
 		A2411EF35EBC84DF370FAA6F76C5BE4A /* Pods_PysakkiKello.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PysakkiKello.framework; path = "Pods-PysakkiKello.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A37D64C30FC4DB98A5071507886E34F3 /* FTS5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTS5.swift; path = Sources/SQLite/Extensions/FTS5.swift; sourceTree = "<group>"; };
-		A6FAA906F6C8F821C53E8EAFEA5CBA62 /* GraphQLError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLError.swift; path = Sources/Apollo/GraphQLError.swift; sourceTree = "<group>"; };
-		A9E838FB623F3C1F10C6B218E96E8B52 /* JSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSON.swift; path = Sources/Apollo/JSON.swift; sourceTree = "<group>"; };
-		B0D0189FDE3C27889B71D44DC3329ED2 /* JSONSerializationFormat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONSerializationFormat.swift; path = Sources/Apollo/JSONSerializationFormat.swift; sourceTree = "<group>"; };
+		A32F6887390F256CBF2E27E81DD596C6 /* Decoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Decoding.swift; path = Sources/Apollo/Decoding.swift; sourceTree = "<group>"; };
+		A49D51A681531281B45C8410FF41403E /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Sources/SQLite/Typed/Operators.swift; sourceTree = "<group>"; };
+		A9BED4BE7F3CC6629E99AC58969878DB /* SQLite.swift-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SQLite.swift-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		A9E59BBFA0815ADE5FAA9450F3734FCE /* SQLite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SQLite.h; path = Sources/SQLite/SQLite.h; sourceTree = "<group>"; };
+		AF668FE1A94FB22FA7D0217E3DF7BB01 /* Value.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Value.swift; path = Sources/SQLite/Core/Value.swift; sourceTree = "<group>"; };
 		B26F99DD75A25B2ADF4E8497542A9D35 /* Pods-PysakkiKello WatchKit App.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PysakkiKello WatchKit App.modulemap"; sourceTree = "<group>"; };
-		B2F78A4579AA480919201B199D530FCC /* Atomic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Atomic.swift; path = Sources/Apollo/Atomic.swift; sourceTree = "<group>"; };
-		B6176783771AE206FB6FC9922D77AC4D /* NetworkTransport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkTransport.swift; path = Sources/Apollo/NetworkTransport.swift; sourceTree = "<group>"; };
+		B2F3798E2E8A5E0E92D028515E9CA77B /* SQLite.swift-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "SQLite.swift-watchOS.release.xcconfig"; path = "../SQLite.swift-watchOS/SQLite.swift-watchOS.release.xcconfig"; sourceTree = "<group>"; };
+		B4159C58454D6FC08433DDBA65ABAE88 /* DataLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataLoader.swift; path = Sources/Apollo/DataLoader.swift; sourceTree = "<group>"; };
+		B494E8DD253DF5CB8BA8B25D9AB2B3F1 /* RequestCreator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestCreator.swift; path = Sources/Apollo/RequestCreator.swift; sourceTree = "<group>"; };
+		B4EA5680A50F7496151C60FF6622DE55 /* JSONSerialization+Sorting.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "JSONSerialization+Sorting.swift"; path = "Sources/Apollo/JSONSerialization+Sorting.swift"; sourceTree = "<group>"; };
+		B4F2683159F50E264E1CD2B2E5D7D2E7 /* GraphQLOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLOperation.swift; path = Sources/Apollo/GraphQLOperation.swift; sourceTree = "<group>"; };
 		B61A219BD1B14D550B45B62CE0BE50AC /* Pods-PysakkiKello WatchKit Extension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PysakkiKello WatchKit Extension-acknowledgements.plist"; sourceTree = "<group>"; };
-		B75C55FED0F6CF1E9E04BFDA1E520D13 /* DataLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataLoader.swift; path = Sources/Apollo/DataLoader.swift; sourceTree = "<group>"; };
-		B871EFA1E7DE71321093837135338389 /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Sources/SQLite/Typed/Operators.swift; sourceTree = "<group>"; };
-		B90BEC05717F3EDCD8B944B668EB301A /* Collation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Collation.swift; path = Sources/SQLite/Typed/Collation.swift; sourceTree = "<group>"; };
-		B9BBB905EE4B8B30D652055E4C22346B /* GroupedSequence.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GroupedSequence.swift; path = Sources/Apollo/GroupedSequence.swift; sourceTree = "<group>"; };
-		B9DB7BFE087E3DD1E9CAB37AADD524E3 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Sources/Apollo/MultipartFormData.swift; sourceTree = "<group>"; };
+		B67A3F09B7FFECC0A1C9437F69B2EA11 /* SQLiteObjc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SQLiteObjc.m; path = Sources/SQLiteObjc/SQLiteObjc.m; sourceTree = "<group>"; };
+		B76831FDA31B9535A0943DD5B7883559 /* AggregateFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AggregateFunctions.swift; path = Sources/SQLite/Typed/AggregateFunctions.swift; sourceTree = "<group>"; };
+		B7B8804FEA6D11C76DE691DDB29F52E5 /* NormalizedCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NormalizedCache.swift; path = Sources/Apollo/NormalizedCache.swift; sourceTree = "<group>"; };
 		BBB7D1F8A535051202CE465812FCF663 /* Pods-PysakkiKello-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PysakkiKello-dummy.m"; sourceTree = "<group>"; };
-		BD306789730B07517DCE9DA10A9E9675 /* Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = Sources/SQLite/Helpers.swift; sourceTree = "<group>"; };
-		C24F71D6C4E5C0604BAEBF5677A0768A /* FTS4.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTS4.swift; path = Sources/SQLite/Extensions/FTS4.swift; sourceTree = "<group>"; };
-		C4879FD33E337E997A8062D7FE3391B9 /* GraphQLResultAccumulator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLResultAccumulator.swift; path = Sources/Apollo/GraphQLResultAccumulator.swift; sourceTree = "<group>"; };
-		C8922A829D9CA870B5B191E15103AFF2 /* Apollo-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Apollo-iOS-umbrella.h"; sourceTree = "<group>"; };
-		CAEDFB06D43ACAAEC2FC300E80D4C1C9 /* SQLite.swift-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SQLite.swift-watchOS-prefix.pch"; path = "../SQLite.swift-watchOS/SQLite.swift-watchOS-prefix.pch"; sourceTree = "<group>"; };
+		BC40F5032856BBC3985CECF345FBEEB4 /* FTS4.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTS4.swift; path = Sources/SQLite/Extensions/FTS4.swift; sourceTree = "<group>"; };
+		BCFBD5549B37D0F6C3F47F8CA00B0A15 /* Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Promise.swift; path = Sources/Apollo/Promise.swift; sourceTree = "<group>"; };
+		BE1FEACBA234E071DA8ECC34E6C05736 /* Apollo-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Apollo-iOS-umbrella.h"; sourceTree = "<group>"; };
+		C36ACAC258219A1707B82454B9F4E06C /* GraphQLHTTPRequestError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLHTTPRequestError.swift; path = Sources/Apollo/GraphQLHTTPRequestError.swift; sourceTree = "<group>"; };
+		C3D229074A1AF87582C5636F9D38228A /* DateAndTimeFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateAndTimeFunctions.swift; path = Sources/SQLite/Typed/DateAndTimeFunctions.swift; sourceTree = "<group>"; };
+		C74480A379ECA9A41E6CAF68309AAF74 /* Apollo-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Apollo-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		C75BD330BBF8CF3E2CC688C8E5804ACA /* SQLite.swift-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SQLite.swift-watchOS-dummy.m"; path = "../SQLite.swift-watchOS/SQLite.swift-watchOS-dummy.m"; sourceTree = "<group>"; };
+		C75EA455080671F0D87C131DBF4B867D /* Apollo-watchOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "Apollo-watchOS-Info.plist"; path = "../Apollo-watchOS/Apollo-watchOS-Info.plist"; sourceTree = "<group>"; };
+		C804D2F3515B7D87B01D41FE77DFFDE4 /* SQLite.swift-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SQLite.swift-iOS-prefix.pch"; sourceTree = "<group>"; };
+		CB8ECDE9B37A488E42D5D0ACB48E18B5 /* Bundle+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bundle+Helpers.swift"; path = "Sources/Apollo/Bundle+Helpers.swift"; sourceTree = "<group>"; };
 		CE0C05F82AC3DE0A8B8F49416ECE6FBB /* Pods-PysakkiKello-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PysakkiKello-Info.plist"; sourceTree = "<group>"; };
-		CE475C47F48CD811BF0575420F86FC07 /* SQLite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SQLite.h; path = Sources/SQLite/SQLite.h; sourceTree = "<group>"; };
-		CE904D610DCEE6D55ED29B715E593EC5 /* Apollo-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Apollo-watchOS-umbrella.h"; path = "../Apollo-watchOS/Apollo-watchOS-umbrella.h"; sourceTree = "<group>"; };
-		D09BCA5FCCD4AD86F58C712D0E63895B /* AsynchronousOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsynchronousOperation.swift; path = Sources/Apollo/AsynchronousOperation.swift; sourceTree = "<group>"; };
-		D278B16171414DB5449EE31D1F6CFDD1 /* DateAndTimeFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateAndTimeFunctions.swift; path = Sources/SQLite/Typed/DateAndTimeFunctions.swift; sourceTree = "<group>"; };
-		D2B27C9D88E95D9054808A8CFA9E3EC5 /* InMemoryNormalizedCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InMemoryNormalizedCache.swift; path = Sources/Apollo/InMemoryNormalizedCache.swift; sourceTree = "<group>"; };
-		D5785AB892C882EA4CC3DC5A37B77820 /* GraphQLInputValue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLInputValue.swift; path = Sources/Apollo/GraphQLInputValue.swift; sourceTree = "<group>"; };
-		D7BB7FE19F265D307ADE1240C5A48E12 /* GraphQLResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLResponse.swift; path = Sources/Apollo/GraphQLResponse.swift; sourceTree = "<group>"; };
-		DC91F0F529C6163D21BC0D58D4913049 /* GraphQLSelectionSetMapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLSelectionSetMapper.swift; path = Sources/Apollo/GraphQLSelectionSetMapper.swift; sourceTree = "<group>"; };
-		DD4139B24380127BB39F548283543B9E /* Apollo-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "Apollo-watchOS.modulemap"; path = "../Apollo-watchOS/Apollo-watchOS.modulemap"; sourceTree = "<group>"; };
+		D2FFA70752A7454452773C95DA80AD44 /* GroupedSequence.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GroupedSequence.swift; path = Sources/Apollo/GroupedSequence.swift; sourceTree = "<group>"; };
+		D423F38BD8D32464228A720A28C98AEF /* Atomic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Atomic.swift; path = Sources/Apollo/Atomic.swift; sourceTree = "<group>"; };
+		D4885D240B9C3DE87D853068F419F1E1 /* SQLite.swift-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "SQLite.swift-iOS.modulemap"; sourceTree = "<group>"; };
+		D7B1B21FD42B61719C6248D14AFD3328 /* Apollo-watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Apollo-watchOS.debug.xcconfig"; path = "../Apollo-watchOS/Apollo-watchOS.debug.xcconfig"; sourceTree = "<group>"; };
+		D9191118C566EA3457AB0B0D4CC3D69F /* SQLite.swift-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SQLite.swift-iOS-dummy.m"; sourceTree = "<group>"; };
+		DB18A752B45E003B66F6D670AFA07DFC /* ResultOrPromise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResultOrPromise.swift; path = Sources/Apollo/ResultOrPromise.swift; sourceTree = "<group>"; };
+		DBCEC7D382D9C7CCBCA76510FE6B9AAC /* Apollo-iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Apollo-iOS-Info.plist"; sourceTree = "<group>"; };
+		DE5FEF1803C267405A0BA791979594C3 /* JSONStandardTypeConversions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONStandardTypeConversions.swift; path = Sources/Apollo/JSONStandardTypeConversions.swift; sourceTree = "<group>"; };
 		E04B2D5DCA4702A8D7AAA28B7BECA67C /* Pods-PysakkiKello.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PysakkiKello.debug.xcconfig"; sourceTree = "<group>"; };
+		E24B91BDDDD501B7759091E1BB9D1799 /* SwiftLint-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SwiftLint-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		E4E4BE0AEBD6889DD3E3F0F70C109186 /* Apollo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Apollo.framework; path = "Apollo-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E5169020E750E2B68309C6D67B3EF650 /* Apollo-watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Apollo-watchOS.debug.xcconfig"; path = "../Apollo-watchOS/Apollo-watchOS.debug.xcconfig"; sourceTree = "<group>"; };
-		E64025DA65B28A970074CF5D077D433B /* RTree.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RTree.swift; path = Sources/SQLite/Extensions/RTree.swift; sourceTree = "<group>"; };
-		E6D03AB0D7A75D8E33A5207A00F68F5D /* GraphQLGETTransformer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLGETTransformer.swift; path = Sources/Apollo/GraphQLGETTransformer.swift; sourceTree = "<group>"; };
 		E6ED1F93DDCB12AAC01C90A6F73DB6D9 /* Pods-PysakkiKello WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PysakkiKello WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
-		E8DCD5B55299C654EB1715CC267EF08C /* Blob.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Blob.swift; path = Sources/SQLite/Core/Blob.swift; sourceTree = "<group>"; };
+		E7F4D618C701F25B968C4D18AF49AE28 /* Errors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = Sources/SQLite/Core/Errors.swift; sourceTree = "<group>"; };
+		E8B8939DC4ECF02EF10E092C02549D3A /* ApolloStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ApolloStore.swift; path = Sources/Apollo/ApolloStore.swift; sourceTree = "<group>"; };
 		EA1D763942C03E4D2904B21B55115F55 /* Pods-PysakkiKello-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PysakkiKello-umbrella.h"; sourceTree = "<group>"; };
-		EE006954C264C5EAE30DD832BD26C2E2 /* SQLite.swift-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SQLite.swift-iOS-prefix.pch"; sourceTree = "<group>"; };
+		EBE05E9331A9972C3E8CF9F94DAAD183 /* Setter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Setter.swift; path = Sources/SQLite/Typed/Setter.swift; sourceTree = "<group>"; };
+		EDC602050A8B5721AE49CD59AE89D2F1 /* SwiftLint-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "SwiftLint-watchOS.release.xcconfig"; path = "../SwiftLint-watchOS/SwiftLint-watchOS.release.xcconfig"; sourceTree = "<group>"; };
+		EEADDEE44EBFD6C88512DD24FCCFE116 /* Apollo-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Apollo-watchOS-prefix.pch"; path = "../Apollo-watchOS/Apollo-watchOS-prefix.pch"; sourceTree = "<group>"; };
+		EEBE394CBAC8B8C34ACD4FA82BE4E3C5 /* Apollo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Apollo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		EEE70D8ACA9A222A9A60E80E8667ADFD /* Pods-PysakkiKello WatchKit Extension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PysakkiKello WatchKit Extension.modulemap"; sourceTree = "<group>"; };
-		F0676CD6CF93F282E61C5218DE7E687E /* Apollo-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Apollo-iOS.modulemap"; sourceTree = "<group>"; };
+		EFDA3B3D160B70CBA393C755699EF579 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Sources/Apollo/MultipartFormData.swift; sourceTree = "<group>"; };
+		F0007BF0145AC5CD175F844DAA5B0D0A /* ApolloClientProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ApolloClientProtocol.swift; path = Sources/Apollo/ApolloClientProtocol.swift; sourceTree = "<group>"; };
 		F167DC757949F26B4D838A54BD2E4B50 /* Pods-PysakkiKello WatchKit App-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PysakkiKello WatchKit App-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F4D1334578E2DCA1AC0702858425A95E /* ResponsePath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponsePath.swift; path = Sources/Apollo/ResponsePath.swift; sourceTree = "<group>"; };
-		F9C7F60FDEC68038B134E48C5C412C8A /* Schema.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Schema.swift; path = Sources/SQLite/Typed/Schema.swift; sourceTree = "<group>"; };
-		FA529687702548D7751B154D5A0E7EEC /* SQLite.swift-watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "SQLite.swift-watchOS.debug.xcconfig"; path = "../SQLite.swift-watchOS/SQLite.swift-watchOS.debug.xcconfig"; sourceTree = "<group>"; };
+		F36779618B50583285C90F7A7B6135CD /* AsynchronousOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsynchronousOperation.swift; path = Sources/Apollo/AsynchronousOperation.swift; sourceTree = "<group>"; };
+		F3E5ECB2134411107625F1EC05D703B2 /* GraphQLError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLError.swift; path = Sources/Apollo/GraphQLError.swift; sourceTree = "<group>"; };
 		FE662F2130BE7EFA85CA914C7A064189 /* Pods-PysakkiKello.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PysakkiKello.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -377,6 +423,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E523F82C3F29F35A92051088C29160BB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D24B246F0F3C93DD35949DC7A99209A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53E9D0B4E8AFC698FF6EF984A9C5D245 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,19 +450,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8D3F5B3C76080F91998F71E4026B72F3 /* Frameworks */ = {
+		8522597702096C9702D8700FA04E4099 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9947E18CF745B26B0524EFAA1808B96 /* Foundation.framework in Frameworks */,
+				34F166A6F577B62F4E8D0D0CFF08F1DA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		98A02F84B2294A42D387C2D4037CCFA7 /* Frameworks */ = {
+		952FB107B99A882B68114E5773784433 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71EC7CC186366DC00DA604F0429142D2 /* Foundation.framework in Frameworks */,
+				8482E7A84AAEF29DB2F3F97EE23B0E0A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,14 +471,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1B0B30D166D7C1A7CEAB996069783E9 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C5C411D3E8E96BF67FF770DCC8F875AF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1DA902CDFC618DA5F9CD42FE0C9B03A3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +495,16 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		2F11D9C148122DE63F1CBE9714E86CED /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4E5FFED211A2AC12C9531AF61199080E /* Apollo */,
+				48F00C7871AB9E6F9611AA300275D2DB /* SQLite.swift */,
+				E957C2D49ACBACEA49D4FAF7464AC386 /* SwiftLint */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		300EB9918683B8C1CC9BAB12ABDF6614 /* Pods-PysakkiKello */ = {
 			isa = PBXGroup;
 			children = (
@@ -466,21 +522,32 @@
 			path = "Target Support Files/Pods-PysakkiKello";
 			sourceTree = "<group>";
 		};
-		38F455C6EF51F3C6FE81AE8165256311 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				AF80EAB5D48FEB0070F05CF0A06D1CBE /* Apollo */,
-				9F6651F931F16D37E538EE5B436BCDE9 /* SQLite.swift */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		43085B5EC92BA9333228B94389FFA518 /* watchOS */ = {
 			isa = PBXGroup;
 			children = (
 				86FE31D69E844FBC226419FFD908E6D2 /* Foundation.framework */,
 			);
 			name = watchOS;
+			sourceTree = "<group>";
+		};
+		48F00C7871AB9E6F9611AA300275D2DB /* SQLite.swift */ = {
+			isa = PBXGroup;
+			children = (
+				7753A52B7248BBA5B72014962F76EA13 /* standard */,
+				D424B12988D716570ADA42E87AFD620E /* Support Files */,
+			);
+			name = SQLite.swift;
+			path = SQLite.swift;
+			sourceTree = "<group>";
+		};
+		4E5FFED211A2AC12C9531AF61199080E /* Apollo */ = {
+			isa = PBXGroup;
+			children = (
+				A0AFF348351B683D04789D18699A5767 /* Core */,
+				C89D1FB7BA0AA74A8A03951FC13B93DF /* Support Files */,
+			);
+			name = Apollo;
+			path = Apollo;
 			sourceTree = "<group>";
 		};
 		54CCD06893F300F5B2C02DAFD57093E1 /* Frameworks */ = {
@@ -526,136 +593,128 @@
 			path = "Target Support Files/Pods-PysakkiKello WatchKit Extension";
 			sourceTree = "<group>";
 		};
-		6E5DF5D6A45C5B04FDF8D80512E01FBF /* Core */ = {
+		7753A52B7248BBA5B72014962F76EA13 /* standard */ = {
 			isa = PBXGroup;
 			children = (
-				536AA974BF3723694E9B96200634D8A5 /* ApolloClient.swift */,
-				65615E24ADCDC4D62D974EC566C163E9 /* ApolloClientProtocol.swift */,
-				4628F615612A5C46BE3113FD683B51F8 /* ApolloStore.swift */,
-				D09BCA5FCCD4AD86F58C712D0E63895B /* AsynchronousOperation.swift */,
-				B2F78A4579AA480919201B199D530FCC /* Atomic.swift */,
-				5D3180E2E2F3907284C6FBB5F0566614 /* Bundle+Helpers.swift */,
-				7228BC50173AA93C99D1B1656AE8701D /* Cancellable.swift */,
-				166FF0141CB08815834BA6FA1FA4BD75 /* Collection+Helpers.swift */,
-				B75C55FED0F6CF1E9E04BFDA1E520D13 /* DataLoader.swift */,
-				7BFF545AF1A289A9327FD2893F75CDC3 /* Decoding.swift */,
-				923EC7B499D9A6440949F62153D448A5 /* Dictionary+Helpers.swift */,
-				4DA2EF0F15493F0198442112E07AA071 /* DispatchQueue+Optional.swift */,
-				21166BD23B61EC111838D648D69C93DB /* GraphQLDependencyTracker.swift */,
-				A6FAA906F6C8F821C53E8EAFEA5CBA62 /* GraphQLError.swift */,
-				35B5E3CF9F001B2395F14E3B83454732 /* GraphQLExecutor.swift */,
-				3C0AD372E4B7808C92E611C37ABF0EAD /* GraphQLFile.swift */,
-				E6D03AB0D7A75D8E33A5207A00F68F5D /* GraphQLGETTransformer.swift */,
-				170AEF7AB5DD27BB0D265E5A738474CF /* GraphQLHTTPMethod.swift */,
-				08A8F243638273661D18B6F474117619 /* GraphQLHTTPRequestError.swift */,
-				0A133303D31A4AFE7FC9BD93BD036111 /* GraphQLHTTPResponseError.swift */,
-				D5785AB892C882EA4CC3DC5A37B77820 /* GraphQLInputValue.swift */,
-				107E2F85AFB065E59E0F62412C61F441 /* GraphQLOperation.swift */,
-				265C01711B9E5F148E1F2A71B28D769D /* GraphQLQueryWatcher.swift */,
-				D7BB7FE19F265D307ADE1240C5A48E12 /* GraphQLResponse.swift */,
-				3DEF9F2C0D890A1F89D072E9FA2A93B8 /* GraphQLResponseGenerator.swift */,
-				1944D5A7566E99337C58EB8BA0F83BC2 /* GraphQLResult.swift */,
-				C4879FD33E337E997A8062D7FE3391B9 /* GraphQLResultAccumulator.swift */,
-				268AC5D4AA094D12414E5325C6DC7729 /* GraphQLResultNormalizer.swift */,
-				973C3B92C3E8C46C4DC1697CEB3B6331 /* GraphQLSelectionSet.swift */,
-				DC91F0F529C6163D21BC0D58D4913049 /* GraphQLSelectionSetMapper.swift */,
-				B9BBB905EE4B8B30D652055E4C22346B /* GroupedSequence.swift */,
-				84B3D8552AB092719423A2AED079370B /* HTTPNetworkTransport.swift */,
-				5A4F0BC09F59BE752DBD3666B2CEB689 /* HTTPURLResponse+Helpers.swift */,
-				D2B27C9D88E95D9054808A8CFA9E3EC5 /* InMemoryNormalizedCache.swift */,
-				A9E838FB623F3C1F10C6B218E96E8B52 /* JSON.swift */,
-				18C475D82879C23A00A9066D4D5AED55 /* JSONSerialization+Sorting.swift */,
-				B0D0189FDE3C27889B71D44DC3329ED2 /* JSONSerializationFormat.swift */,
-				56D284FE403384984BB65A4CC64084F2 /* JSONStandardTypeConversions.swift */,
-				02B607D45ABD7635DF3A7A4935E0BD40 /* Locking.swift */,
-				8D2D9D0957F767F95135757AF7D9C079 /* Matchable.swift */,
-				B9DB7BFE087E3DD1E9CAB37AADD524E3 /* MultipartFormData.swift */,
-				B6176783771AE206FB6FC9922D77AC4D /* NetworkTransport.swift */,
-				938C6FC628D112DA9F6E1FEF606A48EE /* NormalizedCache.swift */,
-				8F462EFA7D55BFB31590BB987DF18BC9 /* Promise.swift */,
-				1FE998AD2C5059B24AE99D1E59E2B212 /* Record.swift */,
-				70F416640DF5708F7CF4744EE5A2F234 /* RecordSet.swift */,
-				03C96B0B539306BC8B0584A2B55086A5 /* RequestCreator.swift */,
-				F4D1334578E2DCA1AC0702858425A95E /* ResponsePath.swift */,
-				53BA2B0833D724ADD3E9FCF347E0C950 /* Result+Helpers.swift */,
-				60E9FCF5715E895976068277A9278C9E /* ResultOrPromise.swift */,
-				6248235898DC33B9E9E63518388D1550 /* String+SHA.swift */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
-		919164919EB691BF212B7756F7D18DFF /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				3E7E2D447F053DE132693EFE28F1B444 /* SQLite.swift-iOS.modulemap */,
-				21B82D85B34A9CB9923955A3D7FAA5B9 /* SQLite.swift-iOS-dummy.m */,
-				3E843879E72E3F602DFFDEC38CAADC27 /* SQLite.swift-iOS-Info.plist */,
-				EE006954C264C5EAE30DD832BD26C2E2 /* SQLite.swift-iOS-prefix.pch */,
-				0BBA30AABD952A1883D7D955F19987C2 /* SQLite.swift-iOS-umbrella.h */,
-				4F7EE7ADA0F8B38DB7D3AFD7972A2CAC /* SQLite.swift-iOS.debug.xcconfig */,
-				89C33A7594B0628F65D2016D2F89A09B /* SQLite.swift-iOS.release.xcconfig */,
-				8950BA591C22E643B0819B55A23620EB /* SQLite.swift-watchOS.modulemap */,
-				4AC131461AE611FAD02F227F7171BCEE /* SQLite.swift-watchOS-dummy.m */,
-				767ACB8858BE1DEC4CCABBD989CDB5C4 /* SQLite.swift-watchOS-Info.plist */,
-				CAEDFB06D43ACAAEC2FC300E80D4C1C9 /* SQLite.swift-watchOS-prefix.pch */,
-				61E53179E2C4246F36BF38054BFE15AC /* SQLite.swift-watchOS-umbrella.h */,
-				FA529687702548D7751B154D5A0E7EEC /* SQLite.swift-watchOS.debug.xcconfig */,
-				2A89EA7C92361F3347D373858DE37F30 /* SQLite.swift-watchOS.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SQLite.swift-iOS";
-			sourceTree = "<group>";
-		};
-		9B6940C327FC99D5EEB47A6CD316C452 /* standard */ = {
-			isa = PBXGroup;
-			children = (
-				2C5FA8AA727058486E8D6A47856BEB5C /* AggregateFunctions.swift */,
-				E8DCD5B55299C654EB1715CC267EF08C /* Blob.swift */,
-				7EDA20AEC9749B1B014D5EB85291A1E9 /* Coding.swift */,
-				B90BEC05717F3EDCD8B944B668EB301A /* Collation.swift */,
-				477AABA708A2507869801E2024ACDFAE /* Connection.swift */,
-				4DE97B2A1B68106FD0FC6DD29D9B2BF1 /* CoreFunctions.swift */,
-				6FFC5FD36526B5E4567FBE8AA2376C2E /* CustomFunctions.swift */,
-				D278B16171414DB5449EE31D1F6CFDD1 /* DateAndTimeFunctions.swift */,
-				2428D71E7FF630C1C0FFB5B67D58BF07 /* Errors.swift */,
-				1E5C29D836EA7B740D1A94B01578449F /* Expression.swift */,
-				5F9F3460831D5CB904687526440C36DE /* Foundation.swift */,
-				25CB40532BC5EE63D21714EE3E0ECD00 /* fts3_tokenizer.h */,
-				C24F71D6C4E5C0604BAEBF5677A0768A /* FTS4.swift */,
-				A37D64C30FC4DB98A5071507886E34F3 /* FTS5.swift */,
-				BD306789730B07517DCE9DA10A9E9675 /* Helpers.swift */,
-				B871EFA1E7DE71321093837135338389 /* Operators.swift */,
-				6ECB512B709D91717DA5369D47161A34 /* Query.swift */,
-				E64025DA65B28A970074CF5D077D433B /* RTree.swift */,
-				F9C7F60FDEC68038B134E48C5C412C8A /* Schema.swift */,
-				6A9D30C6A251BB57B5A11318618E1E2E /* Setter.swift */,
-				CE475C47F48CD811BF0575420F86FC07 /* SQLite.h */,
-				7E61D02F602BA40FA2A4CA6B6CC39CD9 /* SQLiteObjc.h */,
-				965D79C0A7AF1EBDB4172A115D5B97B3 /* SQLiteObjc.m */,
-				0C249A9A014C68846703B0E11FD8393B /* Statement.swift */,
-				16C52ABB1ED91731C4B73AA889839F3F /* Value.swift */,
+				B76831FDA31B9535A0943DD5B7883559 /* AggregateFunctions.swift */,
+				78AA3CE0749E53DA70F0FEA14FD46B0B /* Blob.swift */,
+				7B6E66A073BFCBC943EF122B59D73875 /* Coding.swift */,
+				47249C0EDC66311DDA8E257B808C8EDE /* Collation.swift */,
+				A1591C3D50F5DBB2CD1A841CB39CB840 /* Connection.swift */,
+				29DE14033ECC1D86FDAAC6A09956F01C /* CoreFunctions.swift */,
+				99EB70BD66827D96B798D119110E1300 /* CustomFunctions.swift */,
+				C3D229074A1AF87582C5636F9D38228A /* DateAndTimeFunctions.swift */,
+				E7F4D618C701F25B968C4D18AF49AE28 /* Errors.swift */,
+				86F135DD2469C9F5FA5ED48503998F7D /* Expression.swift */,
+				10FABDEA5BB9F0636402FEF95494D811 /* Foundation.swift */,
+				9A67B9EA8FFDD22E5AA8B8B305205F85 /* fts3_tokenizer.h */,
+				BC40F5032856BBC3985CECF345FBEEB4 /* FTS4.swift */,
+				1210724E29616EDA636DAE0E7B1D3D81 /* FTS5.swift */,
+				57A85FA377E0399F7B93F1FCC626D2F9 /* Helpers.swift */,
+				A49D51A681531281B45C8410FF41403E /* Operators.swift */,
+				0536BD2D8767BA64BCE36F1D067BCA13 /* Query.swift */,
+				36EEA1EF40839C625BDF4E275B46FE5D /* RTree.swift */,
+				35829EE5BAC9F3F002A7406E8A9B0E48 /* Schema.swift */,
+				EBE05E9331A9972C3E8CF9F94DAAD183 /* Setter.swift */,
+				A9E59BBFA0815ADE5FAA9450F3734FCE /* SQLite.h */,
+				70D94646963EC25046BD31ECE6C407EF /* SQLiteObjc.h */,
+				B67A3F09B7FFECC0A1C9437F69B2EA11 /* SQLiteObjc.m */,
+				15E944CF0BE9478B894123D7F3168F43 /* Statement.swift */,
+				AF668FE1A94FB22FA7D0217E3DF7BB01 /* Value.swift */,
 			);
 			name = standard;
 			sourceTree = "<group>";
 		};
-		9F6651F931F16D37E538EE5B436BCDE9 /* SQLite.swift */ = {
+		7E27846B42CA60440FCFD9B4A7562748 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				9B6940C327FC99D5EEB47A6CD316C452 /* standard */,
-				919164919EB691BF212B7756F7D18DFF /* Support Files */,
+				E24B91BDDDD501B7759091E1BB9D1799 /* SwiftLint-iOS.debug.xcconfig */,
+				959A47376B29A2492EACA76C7CE7A315 /* SwiftLint-iOS.release.xcconfig */,
+				5691DCC296141977CD9B3D8359DCC945 /* SwiftLint-watchOS.debug.xcconfig */,
+				EDC602050A8B5721AE49CD59AE89D2F1 /* SwiftLint-watchOS.release.xcconfig */,
 			);
-			name = SQLite.swift;
-			path = SQLite.swift;
+			name = "Support Files";
+			path = "../Target Support Files/SwiftLint-iOS";
 			sourceTree = "<group>";
 		};
-		AF80EAB5D48FEB0070F05CF0A06D1CBE /* Apollo */ = {
+		A0AFF348351B683D04789D18699A5767 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				6E5DF5D6A45C5B04FDF8D80512E01FBF /* Core */,
-				D3AD79A3E30CBCAC95E7CA4B71DE2576 /* Support Files */,
+				5082DBC39A5D41DFB0CF0B2857E76FC7 /* ApolloClient.swift */,
+				F0007BF0145AC5CD175F844DAA5B0D0A /* ApolloClientProtocol.swift */,
+				E8B8939DC4ECF02EF10E092C02549D3A /* ApolloStore.swift */,
+				F36779618B50583285C90F7A7B6135CD /* AsynchronousOperation.swift */,
+				D423F38BD8D32464228A720A28C98AEF /* Atomic.swift */,
+				CB8ECDE9B37A488E42D5D0ACB48E18B5 /* Bundle+Helpers.swift */,
+				58817A39F2FBE637D618368E72A8A977 /* Cancellable.swift */,
+				5967010C3EF27CDDA505C0EDE7BBFB44 /* Collection+Helpers.swift */,
+				B4159C58454D6FC08433DDBA65ABAE88 /* DataLoader.swift */,
+				A32F6887390F256CBF2E27E81DD596C6 /* Decoding.swift */,
+				01806CBC9B4DAFA360E6EB95B93CB177 /* Dictionary+Helpers.swift */,
+				14EFFFC187B7F301BEB83B59623C524B /* DispatchQueue+Optional.swift */,
+				5ED1DCF4CDCA1A58EF2A5030ED9F44FD /* GraphQLDependencyTracker.swift */,
+				F3E5ECB2134411107625F1EC05D703B2 /* GraphQLError.swift */,
+				8C39374451CFFC343961A37D885132FD /* GraphQLExecutor.swift */,
+				09E038E78E0723FB4ABE5DFF17C8A58A /* GraphQLFile.swift */,
+				1E0B7F5EFD6F95912896C233D6AEF602 /* GraphQLGETTransformer.swift */,
+				1F23813532B0C0052735D94581D04F63 /* GraphQLHTTPMethod.swift */,
+				C36ACAC258219A1707B82454B9F4E06C /* GraphQLHTTPRequestError.swift */,
+				7D040472924E959C7FADF18D4402607B /* GraphQLHTTPResponseError.swift */,
+				5EBF49EE48B3CA05581494ED94F92170 /* GraphQLInputValue.swift */,
+				B4F2683159F50E264E1CD2B2E5D7D2E7 /* GraphQLOperation.swift */,
+				13929C321A5178D2B87D57622FA9C93E /* GraphQLQueryWatcher.swift */,
+				52A023AB977DB6ABBA04EC9B97B39A1B /* GraphQLResponse.swift */,
+				1E9F8DDC184FA2B3B29E50277C079CE1 /* GraphQLResponseGenerator.swift */,
+				37AFD8F05C2AA8FBC2E05C69C6F5637C /* GraphQLResult.swift */,
+				84A5DD008F46BB75EA00386FD59C47CA /* GraphQLResultAccumulator.swift */,
+				8AE32CC3801CC6E3D24DFE9E48EA02FC /* GraphQLResultNormalizer.swift */,
+				2F8992F490F47866BE2BF58D25378EBA /* GraphQLSelectionSet.swift */,
+				8FF7E22FE391C2255D5CB9694972AE8B /* GraphQLSelectionSetMapper.swift */,
+				D2FFA70752A7454452773C95DA80AD44 /* GroupedSequence.swift */,
+				4885A1631D8B1D6B4FDD4F8575E665CB /* HTTPNetworkTransport.swift */,
+				449CE002A5E124820631AD5E1B4AB8BC /* HTTPURLResponse+Helpers.swift */,
+				8944DC1B36003CA7220640951FA54C9C /* InMemoryNormalizedCache.swift */,
+				98C20487B041033FBAD6034056852B86 /* JSON.swift */,
+				B4EA5680A50F7496151C60FF6622DE55 /* JSONSerialization+Sorting.swift */,
+				233BB374E00BEB86CBBC0258A2CA8883 /* JSONSerializationFormat.swift */,
+				DE5FEF1803C267405A0BA791979594C3 /* JSONStandardTypeConversions.swift */,
+				42F8ECA5F22FF711515D1CCE5B3EE910 /* Locking.swift */,
+				A21796F71DE2AD51A4910C3DB2272727 /* Matchable.swift */,
+				EFDA3B3D160B70CBA393C755699EF579 /* MultipartFormData.swift */,
+				135849DCAF8190752AD3BA8D5B7A55A8 /* NetworkTransport.swift */,
+				B7B8804FEA6D11C76DE691DDB29F52E5 /* NormalizedCache.swift */,
+				BCFBD5549B37D0F6C3F47F8CA00B0A15 /* Promise.swift */,
+				8697981CD22DDD55EC6364A941BC4D7A /* Record.swift */,
+				4259AC61019232765691C5F8302FA32B /* RecordSet.swift */,
+				B494E8DD253DF5CB8BA8B25D9AB2B3F1 /* RequestCreator.swift */,
+				3BE1795B61C2A9643A6EDBEDDD7D796F /* ResponsePath.swift */,
+				40800DD97FCE26ADE467CB0C3628D8A3 /* Result+Helpers.swift */,
+				DB18A752B45E003B66F6D670AFA07DFC /* ResultOrPromise.swift */,
+				3045966B3DBB247F45368809AD14335C /* String+SHA.swift */,
 			);
-			name = Apollo;
-			path = Apollo;
+			name = Core;
+			sourceTree = "<group>";
+		};
+		C89D1FB7BA0AA74A8A03951FC13B93DF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4C7D61457662352AAB6B7DAC389059E9 /* Apollo-iOS.modulemap */,
+				213008E31A01D742BC6FF7379D968222 /* Apollo-iOS-dummy.m */,
+				DBCEC7D382D9C7CCBCA76510FE6B9AAC /* Apollo-iOS-Info.plist */,
+				87229BBA88DE8A210188F2069720DB25 /* Apollo-iOS-prefix.pch */,
+				BE1FEACBA234E071DA8ECC34E6C05736 /* Apollo-iOS-umbrella.h */,
+				EEBE394CBAC8B8C34ACD4FA82BE4E3C5 /* Apollo-iOS.debug.xcconfig */,
+				C74480A379ECA9A41E6CAF68309AAF74 /* Apollo-iOS.release.xcconfig */,
+				86019F136D766F1C0A59B4B3A26C6ABF /* Apollo-watchOS.modulemap */,
+				184BF0306D720D9DF8CAF6A838695F8F /* Apollo-watchOS-dummy.m */,
+				C75EA455080671F0D87C131DBF4B867D /* Apollo-watchOS-Info.plist */,
+				EEADDEE44EBFD6C88512DD24FCCFE116 /* Apollo-watchOS-prefix.pch */,
+				719968A98CDC32B625869671C0CA2706 /* Apollo-watchOS-umbrella.h */,
+				D7B1B21FD42B61719C6248D14AFD3328 /* Apollo-watchOS.debug.xcconfig */,
+				0F8B11128EDAF70DC55815550FDF0E34 /* Apollo-watchOS.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Apollo-iOS";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -663,32 +722,41 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				54CCD06893F300F5B2C02DAFD57093E1 /* Frameworks */,
-				38F455C6EF51F3C6FE81AE8165256311 /* Pods */,
+				2F11D9C148122DE63F1CBE9714E86CED /* Pods */,
 				FB6A7EB3BC20CAC0322B10DC4650E788 /* Products */,
 				001FB7427C19D6A925648BA1E1F29462 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D3AD79A3E30CBCAC95E7CA4B71DE2576 /* Support Files */ = {
+		D424B12988D716570ADA42E87AFD620E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				F0676CD6CF93F282E61C5218DE7E687E /* Apollo-iOS.modulemap */,
-				851E27FAD6876354ED75790EFA7C1A21 /* Apollo-iOS-dummy.m */,
-				4ECD5A18D6B6DC61490D7027BC4775C3 /* Apollo-iOS-Info.plist */,
-				5F93ECAD6F008D4583356EF423BA6A82 /* Apollo-iOS-prefix.pch */,
-				C8922A829D9CA870B5B191E15103AFF2 /* Apollo-iOS-umbrella.h */,
-				26064D5CDB9B993D191CDB0E4CD2ECBD /* Apollo-iOS.debug.xcconfig */,
-				719D60D474AFDEF759E66B426D6A8599 /* Apollo-iOS.release.xcconfig */,
-				DD4139B24380127BB39F548283543B9E /* Apollo-watchOS.modulemap */,
-				174C9BC20B105200C615648A59E97230 /* Apollo-watchOS-dummy.m */,
-				78493116D291836BE0C9F130BA24DAA1 /* Apollo-watchOS-Info.plist */,
-				1105B001435F11E1380A9069B89FD777 /* Apollo-watchOS-prefix.pch */,
-				CE904D610DCEE6D55ED29B715E593EC5 /* Apollo-watchOS-umbrella.h */,
-				E5169020E750E2B68309C6D67B3EF650 /* Apollo-watchOS.debug.xcconfig */,
-				84D179CD8DD9F212BA3ABC42CA89A715 /* Apollo-watchOS.release.xcconfig */,
+				D4885D240B9C3DE87D853068F419F1E1 /* SQLite.swift-iOS.modulemap */,
+				D9191118C566EA3457AB0B0D4CC3D69F /* SQLite.swift-iOS-dummy.m */,
+				46764E782E4A2650AD837B55C8E00F60 /* SQLite.swift-iOS-Info.plist */,
+				C804D2F3515B7D87B01D41FE77DFFDE4 /* SQLite.swift-iOS-prefix.pch */,
+				51FAD74F53FA19391B8C1F58CDE58C88 /* SQLite.swift-iOS-umbrella.h */,
+				10A6377028680D4964F1949C9C52142F /* SQLite.swift-iOS.debug.xcconfig */,
+				A9BED4BE7F3CC6629E99AC58969878DB /* SQLite.swift-iOS.release.xcconfig */,
+				918ECECE5FDF86EA05A638FB344A69D7 /* SQLite.swift-watchOS.modulemap */,
+				C75BD330BBF8CF3E2CC688C8E5804ACA /* SQLite.swift-watchOS-dummy.m */,
+				7E731146A23976FA89B83D2B8376B61B /* SQLite.swift-watchOS-Info.plist */,
+				72D7D60962A23864CAFDB1FBC057109B /* SQLite.swift-watchOS-prefix.pch */,
+				0F3552F6A6A765FAA63ED3C5AF0E1F26 /* SQLite.swift-watchOS-umbrella.h */,
+				29C9791A4B828FEBE7609B6A8E91E18C /* SQLite.swift-watchOS.debug.xcconfig */,
+				B2F3798E2E8A5E0E92D028515E9CA77B /* SQLite.swift-watchOS.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/Apollo-iOS";
+			path = "../Target Support Files/SQLite.swift-iOS";
+			sourceTree = "<group>";
+		};
+		E957C2D49ACBACEA49D4FAF7464AC386 /* SwiftLint */ = {
+			isa = PBXGroup;
+			children = (
+				7E27846B42CA60440FCFD9B4A7562748 /* Support Files */,
+			);
+			name = SwiftLint;
+			path = SwiftLint;
 			sourceTree = "<group>";
 		};
 		FB6A7EB3BC20CAC0322B10DC4650E788 /* Products */ = {
@@ -708,6 +776,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		07EF1D6E7F096EC870AD9D3DB2737974 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7999124B333D29568E4CFF6F30A8D7C8 /* Pods-PysakkiKello WatchKit Extension-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1C2E7475BFE728BCC6FACA5914D3E4D7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -716,11 +792,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4373EC8883FD6215850BC389195A3BFA /* Headers */ = {
+		42F3989C31F476496BD1F0B8EF643AE9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A34A1147E38BE86E304F462956DBAA4 /* Pods-PysakkiKello WatchKit Extension-umbrella.h in Headers */,
+				3EA7FA9A06F240EFEB81FD79C696FF3F /* Pods-PysakkiKello WatchKit App-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -754,19 +830,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E9A7CA77A4E5294526F4BC192ED727F4 /* Headers */ = {
+		DE36D6C8BB685287A1A5FA478389BC70 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98F578352D695C8F706559120229E225 /* Pods-PysakkiKello-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EA3F9B8B00BD49D776F6929DB5EBA715 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E7944E1C56E85DE471A8E6FE3696226F /* Pods-PysakkiKello WatchKit App-umbrella.h in Headers */,
+				0DC351F88F6D25E8443C6EFB7C04599C /* Pods-PysakkiKello-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -847,18 +915,19 @@
 		};
 		D033163385FCADA27E37DD9C20FCFFA8 /* Pods-PysakkiKello WatchKit Extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 351CE69A3B076709D0D91F7FA0477E5F /* Build configuration list for PBXNativeTarget "Pods-PysakkiKello WatchKit Extension" */;
+			buildConfigurationList = 2A952D5B9FA5689B89162962573D5CBF /* Build configuration list for PBXNativeTarget "Pods-PysakkiKello WatchKit Extension" */;
 			buildPhases = (
-				4373EC8883FD6215850BC389195A3BFA /* Headers */,
-				0DA5EA5BB61255AC0B5D8814B802499D /* Sources */,
-				98A02F84B2294A42D387C2D4037CCFA7 /* Frameworks */,
-				24DC81DFC026D5B89D3A7864D85487AE /* Resources */,
+				07EF1D6E7F096EC870AD9D3DB2737974 /* Headers */,
+				A908963B6FDD79E33394D65009770720 /* Sources */,
+				8522597702096C9702D8700FA04E4099 /* Frameworks */,
+				EB9DFB94115D4AAECB514F8F6EDD889A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9F768664BE48DC4545D50B4800A3D527 /* PBXTargetDependency */,
-				2FC456BBB030280326D5D74E3B58A8F9 /* PBXTargetDependency */,
+				B9DC7524E5748EABD8B512C413909E12 /* PBXTargetDependency */,
+				973546CF8A79CFD8C2FBD967A853D876 /* PBXTargetDependency */,
+				C13B10C122CFD613E26971663B11C8AD /* PBXTargetDependency */,
 			);
 			name = "Pods-PysakkiKello WatchKit Extension";
 			productName = "Pods-PysakkiKello WatchKit Extension";
@@ -867,18 +936,19 @@
 		};
 		E042EDA9E7C43CF04694E9583FA19D26 /* Pods-PysakkiKello */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 518A5757BE6F1E47B446766C7FE1D8EB /* Build configuration list for PBXNativeTarget "Pods-PysakkiKello" */;
+			buildConfigurationList = 1A816E16B05EEDEFEBDAF8E464ECEE25 /* Build configuration list for PBXNativeTarget "Pods-PysakkiKello" */;
 			buildPhases = (
-				E9A7CA77A4E5294526F4BC192ED727F4 /* Headers */,
-				4CD090088D1B6E8CB633C1A47BF31617 /* Sources */,
-				8D3F5B3C76080F91998F71E4026B72F3 /* Frameworks */,
-				3D6BA8EDF249D1A09663796AAC7596CB /* Resources */,
+				DE36D6C8BB685287A1A5FA478389BC70 /* Headers */,
+				89005F7A02439F8754A8F016D9A33980 /* Sources */,
+				4D24B246F0F3C93DD35949DC7A99209A /* Frameworks */,
+				5A40A8007113CFDF4E3A3F68852A6310 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				81EF7CF8EBE48702B2A360209859D7AD /* PBXTargetDependency */,
-				D49D4CAA75819923A74C92FC863210BE /* PBXTargetDependency */,
+				FDF771CB5BF242A0A4FC077C268E7515 /* PBXTargetDependency */,
+				7A11944B60440D880652A9D0F1B2DB52 /* PBXTargetDependency */,
+				2D0C91C20792164CDBFD01236C3B623E /* PBXTargetDependency */,
 			);
 			name = "Pods-PysakkiKello";
 			productName = "Pods-PysakkiKello";
@@ -887,18 +957,19 @@
 		};
 		F1CBE4931AFA533781CF83F13D423AB2 /* Pods-PysakkiKello WatchKit App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 52BD0793C055DF017332924620CA4F23 /* Build configuration list for PBXNativeTarget "Pods-PysakkiKello WatchKit App" */;
+			buildConfigurationList = 766FB8DA7B2B74F4C2C1CCEACCFE3803 /* Build configuration list for PBXNativeTarget "Pods-PysakkiKello WatchKit App" */;
 			buildPhases = (
-				EA3F9B8B00BD49D776F6929DB5EBA715 /* Headers */,
-				22F8D254C47CD53DA940346F54CCC185 /* Sources */,
-				C5C411D3E8E96BF67FF770DCC8F875AF /* Frameworks */,
-				7EAF6E862967733CF6A1F7533B207420 /* Resources */,
+				42F3989C31F476496BD1F0B8EF643AE9 /* Headers */,
+				0AA4F06CE093808198B6B2D2FA78A903 /* Sources */,
+				952FB107B99A882B68114E5773784433 /* Frameworks */,
+				6A1F4B15810BBA2F07DA59863D6D2B6B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DCC61A9CA3ACEDA9973A3CA1E6BE14B0 /* PBXTargetDependency */,
-				46FF818822F72A7FC5714CD66CD72C75 /* PBXTargetDependency */,
+				B92D83299F245A7D6360A3AE895D7E49 /* PBXTargetDependency */,
+				EF58ED38A9B0994C29656CB9469FE321 /* PBXTargetDependency */,
+				F83270386FF2FAF335D7C6D4DB8CD65D /* PBXTargetDependency */,
 			);
 			name = "Pods-PysakkiKello WatchKit App";
 			productName = "Pods-PysakkiKello WatchKit App";
@@ -934,6 +1005,8 @@
 				D033163385FCADA27E37DD9C20FCFFA8 /* Pods-PysakkiKello WatchKit Extension */,
 				0A79CECACBDA1A8D6DAEF3993D705334 /* SQLite.swift-iOS */,
 				B03C12E4A63B911096950D3BEDE8BCE4 /* SQLite.swift-watchOS */,
+				2B03D5FD26A26B7D62142EA4492AEB83 /* SwiftLint-iOS */,
+				0626378CBCA3137F03E6DCC306504C4B /* SwiftLint-watchOS */,
 			);
 		};
 /* End PBXProject section */
@@ -953,14 +1026,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		24DC81DFC026D5B89D3A7864D85487AE /* Resources */ = {
+		5A40A8007113CFDF4E3A3F68852A6310 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3D6BA8EDF249D1A09663796AAC7596CB /* Resources */ = {
+		6A1F4B15810BBA2F07DA59863D6D2B6B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -974,14 +1047,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7EAF6E862967733CF6A1F7533B207420 /* Resources */ = {
+		AD60C3E837349FFDBEAE6E66D6E0847A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AD60C3E837349FFDBEAE6E66D6E0847A /* Resources */ = {
+		EB9DFB94115D4AAECB514F8F6EDD889A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -991,27 +1064,11 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0DA5EA5BB61255AC0B5D8814B802499D /* Sources */ = {
+		0AA4F06CE093808198B6B2D2FA78A903 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				528F9781905678330D07E342B1B42E08 /* Pods-PysakkiKello WatchKit Extension-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		22F8D254C47CD53DA940346F54CCC185 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				02FA19BAB16422B45769F757646939BA /* Pods-PysakkiKello WatchKit App-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4CD090088D1B6E8CB633C1A47BF31617 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CD6A2E7A3A3E044DB57E08275F0F8296 /* Pods-PysakkiKello-dummy.m in Sources */,
+				887374609D99FCB5595518401AF8408D /* Pods-PysakkiKello WatchKit App-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1075,6 +1132,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		89005F7A02439F8754A8F016D9A33980 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				266C23ED2C397EE25C606913FB57EA8A /* Pods-PysakkiKello-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		95C900C63709E9BABAE52874F4B14617 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1131,6 +1196,14 @@
 				086CEC573E1EE8DE60278C1AA01D086E /* Result+Helpers.swift in Sources */,
 				AFBD254C827078BDAA078BBB8B910384 /* ResultOrPromise.swift in Sources */,
 				D8ABD1A64883F8DA8E25C0C76A0BB79A /* String+SHA.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A908963B6FDD79E33394D65009770720 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D9CD6AC71C267D2CB7E4A63D338E269 /* Pods-PysakkiKello WatchKit Extension-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1196,48 +1269,66 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2FC456BBB030280326D5D74E3B58A8F9 /* PBXTargetDependency */ = {
+		2D0C91C20792164CDBFD01236C3B623E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "SQLite.swift-watchOS";
-			target = B03C12E4A63B911096950D3BEDE8BCE4 /* SQLite.swift-watchOS */;
-			targetProxy = 1F5C1387AFD1C9D4D622D560053C6F0E /* PBXContainerItemProxy */;
+			name = "SwiftLint-iOS";
+			target = 2B03D5FD26A26B7D62142EA4492AEB83 /* SwiftLint-iOS */;
+			targetProxy = A80B35B6D65661AF52849EF9B22BA837 /* PBXContainerItemProxy */;
 		};
-		46FF818822F72A7FC5714CD66CD72C75 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "SQLite.swift-watchOS";
-			target = B03C12E4A63B911096950D3BEDE8BCE4 /* SQLite.swift-watchOS */;
-			targetProxy = 2D27D474D8DB1A782C0CEDC9069E9C1D /* PBXContainerItemProxy */;
-		};
-		81EF7CF8EBE48702B2A360209859D7AD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Apollo-iOS";
-			target = 4B473BC68A8E02E3A7A9ED2CE7790A74 /* Apollo-iOS */;
-			targetProxy = 4B95324717E91AC2B975E356F9E18E7B /* PBXContainerItemProxy */;
-		};
-		9F768664BE48DC4545D50B4800A3D527 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Apollo-watchOS";
-			target = 9DF667367C1D5C66C810E63C5D2E9C2C /* Apollo-watchOS */;
-			targetProxy = DD2DFB28D9388E0C128FFAE2EF73FB2E /* PBXContainerItemProxy */;
-		};
-		D49D4CAA75819923A74C92FC863210BE /* PBXTargetDependency */ = {
+		7A11944B60440D880652A9D0F1B2DB52 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "SQLite.swift-iOS";
 			target = 0A79CECACBDA1A8D6DAEF3993D705334 /* SQLite.swift-iOS */;
-			targetProxy = BB7ECD3B41B5155C37536089416F5332 /* PBXContainerItemProxy */;
+			targetProxy = CC4615E64507E51EB1DB1AB92D310E98 /* PBXContainerItemProxy */;
 		};
-		DCC61A9CA3ACEDA9973A3CA1E6BE14B0 /* PBXTargetDependency */ = {
+		973546CF8A79CFD8C2FBD967A853D876 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SQLite.swift-watchOS";
+			target = B03C12E4A63B911096950D3BEDE8BCE4 /* SQLite.swift-watchOS */;
+			targetProxy = 3D2BBDEDC2C738B65A6F52FDC866BFB6 /* PBXContainerItemProxy */;
+		};
+		B92D83299F245A7D6360A3AE895D7E49 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Apollo-watchOS";
 			target = 9DF667367C1D5C66C810E63C5D2E9C2C /* Apollo-watchOS */;
-			targetProxy = 5EC39D8740DBAAE0F0B7D3C5BAAC46C3 /* PBXContainerItemProxy */;
+			targetProxy = 50F3180D96186B05CAFF2D0D45182D08 /* PBXContainerItemProxy */;
+		};
+		B9DC7524E5748EABD8B512C413909E12 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Apollo-watchOS";
+			target = 9DF667367C1D5C66C810E63C5D2E9C2C /* Apollo-watchOS */;
+			targetProxy = D9718BC3F304DF5BAA21B1E52CF32CEF /* PBXContainerItemProxy */;
+		};
+		C13B10C122CFD613E26971663B11C8AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SwiftLint-watchOS";
+			target = 0626378CBCA3137F03E6DCC306504C4B /* SwiftLint-watchOS */;
+			targetProxy = 7C636FD902E9FDAE4C57987C7545E55A /* PBXContainerItemProxy */;
+		};
+		EF58ED38A9B0994C29656CB9469FE321 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SQLite.swift-watchOS";
+			target = B03C12E4A63B911096950D3BEDE8BCE4 /* SQLite.swift-watchOS */;
+			targetProxy = 5A45794F894043D578F1435A690E356B /* PBXContainerItemProxy */;
+		};
+		F83270386FF2FAF335D7C6D4DB8CD65D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SwiftLint-watchOS";
+			target = 0626378CBCA3137F03E6DCC306504C4B /* SwiftLint-watchOS */;
+			targetProxy = 9CACCFE372E0E46547EA60D64C4EB80A /* PBXContainerItemProxy */;
+		};
+		FDF771CB5BF242A0A4FC077C268E7515 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Apollo-iOS";
+			target = 4B473BC68A8E02E3A7A9ED2CE7790A74 /* Apollo-iOS */;
+			targetProxy = 5EC8CA3B91C97BE4C1F896069D2626A5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		158C3330B4D9B61E0830E99A45158938 /* Debug */ = {
+		07210D5860813923CDA79363FB38DB45 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6FDC23EAE2965721C00545C790B7B80B /* Pods-PysakkiKello WatchKit App.debug.xcconfig */;
+			baseConfigurationReference = 3414BE644F3F5B83003BF9DFDACE38B3 /* Pods-PysakkiKello WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				APPLICATION_EXTENSION_API_ONLY = YES;
@@ -1250,7 +1341,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-PysakkiKello WatchKit App/Pods-PysakkiKello WatchKit App-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-PysakkiKello WatchKit Extension/Pods-PysakkiKello WatchKit Extension-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1258,7 +1349,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-PysakkiKello WatchKit App/Pods-PysakkiKello WatchKit App.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-PysakkiKello WatchKit Extension/Pods-PysakkiKello WatchKit Extension.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -1267,11 +1358,51 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 				WATCHOS_DEPLOYMENT_TARGET = 6.0;
 			};
-			name = Debug;
+			name = Release;
+		};
+		082B3F0D676C3217DA58BA889F089C53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE662F2130BE7EFA85CA914C7A064189 /* Pods-PysakkiKello.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PysakkiKello/Pods-PysakkiKello-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PysakkiKello/Pods-PysakkiKello.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		19D54E594663518ACF948A7035E03761 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1338,9 +1469,60 @@
 			};
 			name = Debug;
 		};
+		1E930D0407506C4A6DE10F123660ED09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDC602050A8B5721AE49CD59AE89D2F1 /* SwiftLint-watchOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		21F766ACA24454DAEAC350330924C77F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C336606A46D267D13C9F90470F5DBCD /* Pods-PysakkiKello WatchKit Extension.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PysakkiKello WatchKit Extension/Pods-PysakkiKello WatchKit Extension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PysakkiKello WatchKit Extension/Pods-PysakkiKello WatchKit Extension.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
 		259DB477718344FB7B0430B272487DF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 26064D5CDB9B993D191CDB0E4CD2ECBD /* Apollo-iOS.debug.xcconfig */;
+			baseConfigurationReference = EEBE394CBAC8B8C34ACD4FA82BE4E3C5 /* Apollo-iOS.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1373,9 +1555,21 @@
 			};
 			name = Debug;
 		};
+		2E2B03CBAE2832C024E56D636BB17A97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5691DCC296141977CD9B3D8359DCC945 /* SwiftLint-watchOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
 		35B8FD26EE68640627827797567F9FE4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89C33A7594B0628F65D2016D2F89A09B /* SQLite.swift-iOS.release.xcconfig */;
+			baseConfigurationReference = A9BED4BE7F3CC6629E99AC58969878DB /* SQLite.swift-iOS.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1470,7 +1664,295 @@
 			};
 			name = Release;
 		};
-		5644FFD62F0FC659A938B7DA41A76CD6 /* Debug */ = {
+		5EB2330A2BCA9B08A2FCEE73C7EEB79C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FDC23EAE2965721C00545C790B7B80B /* Pods-PysakkiKello WatchKit App.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PysakkiKello WatchKit App/Pods-PysakkiKello WatchKit App-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PysakkiKello WatchKit App/Pods-PysakkiKello WatchKit App.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		6989C1D67B3918FFAD0F8D1C77EF3A3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C74480A379ECA9A41E6CAF68309AAF74 /* Apollo-iOS.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Apollo-iOS/Apollo-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Apollo-iOS/Apollo-iOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Apollo-iOS/Apollo-iOS.modulemap";
+				PRODUCT_MODULE_NAME = Apollo;
+				PRODUCT_NAME = Apollo;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		79E1DF33436F69660555908721A38B96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29C9791A4B828FEBE7609B6A8E91E18C /* SQLite.swift-watchOS.debug.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SQLite.swift-watchOS/SQLite.swift-watchOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SQLite.swift-watchOS/SQLite.swift-watchOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SQLite.swift-watchOS/SQLite.swift-watchOS.modulemap";
+				PRODUCT_MODULE_NAME = SQLite;
+				PRODUCT_NAME = SQLite;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		9493D27B8FD37848A8A502057B76DF92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2F3798E2E8A5E0E92D028515E9CA77B /* SQLite.swift-watchOS.release.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SQLite.swift-watchOS/SQLite.swift-watchOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SQLite.swift-watchOS/SQLite.swift-watchOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SQLite.swift-watchOS/SQLite.swift-watchOS.modulemap";
+				PRODUCT_MODULE_NAME = SQLite;
+				PRODUCT_NAME = SQLite;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+		B058BF3729F7A2FA57A22DD121DBD175 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F8B11128EDAF70DC55815550FDF0E34 /* Apollo-watchOS.release.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Apollo-watchOS/Apollo-watchOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Apollo-watchOS/Apollo-watchOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Apollo-watchOS/Apollo-watchOS.modulemap";
+				PRODUCT_MODULE_NAME = Apollo;
+				PRODUCT_NAME = Apollo;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Release;
+		};
+		B33F130F1C6AA87B6C1F0219867802EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E24B91BDDDD501B7759091E1BB9D1799 /* SwiftLint-iOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DF11D64845FCD71751FCEBDC97B6E4DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10A6377028680D4964F1949C9C52142F /* SQLite.swift-iOS.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SQLite.swift-iOS/SQLite.swift-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SQLite.swift-iOS/SQLite.swift-iOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SQLite.swift-iOS/SQLite.swift-iOS.modulemap";
+				PRODUCT_MODULE_NAME = SQLite;
+				PRODUCT_NAME = SQLite;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DF914BE06D732224931FC980CD313EC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 959A47376B29A2492EACA76C7CE7A315 /* SwiftLint-iOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F0A0E69E7A6B47245F7ADBB540CFF3C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7B1B21FD42B61719C6248D14AFD3328 /* Apollo-watchOS.debug.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Apollo-watchOS/Apollo-watchOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Apollo-watchOS/Apollo-watchOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Apollo-watchOS/Apollo-watchOS.modulemap";
+				PRODUCT_MODULE_NAME = Apollo;
+				PRODUCT_NAME = Apollo;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Debug;
+		};
+		FEB53ECF91546D4E752E82A4CB560460 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E04B2D5DCA4702A8D7AAA28B7BECA67C /* Pods-PysakkiKello.debug.xcconfig */;
 			buildSettings = {
@@ -1508,79 +1990,7 @@
 			};
 			name = Debug;
 		};
-		6989C1D67B3918FFAD0F8D1C77EF3A3C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 719D60D474AFDEF759E66B426D6A8599 /* Apollo-iOS.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Apollo-iOS/Apollo-iOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Apollo-iOS/Apollo-iOS-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/Apollo-iOS/Apollo-iOS.modulemap";
-				PRODUCT_MODULE_NAME = Apollo;
-				PRODUCT_NAME = Apollo;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		79E1DF33436F69660555908721A38B96 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA529687702548D7751B154D5A0E7EEC /* SQLite.swift-watchOS.debug.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SQLite.swift-watchOS/SQLite.swift-watchOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SQLite.swift-watchOS/SQLite.swift-watchOS-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SQLite.swift-watchOS/SQLite.swift-watchOS.modulemap";
-				PRODUCT_MODULE_NAME = SQLite;
-				PRODUCT_NAME = SQLite;
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5;
-				TARGETED_DEVICE_FAMILY = 4;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-				WATCHOS_DEPLOYMENT_TARGET = 2.2;
-			};
-			name = Debug;
-		};
-		7AEBDC1423CF4ACCBAF812921C080524 /* Release */ = {
+		FF9C264D1465160D1D1905E8DD584C5A /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E6ED1F93DDCB12AAC01C90A6F73DB6D9 /* Pods-PysakkiKello WatchKit App.release.xcconfig */;
 			buildSettings = {
@@ -1619,275 +2029,32 @@
 			};
 			name = Release;
 		};
-		83B29B4228C0887AF33405FDDCD68B7B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C336606A46D267D13C9F90470F5DBCD /* Pods-PysakkiKello WatchKit Extension.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-PysakkiKello WatchKit Extension/Pods-PysakkiKello WatchKit Extension-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-PysakkiKello WatchKit Extension/Pods-PysakkiKello WatchKit Extension.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-				WATCHOS_DEPLOYMENT_TARGET = 6.0;
-			};
-			name = Debug;
-		};
-		9493D27B8FD37848A8A502057B76DF92 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2A89EA7C92361F3347D373858DE37F30 /* SQLite.swift-watchOS.release.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SQLite.swift-watchOS/SQLite.swift-watchOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SQLite.swift-watchOS/SQLite.swift-watchOS-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SQLite.swift-watchOS/SQLite.swift-watchOS.modulemap";
-				PRODUCT_MODULE_NAME = SQLite;
-				PRODUCT_NAME = SQLite;
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5;
-				TARGETED_DEVICE_FAMILY = 4;
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-				WATCHOS_DEPLOYMENT_TARGET = 2.2;
-			};
-			name = Release;
-		};
-		B058BF3729F7A2FA57A22DD121DBD175 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 84D179CD8DD9F212BA3ABC42CA89A715 /* Apollo-watchOS.release.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Apollo-watchOS/Apollo-watchOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Apollo-watchOS/Apollo-watchOS-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/Apollo-watchOS/Apollo-watchOS.modulemap";
-				PRODUCT_MODULE_NAME = Apollo;
-				PRODUCT_NAME = Apollo;
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-				WATCHOS_DEPLOYMENT_TARGET = 3.0;
-			};
-			name = Release;
-		};
-		DF11D64845FCD71751FCEBDC97B6E4DD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4F7EE7ADA0F8B38DB7D3AFD7972A2CAC /* SQLite.swift-iOS.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SQLite.swift-iOS/SQLite.swift-iOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SQLite.swift-iOS/SQLite.swift-iOS-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SQLite.swift-iOS/SQLite.swift-iOS.modulemap";
-				PRODUCT_MODULE_NAME = SQLite;
-				PRODUCT_NAME = SQLite;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		EE5EDCBEEA3C562D5F605F54CA967EE5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3414BE644F3F5B83003BF9DFDACE38B3 /* Pods-PysakkiKello WatchKit Extension.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-PysakkiKello WatchKit Extension/Pods-PysakkiKello WatchKit Extension-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-PysakkiKello WatchKit Extension/Pods-PysakkiKello WatchKit Extension.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-				WATCHOS_DEPLOYMENT_TARGET = 6.0;
-			};
-			name = Release;
-		};
-		EEFF39878153DE8A1D65A08F7FAA1C87 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FE662F2130BE7EFA85CA914C7A064189 /* Pods-PysakkiKello.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-PysakkiKello/Pods-PysakkiKello-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-PysakkiKello/Pods-PysakkiKello.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		F0A0E69E7A6B47245F7ADBB540CFF3C7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E5169020E750E2B68309C6D67B3EF650 /* Apollo-watchOS.debug.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Apollo-watchOS/Apollo-watchOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Apollo-watchOS/Apollo-watchOS-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/Apollo-watchOS/Apollo-watchOS.modulemap";
-				PRODUCT_MODULE_NAME = Apollo;
-				PRODUCT_NAME = Apollo;
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-				WATCHOS_DEPLOYMENT_TARGET = 3.0;
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		351CE69A3B076709D0D91F7FA0477E5F /* Build configuration list for PBXNativeTarget "Pods-PysakkiKello WatchKit Extension" */ = {
+		15C2581D1D019FF8D7F783E76C884B84 /* Build configuration list for PBXAggregateTarget "SwiftLint-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				83B29B4228C0887AF33405FDDCD68B7B /* Debug */,
-				EE5EDCBEEA3C562D5F605F54CA967EE5 /* Release */,
+				B33F130F1C6AA87B6C1F0219867802EE /* Debug */,
+				DF914BE06D732224931FC980CD313EC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A816E16B05EEDEFEBDAF8E464ECEE25 /* Build configuration list for PBXNativeTarget "Pods-PysakkiKello" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEB53ECF91546D4E752E82A4CB560460 /* Debug */,
+				082B3F0D676C3217DA58BA889F089C53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A952D5B9FA5689B89162962573D5CBF /* Build configuration list for PBXNativeTarget "Pods-PysakkiKello WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21F766ACA24454DAEAC350330924C77F /* Debug */,
+				07210D5860813923CDA79363FB38DB45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1901,29 +2068,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		518A5757BE6F1E47B446766C7FE1D8EB /* Build configuration list for PBXNativeTarget "Pods-PysakkiKello" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5644FFD62F0FC659A938B7DA41A76CD6 /* Debug */,
-				EEFF39878153DE8A1D65A08F7FAA1C87 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		52BD0793C055DF017332924620CA4F23 /* Build configuration list for PBXNativeTarget "Pods-PysakkiKello WatchKit App" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				158C3330B4D9B61E0830E99A45158938 /* Debug */,
-				7AEBDC1423CF4ACCBAF812921C080524 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		6637E4F972BEFA874077DCDC0A03D2F9 /* Build configuration list for PBXNativeTarget "SQLite.swift-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DF11D64845FCD71751FCEBDC97B6E4DD /* Debug */,
 				35B8FD26EE68640627827797567F9FE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		766FB8DA7B2B74F4C2C1CCEACCFE3803 /* Build configuration list for PBXNativeTarget "Pods-PysakkiKello WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EB2330A2BCA9B08A2FCEE73C7EEB79C /* Debug */,
+				FF9C264D1465160D1D1905E8DD584C5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1951,6 +2109,15 @@
 			buildConfigurations = (
 				259DB477718344FB7B0430B272487DF3 /* Debug */,
 				6989C1D67B3918FFAD0F8D1C77EF3A3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE281C55CA51425B131359529BA6F174 /* Build configuration list for PBXAggregateTarget "SwiftLint-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E2B03CBAE2832C024E56D636BB17A97 /* Debug */,
+				1E930D0407506C4A6DE10F123660ED09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

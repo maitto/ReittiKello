@@ -14,7 +14,7 @@ extension String {
         if value != self || NSLocale.preferredLanguages.first == "en" {
             return value
         }
-        
+
         // Fall back to en
         guard
             let path = Bundle.main.path(forResource: "en", ofType: "lproj"),
@@ -30,10 +30,10 @@ func getFormattedTime(seconds: Int) -> String? {
 
     let formatter = DateComponentsFormatter()
     formatter.unitsStyle = .positional
-    formatter.allowedUnits = [ .hour ,.minute ]
+    formatter.allowedUnits = [ .hour, .minute ]
     formatter.zeroFormattingBehavior = [ .pad ]
 
     let formattedDuration = formatter.string(from: duration)
-    
+
     return formattedDuration
 }

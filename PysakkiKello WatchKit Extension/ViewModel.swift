@@ -10,16 +10,16 @@ import UIKit
 
 class ViewModel {
     static let shared = ViewModel()
-    
+
     var viewMode: ViewMode = .favorites
-    
+
     func initView() {
         viewMode = StorageService.shared.getFavoriteStops().isEmpty ? .nearby : .favorites
         updateNoDataTitle(updating: true)
         updateViewModeButton()
         updateStopListTitle()
     }
-    
+
     func updateStops() {
         switch viewMode {
         case .favorites:
@@ -28,7 +28,7 @@ class ViewModel {
             updateNearbyStops()
         }
     }
-    
+
     func updateDepartures(_ id: String) {
         ViewData.shared.departures = []
         updateFavoritedButton(id)
@@ -37,14 +37,14 @@ class ViewModel {
             self.updateNoDataTitle(updating: false)
         }
     }
-    
-    func updateNearbyStops(_ lat: Double,_ lon: Double) {
+
+    func updateNearbyStops(_ lat: Double, _ lon: Double) {
         NetworkService.shared.getNearbyStops(lat, lon) { stops in
             ViewData.shared.stops = stops
             self.updateNoDataTitle(updating: false)
         }
     }
-    
+
     func toggleListMode() {
         switch viewMode {
         case .favorites:
@@ -57,7 +57,7 @@ class ViewModel {
         updateStopListTitle()
         updateStops()
     }
-    
+
     func toggleIsStopFavorited(_ id: String, name: String, platform: String?) {
         if StorageService.shared.isStopFavorited(id) {
             StorageService.shared.removeFavoriteStop(id)
@@ -67,28 +67,28 @@ class ViewModel {
         updateFavoritedButton(id)
         updateStops()
     }
-    
+
     func onApplicationDidFinishLaunching() {
         StorageService.shared.createDatabase()
         initView()
     }
-    
+
     func onApplicationDidBecomeActive() {
         if let id = ViewData.shared.departures.first?.hslStopId {
             updateDepartures(id)
         }
         updateStops()
     }
-    
+
     private func updateNearbyStops() {
         LocationService.shared.requestLocation()
     }
-    
+
     private func updateFavoriteStops() {
         ViewData.shared.stops = StorageService.shared.getFavoriteStops()
         updateNoDataTitle(updating: false)
     }
-    
+
     private func updateViewModeButton() {
         switch viewMode {
         case .favorites:
@@ -99,7 +99,7 @@ class ViewModel {
             ViewData.shared.viewModeButtonImage = UIImage(systemName: "star") ?? UIImage()
         }
     }
-    
+
     private func updateStopListTitle() {
         switch viewMode {
         case .favorites:
@@ -108,7 +108,7 @@ class ViewModel {
             ViewData.shared.stopListTitle = "nearby_stops".localized()
         }
     }
-    
+
     private func updateFavoritedButton(_ id: String) {
         if StorageService.shared.isStopFavorited(id) {
             ViewData.shared.toggleFavoritedButtonTitle = "remove_stop_from_favorites".localized()
@@ -118,7 +118,7 @@ class ViewModel {
             ViewData.shared.toggleFavoritedButtonImage = UIImage(systemName: "star.fill") ?? UIImage()
         }
     }
-    
+
     private func updateNoDataTitle(updating: Bool) {
         if updating {
             ViewData.shared.noDataTitle = "updating".localized()

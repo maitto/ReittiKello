@@ -10,7 +10,7 @@ import UIKit
 
 class ViewData: ObservableObject {
     static let shared = ViewData()
-    
+
     @Published var stops: [Stop] = []
     @Published var departures: [Departure] = []
     @Published var stopListTitle = ""
