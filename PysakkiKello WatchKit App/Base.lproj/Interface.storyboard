@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="15705" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NBu-mt-KyX">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="16096" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NBu-mt-KyX">
     <device id="watch38"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="15501"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="16012"/>
     </dependencies>
     <scenes>
         <!--Hosting Controller-->
         <scene sceneID="RUd-og-cv4">
             <objects>
-                <hostingController id="NBu-mt-KyX" customClass="HostingController" customModule="PysakkiKello_WatchKit_App" customModuleProvider="target"/>
+                <hostingController id="NBu-mt-KyX" customClass="HostingController" customModule="PysäkkiKello" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="187" y="141"/>
         </scene>
@@ -32,13 +32,16 @@
         <!--Notification Controller-->
         <scene sceneID="Niz-AI-uX2">
             <objects>
-                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="PysakkiKello_WatchKit_App" customModuleProvider="target">
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="PysäkkiKello" customModuleProvider="target">
                     <items>
-                        <imageView alignment="left" id="z1k-rs-g4g"/>
+                        <imageView alignment="left" image="star" catalog="system" id="z1k-rs-g4g"/>
                     </items>
                 </controller>
             </objects>
             <point key="canvasLocation" x="488" y="462"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="star" catalog="system" width="128" height="115"/>
+    </resources>
 </document>

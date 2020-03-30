@@ -26,7 +26,7 @@ struct StopsView: View {
                 }) {
                     VStack {
                         Text(viewData.viewModeButtonTitle)
-                        Image(systemName: "star")
+                        Image(uiImage: viewData.viewModeButtonImage)
                     }
                 }
         }

@@ -6,7 +6,7 @@
 //  Copyright © 2020 Mortti Aittokoski. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class ViewModel {
     static let shared = ViewModel()
@@ -16,7 +16,7 @@ class ViewModel {
     func initView() {
         viewMode = StorageService.shared.getFavoriteStops().isEmpty ? .nearby : .favorites
         updateNoDataTitle(updating: true)
-        updateViewModeButtonTitle()
+        updateViewModeButton()
         updateStopListTitle()
     }
     
@@ -31,7 +31,7 @@ class ViewModel {
     
     func updateDepartures(_ id: String) {
         ViewData.shared.departures = []
-        updateFavoritedButtonTitle(id)
+        updateFavoritedButton(id)
         NetworkService.shared.getDeparturesForStop(id) { departures in
             ViewData.shared.departures = departures
             self.updateNoDataTitle(updating: false)
@@ -53,7 +53,7 @@ class ViewModel {
             viewMode = .favorites
         }
         updateNoDataTitle(updating: true)
-        updateViewModeButtonTitle()
+        updateViewModeButton()
         updateStopListTitle()
         updateStops()
     }
@@ -64,7 +64,7 @@ class ViewModel {
         } else {
             StorageService.shared.addFavoriteStop(id, stopName: name, platformName: platform)
         }
-        updateFavoritedButtonTitle(id)
+        updateFavoritedButton(id)
         updateStops()
     }
     
@@ -89,12 +89,14 @@ class ViewModel {
         updateNoDataTitle(updating: false)
     }
     
-    private func updateViewModeButtonTitle() {
+    private func updateViewModeButton() {
         switch viewMode {
         case .favorites:
             ViewData.shared.viewModeButtonTitle = "show_nearby_stops".localized()
+            ViewData.shared.viewModeButtonImage = UIImage(systemName: "mappin.and.ellipse") ?? UIImage()
         case .nearby:
             ViewData.shared.viewModeButtonTitle = "show_favorite_stops".localized()
+            ViewData.shared.viewModeButtonImage = UIImage(systemName: "star") ?? UIImage()
         }
     }
     
@@ -107,11 +109,13 @@ class ViewModel {
         }
     }
     
-    private func updateFavoritedButtonTitle(_ id: String) {
+    private func updateFavoritedButton(_ id: String) {
         if StorageService.shared.isStopFavorited(id) {
             ViewData.shared.toggleFavoritedButtonTitle = "remove_stop_from_favorites".localized()
+            ViewData.shared.toggleFavoritedButtonImage = UIImage(systemName: "star.slash.fill") ?? UIImage()
         } else {
             ViewData.shared.toggleFavoritedButtonTitle = "add_stop_to_favorites".localized()
+            ViewData.shared.toggleFavoritedButtonImage = UIImage(systemName: "star.fill") ?? UIImage()
         }
     }
     

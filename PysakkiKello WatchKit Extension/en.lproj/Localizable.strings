@@ -6,7 +6,7 @@
   Copyright © 2020 Mortti Aittokoski. All rights reserved.
 */
 
-"show_nearby_stops" = "Näytä lähimmät pysäkit"; //Show nearby stops";
+"show_nearby_stops" = "Show nearby stops";
 "show_favorite_stops" = "Show favorite stops";
 "favorite_stops" = "Favorite stops";
 "nearby_stops" = "Nearby stops";

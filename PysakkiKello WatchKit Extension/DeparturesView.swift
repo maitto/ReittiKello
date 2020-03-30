@@ -27,7 +27,10 @@ struct DeparturesView: View {
                     Button(action: {
                         ViewModel.shared.toggleIsStopFavorited(self.hslStopId, name: self.stopName, platform: self.platform)
                     }) {
-                        Text(viewData.toggleFavoritedButtonTitle)
+                        VStack {
+                            Text(viewData.toggleFavoritedButtonTitle)
+                            Image(uiImage: viewData.toggleFavoritedButtonImage)
+                        }
                     }
             }
         }).onAppear {

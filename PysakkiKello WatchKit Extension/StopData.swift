@@ -6,7 +6,7 @@
 //  Copyright © 2020 Mortti Aittokoski. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class ViewData: ObservableObject {
     static let shared = ViewData()
@@ -15,6 +15,8 @@ class ViewData: ObservableObject {
     @Published var departures: [Departure] = []
     @Published var stopListTitle = ""
     @Published var viewModeButtonTitle = ""
+    @Published var viewModeButtonImage = UIImage()
     @Published var toggleFavoritedButtonTitle = ""
+    @Published var toggleFavoritedButtonImage = UIImage()
     @Published var noDataTitle = ""
 }
