@@ -13,6 +13,8 @@
 		2B3BC03B24266EF400B5AE19 /* ViewMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3BC03A24266EF400B5AE19 /* ViewMode.swift */; };
 		2B3BC04224276CCA00B5AE19 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B3BC04424276CCA00B5AE19 /* Localizable.strings */; };
 		2B3BC0472427B5C900B5AE19 /* Utils+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3BC0462427B5C900B5AE19 /* Utils+Extensions.swift */; };
+		2BABD5C924322EE400514129 /* PysakkiKelloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BABD5C824322EE400514129 /* PysakkiKelloTests.swift */; };
+		2BABD5CE24322F9700514129 /* Utils+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3BC0462427B5C900B5AE19 /* Utils+Extensions.swift */; };
 		2BAD23C4241BCD27008AEB9B /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAD23C3241BCD27008AEB9B /* StorageService.swift */; };
 		2BC7F4102423CB220093A7B5 /* StopData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC7F40F2423CB220093A7B5 /* StopData.swift */; };
 		2BC7F41224266BAE0093A7B5 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC7F41124266BAE0093A7B5 /* ViewModel.swift */; };
@@ -89,6 +91,9 @@
 		2B3BC04324276CCA00B5AE19 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2B3BC04524276CF400B5AE19 /* fi-FI */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fi-FI"; path = "fi-FI.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		2B3BC0462427B5C900B5AE19 /* Utils+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Utils+Extensions.swift"; sourceTree = "<group>"; };
+		2BABD5C624322EE400514129 /* PysakkiKelloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PysakkiKelloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BABD5C824322EE400514129 /* PysakkiKelloTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PysakkiKelloTests.swift; sourceTree = "<group>"; };
+		2BABD5CA24322EE400514129 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BAD23C3241BCD27008AEB9B /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		2BC7F40F2423CB220093A7B5 /* StopData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopData.swift; sourceTree = "<group>"; };
 		2BC7F41124266BAE0093A7B5 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
@@ -126,6 +131,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2BABD5C324322EE400514129 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2BE02713240299D800B3F367 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -153,11 +165,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2BABD5C724322EE400514129 /* PysakkiKelloTests */ = {
+			isa = PBXGroup;
+			children = (
+				2BABD5C824322EE400514129 /* PysakkiKelloTests.swift */,
+				2BABD5CA24322EE400514129 /* Info.plist */,
+			);
+			path = PysakkiKelloTests;
+			sourceTree = "<group>";
+		};
 		2BE026FC240299D400B3F367 = {
 			isa = PBXGroup;
 			children = (
 				2BE0270B240299D400B3F367 /* PysakkiKello WatchKit App */,
 				2BE0271A240299D800B3F367 /* PysakkiKello WatchKit Extension */,
+				2BABD5C724322EE400514129 /* PysakkiKelloTests */,
 				2BE02704240299D400B3F367 /* Products */,
 				35643C33FA68B93FEA59706D /* Pods */,
 				33F8A7ECFF1C9D056F654208 /* Frameworks */,
@@ -170,6 +192,7 @@
 				2BE02703240299D400B3F367 /* PysakkiKello.app */,
 				2BE02707240299D400B3F367 /* PysäkkiKello.app */,
 				2BE02716240299D800B3F367 /* PysakkiKello WatchKit Extension.appex */,
+				2BABD5C624322EE400514129 /* PysakkiKelloTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -250,6 +273,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2BABD5C524322EE400514129 /* PysakkiKelloTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BABD5CD24322EE400514129 /* Build configuration list for PBXNativeTarget "PysakkiKelloTests" */;
+			buildPhases = (
+				2BABD5C224322EE400514129 /* Sources */,
+				2BABD5C324322EE400514129 /* Frameworks */,
+				2BABD5C424322EE400514129 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PysakkiKelloTests;
+			productName = PysakkiKelloTests;
+			productReference = 2BABD5C624322EE400514129 /* PysakkiKelloTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		2BE02702240299D400B3F367 /* PysakkiKello */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2BE02738240299D900B3F367 /* Build configuration list for PBXNativeTarget "PysakkiKello" */;
@@ -314,10 +354,13 @@
 		2BE026FD240299D400B3F367 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
+				LastSwiftUpdateCheck = 1140;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Mortti Aittokoski";
 				TargetAttributes = {
+					2BABD5C524322EE400514129 = {
+						CreatedOnToolsVersion = 11.4;
+					};
 					2BE02702240299D400B3F367 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -346,11 +389,19 @@
 				2BE02702240299D400B3F367 /* PysakkiKello */,
 				2BE02706240299D400B3F367 /* PysakkiKello WatchKit App */,
 				2BE02715240299D800B3F367 /* PysakkiKello WatchKit Extension */,
+				2BABD5C524322EE400514129 /* PysakkiKelloTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2BABD5C424322EE400514129 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2BE02701240299D400B3F367 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -486,6 +537,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2BABD5C224322EE400514129 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BABD5C924322EE400514129 /* PysakkiKelloTests.swift in Sources */,
+				2BABD5CE24322F9700514129 /* Utils+Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2BE02712240299D800B3F367 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -547,6 +607,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2BABD5CB24322EE400514129 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6T8F5MPVZ3;
+				INFOPLIST_FILE = PysakkiKelloTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = morttiaittokoski.PysakkiKelloTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2BABD5CC24322EE400514129 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6T8F5MPVZ3;
+				INFOPLIST_FILE = PysakkiKelloTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = morttiaittokoski.PysakkiKelloTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		2BE0272E240299D900B3F367 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -792,6 +890,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2BABD5CD24322EE400514129 /* Build configuration list for PBXNativeTarget "PysakkiKelloTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BABD5CB24322EE400514129 /* Debug */,
+				2BABD5CC24322EE400514129 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2BE02700240299D400B3F367 /* Build configuration list for PBXProject "PysakkiKello" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
