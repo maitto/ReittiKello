@@ -13,7 +13,6 @@ private let graphQLEndpoint = "https://api.digitransit.fi/routing/v1/routers/hsl
 private let apollo = ApolloClient(url: URL(string: graphQLEndpoint)!)
 
 class NetworkService {
-    static let shared = NetworkService()
     private var operation: Cancellable?
 
     func getNearbyStops(_ lat: Double, _ lon: Double, _ radius: Int = 1000, completion: @escaping ([Stop]) -> Void) {

@@ -12,8 +12,10 @@ class ViewModel {
     static let shared = ViewModel()
 
     var viewMode: ViewMode = .favorites
+    var networkService: NetworkService?
 
     func initView() {
+        networkService = NetworkService()
         viewMode = StorageService.shared.getFavoriteStops().isEmpty ? .nearby : .favorites
         updateNoDataTitle(updating: true)
         updateViewModeButton()
@@ -32,14 +34,14 @@ class ViewModel {
     func updateDepartures(_ id: String) {
         ViewData.shared.departures = []
         updateFavoritedButton(id)
-        NetworkService.shared.getDeparturesForStop(id) { [weak self] departures in
+        networkService?.getDeparturesForStop(id) { [weak self] departures in
             ViewData.shared.departures = departures
             self?.updateNoDataTitle(updating: false)
         }
     }
 
     func updateNearbyStops(_ lat: Double, _ lon: Double) {
-        NetworkService.shared.getNearbyStops(lat, lon) { [weak self] stops in
+        networkService?.getNearbyStops(lat, lon) { [weak self] stops in
             ViewData.shared.stops = stops
             self?.updateNoDataTitle(updating: false)
         }
