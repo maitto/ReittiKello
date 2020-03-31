@@ -32,16 +32,16 @@ class ViewModel {
     func updateDepartures(_ id: String) {
         ViewData.shared.departures = []
         updateFavoritedButton(id)
-        NetworkService.shared.getDeparturesForStop(id) { departures in
+        NetworkService.shared.getDeparturesForStop(id) { [weak self] departures in
             ViewData.shared.departures = departures
-            self.updateNoDataTitle(updating: false)
+            self?.updateNoDataTitle(updating: false)
         }
     }
 
     func updateNearbyStops(_ lat: Double, _ lon: Double) {
-        NetworkService.shared.getNearbyStops(lat, lon) { stops in
+        NetworkService.shared.getNearbyStops(lat, lon) { [weak self] stops in
             ViewData.shared.stops = stops
-            self.updateNoDataTitle(updating: false)
+            self?.updateNoDataTitle(updating: false)
         }
     }
 
