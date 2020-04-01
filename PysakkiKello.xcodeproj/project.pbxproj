@@ -20,7 +20,7 @@
 		2BC7F4102423CB220093A7B5 /* StopData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC7F40F2423CB220093A7B5 /* StopData.swift */; };
 		2BC7F41224266BAE0093A7B5 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC7F41124266BAE0093A7B5 /* ViewModel.swift */; };
 		2BCF23AB2402A43F00F60337 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BCF23AA2402A43F00F60337 /* schema.json */; };
-		2BE02708240299D400B3F367 /* PysäkkiKello.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2BE02707240299D400B3F367 /* PysäkkiKello.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2BE02708240299D400B3F367 /* PysakkiKello.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2BE02707240299D400B3F367 /* PysakkiKello.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2BE0270E240299D400B3F367 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BE0270C240299D400B3F367 /* Interface.storyboard */; };
 		2BE02710240299D800B3F367 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BE0270F240299D800B3F367 /* Assets.xcassets */; };
 		2BE02717240299D800B3F367 /* PysakkiKello WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2BE02716240299D800B3F367 /* PysakkiKello WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -77,7 +77,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				2BE02708240299D400B3F367 /* PysäkkiKello.app in Embed Watch Content */,
+				2BE02708240299D400B3F367 /* PysakkiKello.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,7 +101,7 @@
 		2BC7F41124266BAE0093A7B5 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		2BCF23AA2402A43F00F60337 /* schema.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		2BE02703240299D400B3F367 /* PysakkiKello.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PysakkiKello.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2BE02707240299D400B3F367 /* PysäkkiKello.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PysäkkiKello.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BE02707240299D400B3F367 /* PysakkiKello.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PysakkiKello.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BE0270D240299D400B3F367 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		2BE0270F240299D800B3F367 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2BE02711240299D800B3F367 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -193,7 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				2BE02703240299D400B3F367 /* PysakkiKello.app */,
-				2BE02707240299D400B3F367 /* PysäkkiKello.app */,
+				2BE02707240299D400B3F367 /* PysakkiKello.app */,
 				2BE02716240299D800B3F367 /* PysakkiKello WatchKit Extension.appex */,
 				2BABD5C624322EE400514129 /* PysakkiKelloTests.xctest */,
 			);
@@ -328,7 +328,7 @@
 			);
 			name = "PysakkiKello WatchKit App";
 			productName = "PysakkiKello WatchKit App";
-			productReference = 2BE02707240299D400B3F367 /* PysäkkiKello.app */;
+			productReference = 2BE02707240299D400B3F367 /* PysakkiKello.app */;
 			productType = "com.apple.product-type.application.watchapp2";
 		};
 		2BE02715240299D800B3F367 /* PysakkiKello WatchKit Extension */ = {
@@ -790,7 +790,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 31;
+				CURRENT_PROJECT_VERSION = 32;
 				DEVELOPMENT_ASSET_PATHS = "\"PysakkiKello WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 6T8F5MPVZ3;
 				ENABLE_PREVIEWS = YES;
@@ -817,7 +817,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 31;
+				CURRENT_PROJECT_VERSION = 32;
 				DEVELOPMENT_ASSET_PATHS = "\"PysakkiKello WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 6T8F5MPVZ3;
 				ENABLE_PREVIEWS = YES;
@@ -845,13 +845,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 31;
+				CURRENT_PROJECT_VERSION = 32;
 				DEVELOPMENT_TEAM = 6T8F5MPVZ3;
 				IBSC_MODULE = PysakkiKello_WatchKit_Extension;
 				INFOPLIST_FILE = "PysakkiKello WatchKit App/Info.plist";
 				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = morttiaittokoski.PysakkiKello.watchkitapp;
-				PRODUCT_NAME = "PysäkkiKello";
+				PRODUCT_NAME = PysakkiKello;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -867,13 +867,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 31;
+				CURRENT_PROJECT_VERSION = 32;
 				DEVELOPMENT_TEAM = 6T8F5MPVZ3;
 				IBSC_MODULE = PysakkiKello_WatchKit_Extension;
 				INFOPLIST_FILE = "PysakkiKello WatchKit App/Info.plist";
 				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = morttiaittokoski.PysakkiKello.watchkitapp;
-				PRODUCT_NAME = "PysäkkiKello";
+				PRODUCT_NAME = PysakkiKello;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -887,7 +887,7 @@
 			baseConfigurationReference = BB161D2DAD3AA522B6784807 /* Pods-PysakkiKello.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 31;
+				CURRENT_PROJECT_VERSION = 32;
 				DEVELOPMENT_TEAM = 6T8F5MPVZ3;
 				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = morttiaittokoski.PysakkiKello;
@@ -901,7 +901,7 @@
 			baseConfigurationReference = 5ADB1C0206FE742F9C07F883 /* Pods-PysakkiKello.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 31;
+				CURRENT_PROJECT_VERSION = 32;
 				DEVELOPMENT_TEAM = 6T8F5MPVZ3;
 				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = morttiaittokoski.PysakkiKello;

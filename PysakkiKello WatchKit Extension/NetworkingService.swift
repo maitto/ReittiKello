@@ -79,8 +79,4 @@ class NetworkService {
 
         return departures
     }
-
-    func cancelOperation() {
-        operation?.cancel()
-    }
 }
