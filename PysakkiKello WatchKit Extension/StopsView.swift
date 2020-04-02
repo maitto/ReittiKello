@@ -29,6 +29,11 @@ struct StopsView: View {
                         Image(uiImage: viewData.viewModeButtonImage)
                     }
                 }
+        }.onAppear {
+            if self.viewData.favoritesUpdated {
+                self.viewData.favoritesUpdated = false
+                ViewModel.shared.updateStops()
+            }
         }
     }
 }

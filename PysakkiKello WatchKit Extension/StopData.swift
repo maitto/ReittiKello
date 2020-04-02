@@ -19,4 +19,5 @@ class ViewData: ObservableObject {
     @Published var toggleFavoritedButtonTitle = ""
     @Published var toggleFavoritedButtonImage = UIImage()
     @Published var noDataTitle = ""
+    @Published var favoritesUpdated = false
 }

@@ -67,7 +67,7 @@ class ViewModel {
             StorageService.shared.addFavoriteStop(id, stopName: name, platformName: platform)
         }
         updateFavoritedButton(id)
-        updateStops()
+        ViewData.shared.favoritesUpdated = true
     }
 
     func onApplicationDidFinishLaunching() {
