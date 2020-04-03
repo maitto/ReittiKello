@@ -16,7 +16,7 @@ struct StopRow: View {
             VStack {
                 Text(stop.stopName)
                 if stop.platformCode != nil {
-                    Text("Platform \(stop.platformCode ?? "")")
+                    Text("\("platform".localized()) \(stop.platformCode ?? "")")
                         .font(.footnote)
                 }
             }

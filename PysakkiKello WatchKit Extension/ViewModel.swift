@@ -42,8 +42,10 @@ class ViewModel {
 
     func updateNearbyStops(_ lat: Double, _ lon: Double) {
         networkService?.getNearbyStops(lat, lon) { [weak self] stops in
-            ViewData.shared.stops = stops
-            self?.updateNoDataTitle(updating: false)
+            if self?.viewMode == .nearby {
+                ViewData.shared.stops = stops
+                self?.updateNoDataTitle(updating: false)
+            }
         }
     }
 
