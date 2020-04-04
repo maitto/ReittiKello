@@ -35,6 +35,7 @@ struct DeparturesView: View {
             }
         }).onAppear {
             print("DeparturesView onAppear")
+            ViewModel.shared.viewMode = .departures
             ViewModel.shared.updateDepartures(self.hslStopId)
         }
     }

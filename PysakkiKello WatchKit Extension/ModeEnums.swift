@@ -1,5 +1,5 @@
 //
-//  ViewMode.swift
+//  ModeEnums.swift
 //  PysakkiKello WatchKit Extension
 //
 //  Created by Mortti Aittokoski on 21.3.2020.
@@ -8,7 +8,12 @@
 
 import Foundation
 
-enum ViewMode {
+enum StopListMode {
     case favorites
     case nearby
+}
+
+enum ViewMode {
+    case stops
+    case departures
 }

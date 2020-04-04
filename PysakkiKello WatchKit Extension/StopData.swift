@@ -14,10 +14,10 @@ class ViewData: ObservableObject {
     @Published var stops: [Stop] = []
     @Published var departures: [Departure] = []
     @Published var stopListTitle = ""
-    @Published var viewModeButtonTitle = ""
-    @Published var viewModeButtonImage = UIImage()
+    @Published var stopListModeButtonTitle = ""
+    @Published var stopListModeButtonImage = UIImage()
     @Published var toggleFavoritedButtonTitle = ""
     @Published var toggleFavoritedButtonImage = UIImage()
     @Published var noDataTitle = ""
-    @Published var favoritesUpdated = false
+    @Published var shouldUpdateStops = false
 }

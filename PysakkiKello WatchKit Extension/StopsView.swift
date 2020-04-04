@@ -25,13 +25,15 @@ struct StopsView: View {
                     ViewModel.shared.toggleListMode()
                 }) {
                     VStack {
-                        Text(viewData.viewModeButtonTitle)
-                        Image(uiImage: viewData.viewModeButtonImage)
+                        Text(viewData.stopListModeButtonTitle)
+                        Image(uiImage: viewData.stopListModeButtonImage)
                     }
                 }
         }.onAppear {
-            if self.viewData.favoritesUpdated {
-                self.viewData.favoritesUpdated = false
+            print("onAppear StopsView")
+            ViewModel.shared.viewMode = .stops
+            if self.viewData.shouldUpdateStops {
+                self.viewData.shouldUpdateStops = false
                 ViewModel.shared.updateStops()
             }
         }

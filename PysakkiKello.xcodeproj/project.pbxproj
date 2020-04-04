@@ -10,7 +10,7 @@
 		0767F646F715E0D8860C2644 /* Pods_PysakkiKello_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FA623E81CC5D08138C46D4E /* Pods_PysakkiKello_WatchKit_App.framework */; };
 		0FB5CE3399E4E6DADA4611B5 /* Pods_PysakkiKello.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F75AA0B3E695FA268FC491D5 /* Pods_PysakkiKello.framework */; };
 		2B269F54240FFBD500CFFAA5 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B269F53240FFBD500CFFAA5 /* API.swift */; };
-		2B3BC03B24266EF400B5AE19 /* ViewMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3BC03A24266EF400B5AE19 /* ViewMode.swift */; };
+		2B3BC03B24266EF400B5AE19 /* ModeEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3BC03A24266EF400B5AE19 /* ModeEnums.swift */; };
 		2B3BC04224276CCA00B5AE19 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B3BC04424276CCA00B5AE19 /* Localizable.strings */; };
 		2B3BC0472427B5C900B5AE19 /* Utils+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3BC0462427B5C900B5AE19 /* Utils+Extensions.swift */; };
 		2BABD5C924322EE400514129 /* PysakkiKelloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BABD5C824322EE400514129 /* PysakkiKelloTests.swift */; };
@@ -88,7 +88,7 @@
 		028B6813ADF1470B3A2DFC27 /* Pods-PysakkiKello WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PysakkiKello WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-PysakkiKello WatchKit App/Pods-PysakkiKello WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 		271D1A5A236E0DEF8665BE8B /* Pods_PysakkiKello_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PysakkiKello_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B269F53240FFBD500CFFAA5 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		2B3BC03A24266EF400B5AE19 /* ViewMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMode.swift; sourceTree = "<group>"; };
+		2B3BC03A24266EF400B5AE19 /* ModeEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeEnums.swift; sourceTree = "<group>"; };
 		2B3BC04324276CCA00B5AE19 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2B3BC04524276CF400B5AE19 /* fi-FI */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fi-FI"; path = "fi-FI.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		2B3BC0462427B5C900B5AE19 /* Utils+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Utils+Extensions.swift"; sourceTree = "<group>"; };
@@ -235,7 +235,7 @@
 				2BAD23C3241BCD27008AEB9B /* StorageService.swift */,
 				2BC7F40F2423CB220093A7B5 /* StopData.swift */,
 				2BC7F41124266BAE0093A7B5 /* ViewModel.swift */,
-				2B3BC03A24266EF400B5AE19 /* ViewMode.swift */,
+				2B3BC03A24266EF400B5AE19 /* ModeEnums.swift */,
 				2B3BC04424276CCA00B5AE19 /* Localizable.strings */,
 				2B3BC0462427B5C900B5AE19 /* Utils+Extensions.swift */,
 			);
@@ -574,7 +574,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BE0271E240299D800B3F367 /* HostingController.swift in Sources */,
-				2B3BC03B24266EF400B5AE19 /* ViewMode.swift in Sources */,
+				2B3BC03B24266EF400B5AE19 /* ModeEnums.swift in Sources */,
 				2BE0271C240299D800B3F367 /* StopsView.swift in Sources */,
 				2B3BC0472427B5C900B5AE19 /* Utils+Extensions.swift in Sources */,
 				2BE0274224029A9E00B3F367 /* StopRow.swift in Sources */,
@@ -790,7 +790,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 37;
+				CURRENT_PROJECT_VERSION = 38;
 				DEVELOPMENT_ASSET_PATHS = "\"PysakkiKello WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 6T8F5MPVZ3;
 				ENABLE_PREVIEWS = YES;
@@ -817,7 +817,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 37;
+				CURRENT_PROJECT_VERSION = 38;
 				DEVELOPMENT_ASSET_PATHS = "\"PysakkiKello WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 6T8F5MPVZ3;
 				ENABLE_PREVIEWS = YES;
@@ -845,7 +845,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 37;
+				CURRENT_PROJECT_VERSION = 38;
 				DEVELOPMENT_TEAM = 6T8F5MPVZ3;
 				IBSC_MODULE = PysakkiKello_WatchKit_Extension;
 				INFOPLIST_FILE = "PysakkiKello WatchKit App/Info.plist";
@@ -867,7 +867,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 37;
+				CURRENT_PROJECT_VERSION = 38;
 				DEVELOPMENT_TEAM = 6T8F5MPVZ3;
 				IBSC_MODULE = PysakkiKello_WatchKit_Extension;
 				INFOPLIST_FILE = "PysakkiKello WatchKit App/Info.plist";
@@ -887,7 +887,7 @@
 			baseConfigurationReference = BB161D2DAD3AA522B6784807 /* Pods-PysakkiKello.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 37;
+				CURRENT_PROJECT_VERSION = 38;
 				DEVELOPMENT_TEAM = 6T8F5MPVZ3;
 				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = morttiaittokoski.PysakkiKello;
@@ -901,7 +901,7 @@
 			baseConfigurationReference = 5ADB1C0206FE742F9C07F883 /* Pods-PysakkiKello.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 37;
+				CURRENT_PROJECT_VERSION = 38;
 				DEVELOPMENT_TEAM = 6T8F5MPVZ3;
 				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = morttiaittokoski.PysakkiKello;
