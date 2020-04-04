@@ -1,11 +1,11 @@
 PODS:
-  - Apollo (0.23.0):
-    - Apollo/Core (= 0.23.0)
-  - Apollo/Core (0.23.0)
+  - Apollo (0.25.0):
+    - Apollo/Core (= 0.25.0)
+  - Apollo/Core (0.25.0)
   - SQLite.swift (0.12.2):
     - SQLite.swift/standard (= 0.12.2)
   - SQLite.swift/standard (0.12.2)
-  - SwiftLint (0.39.1)
+  - SwiftLint (0.39.2)
 
 DEPENDENCIES:
   - Apollo
@@ -19,9 +19,9 @@ SPEC REPOS:
     - SwiftLint
 
 SPEC CHECKSUMS:
-  Apollo: 7ccde5e643aab4a95ed4926fe9b3a593740c8b73
+  Apollo: c0fbe32f9d4fb5aaffbab6adcecd492a2e952eab
   SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
-  SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
+  SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
 
 PODFILE CHECKSUM: 2f8495c045297147cd83e028b2593e99f7817c94
 
