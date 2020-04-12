@@ -24,6 +24,7 @@ class ViewModel {
         storageService = StorageService.shared
         networkService = NetworkService()
         viewData = ViewData.shared
+        storageService?.createDatabase()
         stopListMode = storageService?.getFavoriteStops().isEmpty ?? true ? .nearby : .favorites
         updateNoDataTitle(updating: true)
         updateStopListModeButton()
@@ -84,7 +85,6 @@ class ViewModel {
 
     func onApplicationDidFinishLaunching() {
         initView()
-        storageService?.createDatabase()
     }
 
     func onApplicationDidBecomeActive() {
