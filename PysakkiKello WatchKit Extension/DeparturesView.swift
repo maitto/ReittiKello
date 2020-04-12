@@ -14,6 +14,7 @@ struct DeparturesView: View {
     var platform: String?
 
     @ObservedObject var viewData: ViewData
+    let viewModel = ViewModel.shared
 
     var body: some View {
         VStack(alignment: .leading, spacing: nil, content: {
@@ -25,7 +26,7 @@ struct DeparturesView: View {
             List(viewData.departures, rowContent: DepartureRow.init)
                 .contextMenu {
                     Button(action: {
-                        ViewModel.shared.toggleIsStopFavorited(self.hslStopId, name: self.stopName, platform: self.platform)
+                        self.viewModel.toggleIsStopFavorited(self.hslStopId, name: self.stopName, platform: self.platform)
                     }) {
                         VStack {
                             Text(viewData.toggleFavoritedButtonTitle)
@@ -35,8 +36,8 @@ struct DeparturesView: View {
             }
         }).onAppear {
             print("DeparturesView onAppear")
-            ViewModel.shared.viewMode = .departures
-            ViewModel.shared.updateDepartures(self.hslStopId)
+            self.viewModel.viewMode = .departures
+            self.viewModel.updateDepartures(self.hslStopId)
         }
     }
 }

@@ -11,6 +11,7 @@ import CoreLocation
 class LocationService: NSObject, CLLocationManagerDelegate {
     static let shared = LocationService()
 
+    let viewModel = ViewModel.shared
     var locationManager: CLLocationManager?
 
     override init() {
@@ -30,7 +31,7 @@ class LocationService: NSObject, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last {
             locationManager?.stopUpdatingLocation()
-            ViewModel.shared.updateNearbyStops(location.coordinate.latitude, location.coordinate.longitude)
+            viewModel.updateNearbyStops(location.coordinate.latitude, location.coordinate.longitude)
         }
     }
 

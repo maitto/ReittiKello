@@ -10,6 +10,7 @@ import SwiftUI
 
 struct StopsView: View {
     @ObservedObject var viewData: ViewData
+    let viewModel = ViewModel.shared
 
     var body: some View {
         VStack(alignment: .leading, spacing: nil, content: {
@@ -22,7 +23,7 @@ struct StopsView: View {
         })
             .contextMenu {
                 Button(action: {
-                    ViewModel.shared.toggleListMode()
+                    self.viewModel.toggleListMode()
                 }) {
                     VStack {
                         Text(viewData.stopListModeButtonTitle)
@@ -31,10 +32,10 @@ struct StopsView: View {
                 }
         }.onAppear {
             print("onAppear StopsView")
-            ViewModel.shared.viewMode = .stops
+            self.viewModel.viewMode = .stops
             if self.viewData.shouldUpdateStops {
                 self.viewData.shouldUpdateStops = false
-                ViewModel.shared.updateStops()
+                self.viewModel.updateStops()
             }
         }
     }

@@ -26,7 +26,12 @@ extension String {
 }
 
 func getFormattedTime(seconds: Int) -> String? {
-    let duration: TimeInterval = TimeInterval(seconds)
+    let dayInSeconds = 60 * 60 * 24
+    var sec = seconds
+    if sec >= dayInSeconds {
+        sec -= dayInSeconds
+    }
+    let duration = TimeInterval(sec)
 
     let formatter = DateComponentsFormatter()
     formatter.unitsStyle = .positional

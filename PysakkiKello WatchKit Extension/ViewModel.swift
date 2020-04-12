@@ -16,11 +16,15 @@ class ViewModel {
     
     var networkService: NetworkService?
     weak var viewData: ViewData?
+    weak var locationService: LocationService?
+    weak var storageService: StorageService?
 
     func initView() {
+        locationService = LocationService.shared
+        storageService = StorageService.shared
         networkService = NetworkService()
         viewData = ViewData.shared
-        stopListMode = StorageService.shared.getFavoriteStops().isEmpty ? .nearby : .favorites
+        stopListMode = storageService?.getFavoriteStops().isEmpty ?? true ? .nearby : .favorites
         updateNoDataTitle(updating: true)
         updateStopListModeButton()
         updateStopListTitle()
@@ -69,24 +73,24 @@ class ViewModel {
     }
 
     func toggleIsStopFavorited(_ id: String, name: String, platform: String?) {
-        if StorageService.shared.isStopFavorited(id) {
-            StorageService.shared.removeFavoriteStop(id)
+        if storageService?.isStopFavorited(id) ?? false {
+            storageService?.removeFavoriteStop(id)
         } else {
-            StorageService.shared.addFavoriteStop(id, stopName: name, platformName: platform)
+            storageService?.addFavoriteStop(id, stopName: name, platformName: platform)
         }
         updateFavoritedButton(id)
         viewData?.shouldUpdateStops = true
     }
 
     func onApplicationDidFinishLaunching() {
-        StorageService.shared.createDatabase()
         initView()
+        storageService?.createDatabase()
     }
 
     func onApplicationDidBecomeActive() {
         switch viewMode {
         case .departures:
-            if let id = ViewData.shared.departures.first?.hslStopId {
+            if let id = viewData?.departures.first?.hslStopId {
                 updateDepartures(id)
             }
             viewData?.shouldUpdateStops = true
@@ -96,55 +100,55 @@ class ViewModel {
     }
 
     private func updateNearbyStops() {
-        LocationService.shared.requestLocation()
+        locationService?.requestLocation()
     }
 
     private func updateFavoriteStops() {
-        ViewData.shared.stops = StorageService.shared.getFavoriteStops()
+        viewData?.stops = storageService?.getFavoriteStops() ?? []
         updateNoDataTitle(updating: false)
     }
 
     private func updateStopListModeButton() {
         switch stopListMode {
         case .favorites:
-            ViewData.shared.stopListModeButtonTitle = "show_nearby_stops".localized()
-            ViewData.shared.stopListModeButtonImage = UIImage(systemName: "mappin.and.ellipse") ?? UIImage()
+            viewData?.stopListModeButtonTitle = "show_nearby_stops".localized()
+            viewData?.stopListModeButtonImage = UIImage(systemName: "mappin.and.ellipse") ?? UIImage()
         case .nearby:
-            ViewData.shared.stopListModeButtonTitle = "show_favorite_stops".localized()
-            ViewData.shared.stopListModeButtonImage = UIImage(systemName: "star") ?? UIImage()
+            viewData?.stopListModeButtonTitle = "show_favorite_stops".localized()
+            viewData?.stopListModeButtonImage = UIImage(systemName: "star") ?? UIImage()
         }
     }
 
     private func updateStopListTitle() {
         switch stopListMode {
         case .favorites:
-            ViewData.shared.stopListTitle = "favorite_stops".localized()
+            viewData?.stopListTitle = "favorite_stops".localized()
         case .nearby:
-            ViewData.shared.stopListTitle = "nearby_stops".localized()
+            viewData?.stopListTitle = "nearby_stops".localized()
         }
     }
 
     private func updateFavoritedButton(_ id: String) {
-        if StorageService.shared.isStopFavorited(id) {
-            ViewData.shared.toggleFavoritedButtonTitle = "remove_stop_from_favorites".localized()
-            ViewData.shared.toggleFavoritedButtonImage = UIImage(systemName: "star.slash.fill") ?? UIImage()
+        if storageService?.isStopFavorited(id) ?? false {
+            viewData?.toggleFavoritedButtonTitle = "remove_stop_from_favorites".localized()
+            viewData?.toggleFavoritedButtonImage = UIImage(systemName: "star.slash.fill") ?? UIImage()
         } else {
-            ViewData.shared.toggleFavoritedButtonTitle = "add_stop_to_favorites".localized()
-            ViewData.shared.toggleFavoritedButtonImage = UIImage(systemName: "star.fill") ?? UIImage()
+            viewData?.toggleFavoritedButtonTitle = "add_stop_to_favorites".localized()
+            viewData?.toggleFavoritedButtonImage = UIImage(systemName: "star.fill") ?? UIImage()
         }
     }
 
     private func updateNoDataTitle(updating: Bool) {
         if updating {
-            ViewData.shared.noDataTitle = "updating".localized()
-        } else if !ViewData.shared.stops.isEmpty {
-            ViewData.shared.noDataTitle = ""
+            viewData?.noDataTitle = "updating".localized()
+        } else if !(viewData?.stops.isEmpty ?? false) {
+            viewData?.noDataTitle = ""
         } else {
             switch stopListMode {
             case .favorites:
-                ViewData.shared.noDataTitle = "no_stops_added_to_favorites".localized()
+                viewData?.noDataTitle = "no_stops_added_to_favorites".localized()
             case .nearby:
-                ViewData.shared.noDataTitle = "no_stops_nearby".localized()
+                viewData?.noDataTitle = "no_stops_nearby".localized()
             }
         }
     }
