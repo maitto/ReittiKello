@@ -15,9 +15,9 @@ class ViewModel {
     var viewMode: ViewMode = .stops
     
     var networkService: NetworkService?
-    weak var viewData: ViewData?
-    weak var locationService: LocationService?
-    weak var storageService: StorageService?
+    var viewData: ViewData?
+    var locationService: LocationService?
+    var storageService: StorageService?
 
     func initView() {
         locationService = LocationService.shared
