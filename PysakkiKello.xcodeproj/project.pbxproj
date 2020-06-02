@@ -17,7 +17,8 @@
 		2BABD5CE24322F9700514129 /* Utils+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3BC0462427B5C900B5AE19 /* Utils+Extensions.swift */; };
 		2BABD5D52432366800514129 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 2BABD5D42432366800514129 /* .swiftlint.yml */; };
 		2BAD23C4241BCD27008AEB9B /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAD23C3241BCD27008AEB9B /* StorageService.swift */; };
-		2BC7F4102423CB220093A7B5 /* StopData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC7F40F2423CB220093A7B5 /* StopData.swift */; };
+		2BB8D15B24863026005DC5B2 /* DeparturesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB8D15A24863026005DC5B2 /* DeparturesModel.swift */; };
+		2BC7F4102423CB220093A7B5 /* StopsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC7F40F2423CB220093A7B5 /* StopsModel.swift */; };
 		2BC7F41224266BAE0093A7B5 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC7F41124266BAE0093A7B5 /* ViewModel.swift */; };
 		2BCF23AB2402A43F00F60337 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BCF23AA2402A43F00F60337 /* schema.json */; };
 		2BE02708240299D400B3F367 /* PysakkiKello.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2BE02707240299D400B3F367 /* PysakkiKello.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -97,7 +98,8 @@
 		2BABD5CA24322EE400514129 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BABD5D42432366800514129 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		2BAD23C3241BCD27008AEB9B /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
-		2BC7F40F2423CB220093A7B5 /* StopData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopData.swift; sourceTree = "<group>"; };
+		2BB8D15A24863026005DC5B2 /* DeparturesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeparturesModel.swift; sourceTree = "<group>"; };
+		2BC7F40F2423CB220093A7B5 /* StopsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopsModel.swift; sourceTree = "<group>"; };
 		2BC7F41124266BAE0093A7B5 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		2BCF23AA2402A43F00F60337 /* schema.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		2BE02703240299D400B3F367 /* PysakkiKello.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PysakkiKello.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,6 +178,15 @@
 			path = PysakkiKelloTests;
 			sourceTree = "<group>";
 		};
+		2BB8D15924862FFC005DC5B2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2BC7F40F2423CB220093A7B5 /* StopsModel.swift */,
+				2BB8D15A24863026005DC5B2 /* DeparturesModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		2BE026FC240299D400B3F367 = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +224,7 @@
 		2BE0271A240299D800B3F367 /* PysakkiKello WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				2BB8D15924862FFC005DC5B2 /* Model */,
 				2BE0271B240299D800B3F367 /* StopsView.swift */,
 				2BE0273B24029A1800B3F367 /* DeparturesView.swift */,
 				2BE0271D240299D800B3F367 /* HostingController.swift */,
@@ -233,7 +245,6 @@
 				2BE0274D24029DB300B3F367 /* LocationService.swift */,
 				2BCF23AA2402A43F00F60337 /* schema.json */,
 				2BAD23C3241BCD27008AEB9B /* StorageService.swift */,
-				2BC7F40F2423CB220093A7B5 /* StopData.swift */,
 				2BC7F41124266BAE0093A7B5 /* ViewModel.swift */,
 				2B3BC03A24266EF400B5AE19 /* ModeEnums.swift */,
 				2B3BC04424276CCA00B5AE19 /* Localizable.strings */,
@@ -577,6 +588,7 @@
 				2B3BC03B24266EF400B5AE19 /* ModeEnums.swift in Sources */,
 				2BE0271C240299D800B3F367 /* StopsView.swift in Sources */,
 				2B3BC0472427B5C900B5AE19 /* Utils+Extensions.swift in Sources */,
+				2BB8D15B24863026005DC5B2 /* DeparturesModel.swift in Sources */,
 				2BE0274224029A9E00B3F367 /* StopRow.swift in Sources */,
 				2BE0274024029A8500B3F367 /* DepartureRow.swift in Sources */,
 				2BE02722240299D800B3F367 /* NotificationController.swift in Sources */,
@@ -584,7 +596,7 @@
 				2BE0273E24029A5F00B3F367 /* NetworkingService.swift in Sources */,
 				2BE0273C24029A1800B3F367 /* DeparturesView.swift in Sources */,
 				2BE0274824029B0500B3F367 /* DataStructs.swift in Sources */,
-				2BC7F4102423CB220093A7B5 /* StopData.swift in Sources */,
+				2BC7F4102423CB220093A7B5 /* StopsModel.swift in Sources */,
 				2B269F54240FFBD500CFFAA5 /* API.swift in Sources */,
 				2BE02720240299D800B3F367 /* ExtensionDelegate.swift in Sources */,
 				2BE02724240299D800B3F367 /* NotificationView.swift in Sources */,

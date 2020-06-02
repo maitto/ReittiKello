@@ -12,6 +12,6 @@ import SwiftUI
 
 class HostingController: WKHostingController<StopsView> {
     override var body: StopsView {
-        return StopsView(viewData: ViewData.shared)
+        return StopsView(stopsModel: StopsModel.shared)
     }
 }

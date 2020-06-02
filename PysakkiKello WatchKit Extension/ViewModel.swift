@@ -15,7 +15,8 @@ class ViewModel {
     var viewMode: ViewMode = .stops
     
     var networkService: NetworkService?
-    var viewData: ViewData?
+    var departuresModel: DeparturesModel?
+    var stopsModel: StopsModel?
     var locationService: LocationService?
     var storageService: StorageService?
 
@@ -23,7 +24,8 @@ class ViewModel {
         locationService = LocationService.shared
         storageService = StorageService.shared
         networkService = NetworkService()
-        viewData = ViewData.shared
+        stopsModel = StopsModel.shared
+        departuresModel = DeparturesModel.shared
         storageService?.createDatabase()
         stopListMode = storageService?.getFavoriteStops().isEmpty ?? true ? .nearby : .favorites
         updateNoDataTitle(updating: true)
@@ -41,11 +43,11 @@ class ViewModel {
     }
 
     func updateDepartures(_ id: String) {
-        viewData?.departures = []
+        departuresModel?.departures = []
         updateFavoritedButton(id)
         networkService?.getDeparturesForStop(id) { [weak self] departures in
             if self?.viewMode == .departures {
-                self?.viewData?.departures = departures
+                self?.departuresModel?.departures = departures
                 self?.updateNoDataTitle(updating: false)
             }
         }
@@ -54,7 +56,7 @@ class ViewModel {
     func updateNearbyStops(_ lat: Double, _ lon: Double) {
         networkService?.getNearbyStops(lat, lon) { [weak self] stops in
             if self?.stopListMode == .nearby && self?.viewMode == .stops {
-                self?.viewData?.stops = stops
+                self?.stopsModel?.stops = stops
                 self?.updateNoDataTitle(updating: false)
             }
         }
@@ -80,7 +82,7 @@ class ViewModel {
             storageService?.addFavoriteStop(id, stopName: name, platformName: platform)
         }
         updateFavoritedButton(id)
-        viewData?.shouldUpdateStops = true
+        stopsModel?.shouldUpdateStops = true
     }
 
     func onApplicationDidFinishLaunching() {
@@ -90,10 +92,10 @@ class ViewModel {
     func onApplicationDidBecomeActive() {
         switch viewMode {
         case .departures:
-            if let id = viewData?.departures.first?.hslStopId {
+            if let id = departuresModel?.departures.first?.hslStopId {
                 updateDepartures(id)
             }
-            viewData?.shouldUpdateStops = true
+            stopsModel?.shouldUpdateStops = true
         case .stops:
             updateStops()
         }
@@ -104,51 +106,51 @@ class ViewModel {
     }
 
     private func updateFavoriteStops() {
-        viewData?.stops = storageService?.getFavoriteStops() ?? []
+        stopsModel?.stops = storageService?.getFavoriteStops() ?? []
         updateNoDataTitle(updating: false)
     }
 
     private func updateStopListModeButton() {
         switch stopListMode {
         case .favorites:
-            viewData?.stopListModeButtonTitle = "show_nearby_stops".localized()
-            viewData?.stopListModeButtonImage = UIImage(systemName: "mappin.and.ellipse") ?? UIImage()
+            stopsModel?.stopListModeButtonTitle = "show_nearby_stops".localized()
+            stopsModel?.stopListModeButtonImage = UIImage(systemName: "mappin.and.ellipse") ?? UIImage()
         case .nearby:
-            viewData?.stopListModeButtonTitle = "show_favorite_stops".localized()
-            viewData?.stopListModeButtonImage = UIImage(systemName: "star") ?? UIImage()
+            stopsModel?.stopListModeButtonTitle = "show_favorite_stops".localized()
+            stopsModel?.stopListModeButtonImage = UIImage(systemName: "star") ?? UIImage()
         }
     }
 
     private func updateStopListTitle() {
         switch stopListMode {
         case .favorites:
-            viewData?.stopListTitle = "favorite_stops".localized()
+            stopsModel?.stopListTitle = "favorite_stops".localized()
         case .nearby:
-            viewData?.stopListTitle = "nearby_stops".localized()
+            stopsModel?.stopListTitle = "nearby_stops".localized()
         }
     }
 
     private func updateFavoritedButton(_ id: String) {
         if storageService?.isStopFavorited(id) ?? false {
-            viewData?.toggleFavoritedButtonTitle = "remove_stop_from_favorites".localized()
-            viewData?.toggleFavoritedButtonImage = UIImage(systemName: "star.slash.fill") ?? UIImage()
+            departuresModel?.toggleFavoritedButtonTitle = "remove_stop_from_favorites".localized()
+            departuresModel?.toggleFavoritedButtonImage = UIImage(systemName: "star.slash.fill") ?? UIImage()
         } else {
-            viewData?.toggleFavoritedButtonTitle = "add_stop_to_favorites".localized()
-            viewData?.toggleFavoritedButtonImage = UIImage(systemName: "star.fill") ?? UIImage()
+            departuresModel?.toggleFavoritedButtonTitle = "add_stop_to_favorites".localized()
+            departuresModel?.toggleFavoritedButtonImage = UIImage(systemName: "star.fill") ?? UIImage()
         }
     }
 
     private func updateNoDataTitle(updating: Bool) {
         if updating {
-            viewData?.noDataTitle = "updating".localized()
-        } else if !(viewData?.stops.isEmpty ?? false) {
-            viewData?.noDataTitle = ""
+            stopsModel?.noDataTitle = "updating".localized()
+        } else if !(stopsModel?.stops.isEmpty ?? false) {
+            stopsModel?.noDataTitle = ""
         } else {
             switch stopListMode {
             case .favorites:
-                viewData?.noDataTitle = "no_stops_added_to_favorites".localized()
+                stopsModel?.noDataTitle = "no_stops_added_to_favorites".localized()
             case .nearby:
-                viewData?.noDataTitle = "no_stops_nearby".localized()
+                stopsModel?.noDataTitle = "no_stops_nearby".localized()
             }
         }
     }

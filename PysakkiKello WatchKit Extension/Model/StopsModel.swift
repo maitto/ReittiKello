@@ -8,16 +8,13 @@
 
 import UIKit
 
-class ViewData: ObservableObject {
-    static let shared = ViewData()
+class StopsModel: ObservableObject {
+    static let shared = StopsModel()
 
     @Published var stops: [Stop] = []
-    @Published var departures: [Departure] = []
     @Published var stopListTitle = ""
     @Published var stopListModeButtonTitle = ""
     @Published var stopListModeButtonImage = UIImage()
-    @Published var toggleFavoritedButtonTitle = ""
-    @Published var toggleFavoritedButtonImage = UIImage()
     @Published var noDataTitle = ""
     @Published var shouldUpdateStops = false
 }

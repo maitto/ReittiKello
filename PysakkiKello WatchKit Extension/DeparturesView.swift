@@ -13,7 +13,7 @@ struct DeparturesView: View {
     var stopName: String
     var platform: String?
 
-    @ObservedObject var viewData: ViewData
+    @ObservedObject var departuresModel: DeparturesModel
     let viewModel = ViewModel.shared
 
     var body: some View {
@@ -23,14 +23,14 @@ struct DeparturesView: View {
                 Text("\("platform".localized()) \(platform ?? "")")
                     .font(.footnote)
             }
-            List(viewData.departures, rowContent: DepartureRow.init)
+            List(departuresModel.departures, rowContent: DepartureRow.init)
                 .contextMenu {
                     Button(action: {
                         self.viewModel.toggleIsStopFavorited(self.hslStopId, name: self.stopName, platform: self.platform)
                     }) {
                         VStack {
-                            Text(viewData.toggleFavoritedButtonTitle)
-                            Image(uiImage: viewData.toggleFavoritedButtonImage)
+                            Text(departuresModel.toggleFavoritedButtonTitle)
+                            Image(uiImage: departuresModel.toggleFavoritedButtonImage)
                         }
                     }
             }
@@ -44,6 +44,6 @@ struct DeparturesView: View {
 
 struct DeparturessView_Previews: PreviewProvider {
     static var previews: some View {
-        DeparturesView(hslStopId: "", stopName: "", platform: "", viewData: ViewData())
+        DeparturesView(hslStopId: "", stopName: "", platform: "", departuresModel: DeparturesModel())
     }
 }

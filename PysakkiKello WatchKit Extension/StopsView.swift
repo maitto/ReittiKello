@@ -9,16 +9,16 @@
 import SwiftUI
 
 struct StopsView: View {
-    @ObservedObject var viewData: ViewData
+    @ObservedObject var stopsModel: StopsModel
     let viewModel = ViewModel.shared
 
     var body: some View {
         VStack(alignment: .leading, spacing: nil, content: {
-            if viewData.noDataTitle != "" {
-                Text(viewData.noDataTitle)
+            if stopsModel.noDataTitle != "" {
+                Text(stopsModel.noDataTitle)
             } else {
-                Text(viewData.stopListTitle)
-                List(viewData.stops, rowContent: StopRow.init)
+                Text(stopsModel.stopListTitle)
+                List(stopsModel.stops, rowContent: StopRow.init)
             }
         })
             .contextMenu {
@@ -26,15 +26,15 @@ struct StopsView: View {
                     self.viewModel.toggleListMode()
                 }) {
                     VStack {
-                        Text(viewData.stopListModeButtonTitle)
-                        Image(uiImage: viewData.stopListModeButtonImage)
+                        Text(stopsModel.stopListModeButtonTitle)
+                        Image(uiImage: stopsModel.stopListModeButtonImage)
                     }
                 }
         }.onAppear {
             print("onAppear StopsView")
             self.viewModel.viewMode = .stops
-            if self.viewData.shouldUpdateStops {
-                self.viewData.shouldUpdateStops = false
+            if self.stopsModel.shouldUpdateStops {
+                self.stopsModel.shouldUpdateStops = false
                 self.viewModel.updateStops()
             }
         }
@@ -43,6 +43,6 @@ struct StopsView: View {
 
 struct StopsView_Previews: PreviewProvider {
     static var previews: some View {
-        StopsView(viewData: ViewData())
+        StopsView(stopsModel: StopsModel())
     }
 }
