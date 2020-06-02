@@ -43,6 +43,7 @@ class ViewModel {
     }
 
     func updateDepartures(_ id: String) {
+        departuresModel?.stopId = id
         departuresModel?.departures = []
         updateFavoritedButton(id)
         networkService?.getDeparturesForStop(id) { [weak self] departures in
@@ -92,7 +93,7 @@ class ViewModel {
     func onApplicationDidBecomeActive() {
         switch viewMode {
         case .departures:
-            if let id = departuresModel?.departures.first?.hslStopId {
+            if let id = departuresModel?.stopId, id != "" {
                 updateDepartures(id)
             }
             stopsModel?.shouldUpdateStops = true

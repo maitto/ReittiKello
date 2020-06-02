@@ -11,6 +11,7 @@ import UIKit
 class DeparturesModel: ObservableObject {
     static let shared = DeparturesModel()
     
+    @Published var stopId: String = ""
     @Published var departures: [Departure] = []
     @Published var toggleFavoritedButtonTitle = ""
     @Published var toggleFavoritedButtonImage = UIImage()
