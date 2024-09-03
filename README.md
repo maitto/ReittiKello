@@ -10,5 +10,5 @@ App is written in Swift using SwiftUI. MVVM pattern is followed. Apollo library 
 WatchOS 6 is required. This is an independent watchOS app.
 
 ## Link to App Store
-https://apps.apple.com/fi/app/pys%C3%A4kkikello/id1481585656?l=fi
+~~https://apps.apple.com/fi/app/pys%C3%A4kkikello/id1481585656?l=fi~~ I have taken the app down for the time being because the HSL API have been updated and it requires changes to the watch app as well.
 
