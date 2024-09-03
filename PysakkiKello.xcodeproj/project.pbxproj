@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,7 +24,7 @@
 		2BE02708240299D400B3F367 /* PysakkiKello.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2BE02707240299D400B3F367 /* PysakkiKello.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2BE0270E240299D400B3F367 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BE0270C240299D400B3F367 /* Interface.storyboard */; };
 		2BE02710240299D800B3F367 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BE0270F240299D800B3F367 /* Assets.xcassets */; };
-		2BE02717240299D800B3F367 /* PysakkiKello WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2BE02716240299D800B3F367 /* PysakkiKello WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2BE02717240299D800B3F367 /* PysakkiKello WatchKit Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2BE02716240299D800B3F367 /* PysakkiKello WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2BE0271C240299D800B3F367 /* StopsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0271B240299D800B3F367 /* StopsView.swift */; };
 		2BE0271E240299D800B3F367 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0271D240299D800B3F367 /* HostingController.swift */; };
 		2BE02720240299D800B3F367 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0271F240299D800B3F367 /* ExtensionDelegate.swift */; };
@@ -61,15 +61,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		2BE02733240299D900B3F367 /* Embed App Extensions */ = {
+		2BE02733240299D900B3F367 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				2BE02717240299D800B3F367 /* PysakkiKello WatchKit Extension.appex in Embed App Extensions */,
+				2BE02717240299D800B3F367 /* PysakkiKello WatchKit Extension.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2BE02737240299D900B3F367 /* Embed Watch Content */ = {
@@ -329,7 +329,7 @@
 			buildPhases = (
 				A77DBB1BA9F9B526BB6779C3 /* [CP] Check Pods Manifest.lock */,
 				2BE02705240299D400B3F367 /* Resources */,
-				2BE02733240299D900B3F367 /* Embed App Extensions */,
+				2BE02733240299D900B3F367 /* Embed Foundation Extensions */,
 				DB83DC982245059DECC633BF /* Frameworks */,
 			);
 			buildRules = (
@@ -369,8 +369,9 @@
 		2BE026FD240299D400B3F367 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1540;
 				ORGANIZATIONNAME = "Mortti Aittokoski";
 				TargetAttributes = {
 					2BABD5C524322EE400514129 = {
@@ -707,6 +708,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -717,6 +719,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -768,6 +771,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -778,6 +782,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

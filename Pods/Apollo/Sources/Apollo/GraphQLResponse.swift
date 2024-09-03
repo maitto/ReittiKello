@@ -1,87 +1,96 @@
-/// Represents a GraphQL response received from a server.
-public final class GraphQLResponse<Data: GraphQLSelectionSet> {
-  public let body: JSONObject
+#if !COCOAPODS
+import ApolloAPI
+#endif
 
-  private let rootKey: String
-  private let variables: GraphQLMap?
+/// Represents a complete GraphQL response received from a server.
+public final class GraphQLResponse<Data: RootSelectionSet> {
+  private let base: AnyGraphQLResponse
 
-  public init<Operation: GraphQLOperation>(operation: Operation, body: JSONObject) where Operation.Data == Data {
-    self.body = body
-    rootKey = rootCacheKey(for: operation)
-    variables = operation.variables
+  public init<Operation: GraphQLOperation>(
+    operation: Operation,
+    body: JSONObject
+  ) where Operation.Data == Data {
+    self.base = AnyGraphQLResponse(
+      body: body,
+      rootKey: CacheReference.rootCacheReference(for: Operation.operationType),
+      variables: operation.__variables
+    )
   }
 
-  func parseResult(cacheKeyForObject: CacheKeyForObject? = nil) throws -> Promise<(GraphQLResult<Data>, RecordSet?)>  {
-    let errors: [GraphQLError]?
+  /// Parses the response into a `GraphQLResult` and a `RecordSet` depending on the cache policy. The result can be
+  /// sent to a completion block for a request and the `RecordSet` can be merged into a local cache.
+  ///
+  /// - Returns: A tuple of a `GraphQLResult` and an optional `RecordSet`.
+  /// 
+  /// - Parameter cachePolicy: Used to determine whether a cache `RecordSet` is returned. A cache policy that does
+  /// not read or write to the cache will return a `nil` cache `RecordSet`.
+  public func parseResult(withCachePolicy cachePolicy: CachePolicy) throws -> (GraphQLResult<Data>, RecordSet?) {
+    switch cachePolicy {
+    case .fetchIgnoringCacheCompletely:
+      // There is no cache, so we don't need to get any info on dependencies. Use fast parsing.
+      return (try parseResultFast(), nil)
 
-    if let errorsEntry = body["errors"] as? [JSONObject] {
-      errors = errorsEntry.map(GraphQLError.init)
-    } else {
-      errors = nil
-    }
-
-    if let dataEntry = body["data"] as? JSONObject {
-      let executor = GraphQLExecutor { object, info in
-        return .result(.success(object[info.responseKeyForField]))
-      }
-
-      executor.cacheKeyForObject = cacheKeyForObject
-
-      let mapper = GraphQLSelectionSetMapper<Data>()
-      let normalizer = GraphQLResultNormalizer()
-      let dependencyTracker = GraphQLDependencyTracker()
-
-      return firstly {
-        try executor.execute(selections: Data.selections,
-                             on: dataEntry,
-                             withKey: rootKey,
-                             variables: variables,
-                             accumulator: zip(mapper, normalizer, dependencyTracker))
-        }.map { (data, records, dependentKeys) in
-          (
-            GraphQLResult(data: data,
-                         errors: errors,
-                         source: .server,
-                         dependentKeys: dependentKeys),
-            records
-          )
-      }
-    } else {
-      return Promise(fulfilled: (
-        GraphQLResult(data: nil,
-                      errors: errors,
-                      source: .server,
-                      dependentKeys: nil),
-        nil
-      ))
+    default:
+      return try parseResult()
     }
   }
 
-  func parseErrorsOnlyFast() -> [GraphQLError]? {
-    guard let errorsEntry = self.body["errors"] as? [JSONObject] else {
-      return nil
-    }
+  /// Parses a response into a `GraphQLResult` and a `RecordSet`. The result can be sent to a completion block for a 
+  /// request and the `RecordSet` can be merged into a local cache.
+  ///
+  /// - Returns: A `GraphQLResult` and a `RecordSet`.
+  public func parseResult() throws -> (GraphQLResult<Data>, RecordSet?) {
+    let accumulator = zip(
+      GraphQLSelectionSetMapper<Data>(),
+      ResultNormalizerFactory.networkResponseDataNormalizer(),
+      GraphQLDependencyTracker()
+    )
+    let executionResult = try base.execute(
+      selectionSet: Data.self,
+      with: accumulator
+    )
+    let result = makeResult(data: executionResult?.0, dependentKeys: executionResult?.2)
 
-    return errorsEntry.map(GraphQLError.init)
+    return (result, executionResult?.1)
   }
 
-  func parseResultFast() throws -> GraphQLResult<Data>  {
-    let errors = self.parseErrorsOnlyFast()
+  /// Parses a response into a `GraphQLResult` for use without the cache. This parsing does not
+  /// create dependent keys or a `RecordSet` for the cache.
+  ///
+  /// This is faster than `parseResult()` and should be used when cache the response is not needed.
+  public func parseResultFast() throws -> GraphQLResult<Data>  {
+    let accumulator = GraphQLSelectionSetMapper<Data>()
+    let data = try base.execute(
+      selectionSet: Data.self,
+      with: accumulator
+    )
 
-    if let dataEntry = body["data"] as? JSONObject {
-      let data = try decode(selectionSet: Data.self,
-                            from: dataEntry,
-                            variables: variables)
+    return makeResult(data: data, dependentKeys: nil)
+  }
 
-      return GraphQLResult(data: data,
-                           errors: errors,
-                           source: .server,
-                           dependentKeys: nil)
-    } else {
-      return GraphQLResult(data: nil,
-                           errors: errors,
-                           source: .server,
-                           dependentKeys: nil)
-    }
+  private func makeResult(data: Data?, dependentKeys: Set<CacheKey>?) -> GraphQLResult<Data> {
+    return GraphQLResult(
+      data: data,
+      extensions: base.parseExtensions(),
+      errors: base.parseErrors(),
+      source: .server,
+      dependentKeys: dependentKeys
+    )
+  }
+}
+
+// MARK: - Equatable Conformance
+
+extension GraphQLResponse: Equatable where Data: Equatable {
+  public static func == (lhs: GraphQLResponse<Data>, rhs: GraphQLResponse<Data>) -> Bool {
+    lhs.base == rhs.base
+  }
+}
+
+// MARK: - Hashable Conformance
+
+extension GraphQLResponse: Hashable {
+  public func hash(into hasher: inout Hasher) {
+    hasher.combine(base)
   }
 }

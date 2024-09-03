@@ -1,17 +1,29 @@
 import Foundation
+#if !COCOAPODS
+import ApolloAPI
+#endif
 
 /// A network transport is responsible for sending GraphQL operations to a server.
-public protocol NetworkTransport: class {
+public protocol NetworkTransport: AnyObject {
 
   /// Send a GraphQL operation to a server and return a response.
   ///
-  /// Note if you're implementing this yourself rather than using one of the batteries-included versions of `NetworkTransport` (which handle this for you): The `clientName` and `clientVersion` should be sent with any URL request which needs headers so your client can be identified by tools meant to see what client is using which request. The `addApolloClientHeaders` method is provided below to do this for you if you're using Apollo Graph Manager.
+  /// Note if you're implementing this yourself rather than using one of the batteries-included versions of `NetworkTransport` (which handle this for you): The `clientName` and `clientVersion` should be sent with any URL request which needs headers so your client can be identified by tools meant to see what client is using which request. The `addApolloClientHeaders` method is provided below to do this for you if you're using Apollo Studio.
   ///
   /// - Parameters:
   ///   - operation: The operation to send.
+  ///   - cachePolicy: The `CachePolicy` to use making this request.
+  ///   - contextIdentifier:  [optional] A unique identifier for this request, to help with deduping cache hits for watchers. Defaults to `nil`.
+  ///   - context: [optional] A context that is being passed through the request chain. Defaults to `nil`.
+  ///   - callbackQueue: The queue to call back on with the results. Should default to `.main`.
   ///   - completionHandler: A closure to call when a request completes. On `success` will contain the response received from the server. On `failure` will contain the error which occurred.
   /// - Returns: An object that can be used to cancel an in progress request.
-  func send<Operation: GraphQLOperation>(operation: Operation, completionHandler: @escaping (_ result: Result<GraphQLResponse<Operation.Data>, Error>) -> Void) -> Cancellable
+  func send<Operation: GraphQLOperation>(operation: Operation,
+                                         cachePolicy: CachePolicy,
+                                         contextIdentifier: UUID?,
+                                         context: (any RequestContext)?,
+                                         callbackQueue: DispatchQueue,
+                                         completionHandler: @escaping (Result<GraphQLResult<Operation.Data>, any Error>) -> Void) -> any Cancellable
 
   /// The name of the client to send as a header value.
   var clientName: String { get }
@@ -89,7 +101,14 @@ public protocol UploadingNetworkTransport: NetworkTransport {
   /// - Parameters:
   ///   - operation: The operation to send
   ///   - files: An array of `GraphQLFile` objects to send.
+  ///   - context: [optional] A context that is being passed through the request chain.
+  ///   - callbackQueue: The queue to call back on with the results. Should default to `.main`.
   ///   - completionHandler: The completion handler to execute when the request completes or errors
   /// - Returns: An object that can be used to cancel an in progress request.
-  func upload<Operation: GraphQLOperation>(operation: Operation, files: [GraphQLFile], completionHandler: @escaping (_ result: Result<GraphQLResponse<Operation.Data>, Error>) -> Void) -> Cancellable
+  func upload<Operation: GraphQLOperation>(
+    operation: Operation,
+    files: [GraphQLFile],
+    context: (any RequestContext)?,
+    callbackQueue: DispatchQueue,
+    completionHandler: @escaping (Result<GraphQLResult<Operation.Data>,any Error>) -> Void) -> any Cancellable
 }

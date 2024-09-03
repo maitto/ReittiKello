@@ -1,5 +1,5 @@
 /// A set of cache records.
-public struct RecordSet {
+public struct RecordSet: Hashable {
   public private(set) var storage: [CacheKey: Record] = [:]
 
   public init<S: Sequence>(records: S) where S.Iterator.Element == Record {
@@ -8,6 +8,18 @@ public struct RecordSet {
 
   public mutating func insert(_ record: Record) {
     storage[record.key] = record
+  }
+  
+  public mutating func removeRecord(for key: CacheKey) {
+    storage.removeValue(forKey: key)
+  }
+
+  public mutating func removeRecords(matching pattern: CacheKey) {
+    for (key, _) in storage {
+      if key.range(of: pattern, options: .caseInsensitive) != nil {
+        storage.removeValue(forKey: key)
+      }
+    }
   }
 
   public mutating func clear() {
@@ -28,8 +40,8 @@ public struct RecordSet {
     return storage.isEmpty
   }
 
-  public var keys: [CacheKey] {
-    return Array(storage.keys)
+  public var keys: Set<CacheKey> {
+    return Set(storage.keys)
   }
 
   @discardableResult public mutating func merge(records: RecordSet) -> Set<CacheKey> {
@@ -47,7 +59,7 @@ public struct RecordSet {
       var changedKeys: Set<CacheKey> = Set()
 
       for (key, value) in record.fields {
-        if let oldValue = oldRecord.fields[key], equals(oldValue, value) {
+        if let oldValue = oldRecord.fields[key], oldValue == value {
           continue
         }
         oldRecord[key] = value
@@ -74,8 +86,14 @@ extension RecordSet: CustomStringConvertible {
   }
 }
 
+extension RecordSet: CustomDebugStringConvertible {
+  public var debugDescription: String {
+    return description
+  }
+}
+
 extension RecordSet: CustomPlaygroundDisplayConvertible {
-	public var playgroundDescription: Any {
-		 return description
-	}
+  public var playgroundDescription: Any {
+    return description
+  }
 }

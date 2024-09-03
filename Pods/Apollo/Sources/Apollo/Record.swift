@@ -2,10 +2,10 @@
 public typealias CacheKey = String
 
 /// A cache record.
-public struct Record {
+public struct Record: Hashable {
   public let key: CacheKey
 
-  public typealias Value = Any
+  public typealias Value = AnyHashable
   public typealias Fields = [CacheKey: Value]
   public private(set) var fields: Fields
 
@@ -27,26 +27,5 @@ public struct Record {
 extension Record: CustomStringConvertible {
   public var description: String {
     return "#\(key) -> \(fields)"
-  }
-}
-
-/// A reference to a cache record.
-public struct Reference {
-  public let key: CacheKey
-
-  public init(key: CacheKey) {
-    self.key = key
-  }
-}
-
-extension Reference: Equatable {
-  public static func ==(lhs: Reference, rhs: Reference) -> Bool {
-    return lhs.key == rhs.key
-  }
-}
-
-extension Reference: CustomStringConvertible {
-  public var description: String {
-    return "-> #\(key)"
   }
 }

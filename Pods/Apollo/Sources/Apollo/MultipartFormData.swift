@@ -1,7 +1,7 @@
 import Foundation
 
 /// A helper for building out multi-part form data for upload
-public class MultipartFormData {
+public final class MultipartFormData {
 
   enum FormDataError: Error, LocalizedError {
     case encodingStringToDataFailed(_ string: String)
@@ -17,7 +17,7 @@ public class MultipartFormData {
   /// A Carriage Return Line Feed character, which will be seen as a newline on both unix and Windows servers.
   static let CRLF = "\r\n"
 
-  let boundary: String
+  public let boundary: String
 
   private var bodyParts: [BodyPart]
 
@@ -89,7 +89,7 @@ public class MultipartFormData {
   /// Encodes everything into the final form data to send to a server.
   ///
   /// - Returns: The final form data to send to a server.
-  func encode() throws -> Data {
+  public func encode() throws -> Data {
     var data = Data()
 
     for p in self.bodyParts {
@@ -145,10 +145,24 @@ public class MultipartFormData {
   }
 }
 
+// MARK: - Hashable Conformance
+
+extension MultipartFormData: Hashable {
+  public static func == (lhs: MultipartFormData, rhs: MultipartFormData) -> Bool {
+    lhs.boundary == rhs.boundary &&
+    lhs.bodyParts == rhs.bodyParts
+  }
+
+  public func hash(into hasher: inout Hasher) {
+    hasher.combine(boundary)
+    hasher.combine(bodyParts)
+  }
+}
+
 /// MARK: - BodyPart
 
 /// A structure representing a single part of multi-part form data.
-fileprivate struct BodyPart {
+fileprivate struct BodyPart: Hashable {
   let name: String
   let inputStream: InputStream
   let contentLength: UInt64
