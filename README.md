@@ -12,3 +12,4 @@ WatchOS 6 is required. This is an independent watchOS app.
 ## Link to App Store
 ~~https://apps.apple.com/fi/app/pys%C3%A4kkikello/id1481585656?l=fi~~ I have taken the app down for the time being because the HSL API have been updated and it requires changes to the watch app as well.
 
+![Screenshot](https://drive.google.com/file/d/1TlMjWcg59HZMmm-cXeg529dVFujLaetL/view?usp=sharing) "Screenshot")
